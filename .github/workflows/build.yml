@@ -27,6 +27,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Generate Prisma Client
+        run: pnpm prisma generate
+
       # Vercel Remote Cache를 사용하는 경우 주석 해제 및 secrets 설정 필요
       # - name: Vercel Remote Cache Setup
       #   run: pnpx turbo login
