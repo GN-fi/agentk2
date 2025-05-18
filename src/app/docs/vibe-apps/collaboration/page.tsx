@@ -1,13 +1,13 @@
 import Link from "next/link";
 import {
 	FiArrowRight,
-	FiUsers,
-	FiMessageSquare,
+	FiCheckCircle,
+	FiEye,
 	FiGitMerge,
+	FiMessageSquare,
 	FiShare2,
 	FiUserPlus,
-	FiEye,
-	FiCheckCircle,
+	FiUsers,
 } from "react-icons/fi";
 
 const CollaborationPage = () => {

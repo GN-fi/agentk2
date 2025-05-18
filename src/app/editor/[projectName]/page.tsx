@@ -1,13 +1,13 @@
 "use client"; // 클라이언트 컴포넌트로 변경
 
+import { signIn, useSession } from "next-auth/react"; // useSession, signIn 임포트
+import { useParams, usePathname } from "next/navigation"; // usePathname, useParams 임포트 (useParams는 이미 사용 중일 수 있으므로 확인)
 import { useEffect } from "react"; // useEffect 임포트
-import { useSession, signIn } from "next-auth/react"; // useSession, signIn 임포트
-import { usePathname, useParams } from "next/navigation"; // usePathname, useParams 임포트 (useParams는 이미 사용 중일 수 있으므로 확인)
 
 import EditorLayout from "../../../components/editor/EditorLayout";
-import WelcomeHeader from "../../../components/editor/dashboard/WelcomeHeader";
 import QuickStartButtons from "../../../components/editor/dashboard/QuickStartButtons";
 import RecentAppsSection from "../../../components/editor/dashboard/RecentAppsSection";
+import WelcomeHeader from "../../../components/editor/dashboard/WelcomeHeader";
 
 // EditorPageProps 인터페이스는 params를 사용하므로 그대로 두거나, useParams를 사용한다면 제거 가능
 // interface EditorPageProps {

@@ -1,6 +1,6 @@
 "use client";
 
-import { FiLock, FiGlobe, FiMoreVertical, FiFileText } from "react-icons/fi";
+import { FiFileText, FiGlobe, FiLock, FiMoreVertical } from "react-icons/fi";
 
 interface AppCardProps {
 	appName: string;
@@ -23,7 +23,10 @@ const AppCard = ({ appName, lastUpdated, isPublic }: AppCardProps) => {
 				>
 					{appName}
 				</h3>
-				<button className="ml-auto text-gray-400 hover:text-white">
+				<button
+					type="button"
+					className="ml-auto text-gray-400 hover:text-white"
+				>
 					<FiMoreVertical className="w-5 h-5" />
 				</button>
 			</div>

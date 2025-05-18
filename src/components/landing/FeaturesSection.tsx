@@ -12,6 +12,7 @@ const features = [
 				stroke="currentColor"
 				className="w-8 h-8 text-purple-400"
 			>
+				<title>데이터베이스 아이콘</title>
 				<path
 					strokeLinecap="round"
 					strokeLinejoin="round"
@@ -33,6 +34,7 @@ const features = [
 				stroke="currentColor"
 				className="w-8 h-8 text-pink-400"
 			>
+				<title>사용자 인증 아이콘</title>
 				<path
 					strokeLinecap="round"
 					strokeLinejoin="round"
@@ -54,6 +56,7 @@ const features = [
 				stroke="currentColor"
 				className="w-8 h-8 text-indigo-400"
 			>
+				<title>보안 통합 아이콘</title>
 				<path
 					strokeLinecap="round"
 					strokeLinejoin="round"

@@ -2,13 +2,13 @@ import Link from "next/link";
 import {
 	FiArrowRight,
 	FiBox,
-	FiZap,
-	FiUsers,
-	FiUploadCloud,
-	FiLayers,
-	FiTerminal,
 	FiDatabase,
 	FiGrid,
+	FiLayers,
+	FiTerminal,
+	FiUploadCloud,
+	FiUsers,
+	FiZap,
 } from "react-icons/fi";
 
 const AppsOverviewPage = () => {

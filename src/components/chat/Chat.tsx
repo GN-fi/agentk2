@@ -34,7 +34,7 @@ export default function Chat() {
 
 	useEffect(() => {
 		messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-	}, [messages]);
+	}, []);
 
 	const sendMessage = () => {
 		if (newMessage.trim() === "") return;
@@ -66,8 +66,8 @@ export default function Chat() {
 					borderBottom: "1px solid #ccc",
 				}}
 			>
-				{messages.map((msg, index) => (
-					<div key={index} style={{ marginBottom: "10px" }}>
+				{messages.map((msg) => (
+					<div key={msg.timestamp} style={{ marginBottom: "10px" }}>
 						<strong>{msg.user}: </strong>
 						{msg.text}
 						<span
@@ -88,7 +88,11 @@ export default function Chat() {
 					style={{ flexGrow: 1, marginRight: "10px", padding: "5px" }}
 					placeholder="메시지를 입력하세요..."
 				/>
-				<button onClick={sendMessage} style={{ padding: "5px 10px" }}>
+				<button
+					type="button"
+					onClick={sendMessage}
+					style={{ padding: "5px 10px" }}
+				>
 					전송
 				</button>
 			</div>

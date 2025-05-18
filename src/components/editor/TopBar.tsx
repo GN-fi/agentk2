@@ -1,22 +1,22 @@
 "use client"; // 훅 사용을 위해 'use client' 추가
 
 import {
-	ChevronDownIcon,
-	PlayIcon,
-	StopIcon,
-	CloudArrowUpIcon,
-	UserPlusIcon,
-	BellIcon,
-	QuestionMarkCircleIcon,
 	Bars3Icon,
+	BellIcon,
+	ChevronDownIcon,
+	CloudArrowUpIcon,
+	PlayIcon,
+	QuestionMarkCircleIcon,
+	StopIcon,
+	UserPlusIcon,
 	XMarkIcon,
 } from "@heroicons/react/24/outline";
+import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
-import { useParams } from "next/navigation";
-import { useSession, signOut } from "next-auth/react";
 import Link from "next/link";
-import { FiLogOut, FiUser, FiSettings } from "react-icons/fi";
-import { useState, useEffect, useRef } from "react";
+import { useParams } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { FiLogOut, FiSettings, FiUser } from "react-icons/fi";
 
 // interface TopBarProps {
 //   projectName: string;
@@ -35,6 +35,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const mobileMenuRef = useRef<HTMLDivElement>(null);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: ref는 일반적으로 의존성 배열에 필요 없지만, 이 경우 handleClickOutside가 ref를 직접 사용합니다.
 	useEffect(() => {
 		function handleClickOutside(event: MouseEvent) {
 			if (
@@ -73,7 +74,10 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 					<ChevronDownIcon className="w-4 h-4" />
 				</div>
 				{projectName !== "~" && ( // 대시보드에서는 실행 버튼 숨김
-					<button className="flex items-center space-x-2 bg-green-500 hover:bg-green-600 px-3 py-1.5 rounded text-sm font-medium">
+					<button
+						type="button"
+						className="flex items-center space-x-2 bg-green-500 hover:bg-green-600 px-3 py-1.5 rounded text-sm font-medium"
+					>
 						<PlayIcon className="w-5 h-5" />
 						<span>실행</span>
 					</button>
@@ -86,18 +90,24 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 
 			{/* Desktop Menu */}
 			<div className="hidden md:flex items-center space-x-3">
-				<button className="flex items-center space-x-2 bg-blue-500 hover:bg-blue-600 px-3 py-1.5 rounded text-sm font-medium">
+				<button
+					type="button"
+					className="flex items-center space-x-2 bg-blue-500 hover:bg-blue-600 px-3 py-1.5 rounded text-sm font-medium"
+				>
 					<CloudArrowUpIcon className="w-5 h-5" />
 					<span>배포</span>
 				</button>
-				<button className="flex items-center space-x-2 border border-gray-600 hover:bg-gray-700 px-3 py-1.5 rounded text-sm font-medium">
+				<button
+					type="button"
+					className="flex items-center space-x-2 border border-gray-600 hover:bg-gray-700 px-3 py-1.5 rounded text-sm font-medium"
+				>
 					<UserPlusIcon className="w-5 h-5" />
 					<span>초대</span>
 				</button>
-				<button className="p-1.5 hover:bg-gray-700 rounded">
+				<button type="button" className="p-1.5 hover:bg-gray-700 rounded">
 					<BellIcon className="w-5 h-5" />
 				</button>
-				<button className="p-1.5 hover:bg-gray-700 rounded">
+				<button type="button" className="p-1.5 hover:bg-gray-700 rounded">
 					<QuestionMarkCircleIcon className="w-5 h-5" />
 				</button>
 
@@ -189,6 +199,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 									계정 설정
 								</Link>
 								<button
+									type="button"
 									onClick={() => {
 										signOut();
 										setDropdownOpen(false);
@@ -209,6 +220,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 			{/* Mobile Menu Button */}
 			<div className="md:hidden flex items-center">
 				<button
+					type="button"
 					onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
 					className="p-1.5 hover:bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
 					aria-expanded={mobileMenuOpen}
@@ -266,6 +278,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 						)}
 
 						<button
+							type="button"
 							// TODO: 배포 기능 연결
 							onClick={() => {
 								alert("배포 기능이 구현될 예정입니다.");
@@ -278,6 +291,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 							배포
 						</button>
 						<button
+							type="button"
 							// TODO: 초대 기능 연결
 							onClick={() => {
 								alert("초대 기능이 구현될 예정입니다.");
@@ -290,6 +304,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 							초대
 						</button>
 						<button
+							type="button"
 							// TODO: 알림 기능 연결
 							onClick={() => {
 								alert("알림 기능이 구현될 예정입니다.");
@@ -302,6 +317,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 							알림
 						</button>
 						<button
+							type="button"
 							// TODO: 도움말 기능 연결
 							onClick={() => {
 								alert("도움말 기능이 구현될 예정입니다.");
@@ -336,6 +352,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 						)}
 						{status === "authenticated" && (
 							<button
+								type="button"
 								onClick={() => {
 									signOut();
 									setMobileMenuOpen(false);

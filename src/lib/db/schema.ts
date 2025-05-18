@@ -1,16 +1,16 @@
+import { relations } from "drizzle-orm"; // Drizzle ORM의 관계 기능을 relations로 import
 // src/lib/db/schema.ts
 import {
-	timestamp,
-	pgTable,
-	text,
-	primaryKey,
 	integer,
-	varchar,
+	pgTable,
+	primaryKey,
 	serial,
+	text,
+	timestamp,
 	uniqueIndex,
+	varchar,
 } from "drizzle-orm/pg-core";
 import type { AdapterAccount } from "next-auth/adapters";
-import { relations } from "drizzle-orm"; // Drizzle ORM의 관계 기능을 relations로 import
 
 export const users = pgTable("users", {
 	id: text("id").primaryKey().notNull().default("cuid()"),

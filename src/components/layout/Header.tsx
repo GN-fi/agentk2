@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
+import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
-import { useSession, signIn, signOut } from "next-auth/react";
+import Link from "next/link";
 
 const Header = () => {
 	const { data: session, status } = useSession();
@@ -47,7 +47,7 @@ const Header = () => {
 					</Link>
 
 					{loading ? (
-						<div className="h-8 w-20 animate-pulse bg-gray-600 rounded-lg"></div>
+						<div className="h-8 w-20 animate-pulse bg-gray-600 rounded-lg" />
 					) : session ? (
 						<>
 							{session.user?.image && (
@@ -60,6 +60,7 @@ const Header = () => {
 								/>
 							)}
 							<button
+								type="button"
 								onClick={() => signOut({ callbackUrl: "/" })}
 								className="text-gray-300 hover:text-white transition-colors"
 							>
@@ -69,6 +70,7 @@ const Header = () => {
 					) : (
 						<>
 							<button
+								type="button"
 								onClick={() => signIn()}
 								className="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
 							>
@@ -83,7 +85,10 @@ const Header = () => {
 						</>
 					)}
 				</nav>
-				<button className="md:hidden text-gray-300 hover:text-white focus:outline-none">
+				<button
+					type="button"
+					className="md:hidden text-gray-300 hover:text-white focus:outline-none"
+				>
 					{/* 모바일 메뉴 아이콘 (추후 SVG로 교체 및 기능 구현) */}
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -93,6 +98,7 @@ const Header = () => {
 						stroke="currentColor"
 						className="w-6 h-6"
 					>
+						<title>모바일 메뉴 열기</title>
 						<path
 							strokeLinecap="round"
 							strokeLinejoin="round"

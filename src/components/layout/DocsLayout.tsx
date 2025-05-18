@@ -1,6 +1,6 @@
-import Header from "./Header";
-import Footer from "./Footer";
 import DocsSidebar from "./DocsSidebar";
+import Footer from "./Footer";
+import Header from "./Header";
 
 const DocsLayout = ({ children }: { children: React.ReactNode }) => {
 	return (

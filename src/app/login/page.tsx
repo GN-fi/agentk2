@@ -1,10 +1,10 @@
 "use client";
 
+import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState, FormEvent, useEffect } from "react";
-import { FaGoogle, FaGithub, FaTwitter } from "react-icons/fa";
-import { signIn, useSession } from "next-auth/react";
+import { type FormEvent, useEffect, useState } from "react";
+import { FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
 
 const LoginPage = () => {
 	const router = useRouter();
@@ -174,6 +174,7 @@ const LoginPage = () => {
 						<div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
 							<div className="sm:col-span-3">
 								<button
+									type="button"
 									onClick={() => !loading && signIn("google", { callbackUrl })}
 									disabled={loading}
 									className="w-full inline-flex justify-center items-center py-3 px-4 border border-gray-700 rounded-md shadow-sm bg-gray-800 text-sm font-medium text-gray-300 hover:bg-gray-700 transition-colors disabled:opacity-50"

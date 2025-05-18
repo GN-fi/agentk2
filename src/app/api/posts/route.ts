@@ -1,8 +1,8 @@
-import { NextResponse } from "next/server";
-import prisma from "@/lib/prisma";
-import { redis, getOrSet } from "@/lib/cache";
+import { getOrSet, redis } from "@/lib/cache";
 import { db } from "@/lib/db"; // Drizzle 인스턴스 import
-import { posts as postsSchema, type Post } from "@/lib/db/schema"; // Drizzle posts 스키마 import
+import { type Post, posts as postsSchema } from "@/lib/db/schema"; // Drizzle posts 스키마 import
+import prisma from "@/lib/prisma";
+import { NextResponse } from "next/server";
 
 export const runtime = "edge"; // Edge 런타임 활성화
 

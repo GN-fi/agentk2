@@ -1,11 +1,11 @@
 import Link from "next/link";
 import {
-	FiPlayCircle,
+	FiBookOpen,
 	FiBox,
 	FiCpu,
 	FiGitBranch,
+	FiPlayCircle,
 	FiUploadCloud,
-	FiBookOpen,
 } from "react-icons/fi";
 
 const docSections = [

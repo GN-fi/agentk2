@@ -1,4 +1,10 @@
-import { test, expect, chromium, Page } from "@playwright/test";
+import {
+	type Browser,
+	type Page,
+	chromium,
+	expect,
+	test,
+} from "@playwright/test";
 import { playAudit } from "playwright-lighthouse";
 // import lighthouseDesktopConfig from 'lighthouse/lighthouse-core/config/lr-desktop-config.js'; // 이 줄을 주석 처리하거나 삭제합니다.
 
@@ -6,7 +12,7 @@ const TARGET_URL = "http://localhost:3000"; // 테스트할 실제 웹사이트 
 const LH_PORT = 9222;
 
 test.describe("Lighthouse Performance Audit", () => {
-	let browser; // browser 변수 선언은 유지
+	let browser: Browser; // browser 변수 선언은 유지
 	let page: Page;
 
 	test.beforeAll(async () => {

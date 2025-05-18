@@ -1,17 +1,24 @@
 import {
-	FolderIcon,
-	DocumentIcon,
-	CogIcon,
-	CubeIcon,
 	BeakerIcon,
 	CircleStackIcon,
+	CogIcon,
 	CommandLineIcon,
+	CubeIcon,
+	DocumentIcon,
+	FolderIcon,
 	LifebuoyIcon,
 	UserCircleIcon,
 } from "@heroicons/react/24/outline";
 
+interface FileItem {
+	name: string;
+	type: "file" | "folder";
+	icon: React.ElementType; // Heroicon들은 React.ElementType으로 타입 지정 가능
+	children?: FileItem[]; // 폴더인 경우에만 존재
+}
+
 const Sidebar = () => {
-	const files = [
+	const files: FileItem[] = [
 		{ name: "README.md", type: "file", icon: DocumentIcon },
 		{
 			name: "src",
@@ -36,7 +43,7 @@ const Sidebar = () => {
 	];
 
 	// 간단한 파일/폴더 렌더링 함수 (재귀적으로)
-	const renderFileTree = (items: any[], level = 0) => {
+	const renderFileTree = (items: FileItem[], level = 0) => {
 		return (
 			<ul className={`ml-${level * 2}`}>
 				{items.map((item) => (
@@ -58,6 +65,7 @@ const Sidebar = () => {
 			<div className="w-14 bg-gray-900 p-2 flex flex-col items-center space-y-3 border-r border-gray-700">
 				{tools.map((tool) => (
 					<button
+						type="button"
 						key={tool.name}
 						title={tool.name}
 						className={`p-2 rounded hover:bg-gray-700 ${tool.current ? "bg-gray-700 text-white" : "text-gray-400"}`}
@@ -67,12 +75,14 @@ const Sidebar = () => {
 				))}
 				<div className="mt-auto flex flex-col items-center space-y-3">
 					<button
+						type="button"
 						title="Help"
 						className="p-2 rounded hover:bg-gray-700 text-gray-400"
 					>
 						<LifebuoyIcon className="w-6 h-6" />
 					</button>
 					<button
+						type="button"
 						title="Account"
 						className="p-2 rounded hover:bg-gray-700 text-gray-400"
 					>

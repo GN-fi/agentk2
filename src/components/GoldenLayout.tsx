@@ -42,13 +42,14 @@ export function initLayout() {
 		// 'golden-layout' 라이브러리는 기본 export가 클래스인 UMD 모듈일 수 있습니다.
 		// 또는 기본 export가 있는 ES 모듈일 수도 있습니다.
 		// 타입이 일치하지 않을 경우 엄격한 생성자 타입 검사를 우회하기 위해 'as any'를 사용합니다.
+		// biome-ignore lint/suspicious/noExplicitAny: GoldenLayout 생성자 타입 우회
 		const GoldenLayoutConstructor = ActualGoldenLayout as any;
 		const layout = new GoldenLayoutConstructor(config, layoutContainer);
 
 		// @types/golden-layout의 Container 타입 관련 잠재적 문제를 피하기 위해 MyGLContainer 또는 'any'를 사용합니다.
 		layout.registerComponent(
 			"Editor",
-			(container: MyGLContainer, componentState: any) => {
+			(container: MyGLContainer, componentState: unknown) => {
 				const element = document.createElement("div");
 				element.innerHTML =
 					"<h2>에디터 컴포넌트</h2><p>여기에 Monaco 에디터가 표시됩니다.</p>";
@@ -66,7 +67,7 @@ export function initLayout() {
 
 		layout.registerComponent(
 			"Preview",
-			(container: MyGLContainer, componentState: any) => {
+			(container: MyGLContainer, componentState: unknown) => {
 				const element = document.createElement("div");
 				element.innerHTML =
 					"<h2>미리보기 컴포넌트</h2><p>여기에 웹 애플리케이션 미리보기가 표시됩니다.</p>";
@@ -85,7 +86,7 @@ export function initLayout() {
 
 		// 선택 사항: 창 크기 변경 시 레이아웃 업데이트
 		window.addEventListener("resize", () => {
-			if (layout && layout.updateSize) {
+			if (layout?.updateSize) {
 				// layout 객체와 updateSize 메소드 존재 확인
 				layout.updateSize();
 			}

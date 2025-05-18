@@ -1,11 +1,11 @@
 import Link from "next/link";
 import {
 	FiArrowRight,
-	FiZap,
-	FiUsers,
-	FiUploadCloud,
-	FiCpu,
 	FiBook,
+	FiCpu,
+	FiUploadCloud,
+	FiUsers,
+	FiZap,
 } from "react-icons/fi";
 
 const IntroductionPage = () => {

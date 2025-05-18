@@ -2,7 +2,7 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const layoutSlice = createSlice({
 	name: "layout",
-	initialState: { layout: [] as any[] }, // Initialize with an empty array of any type
+	initialState: { layout: [] as unknown[] }, // Initialize with an empty array of any type
 	reducers: {
 		setLayout: (state, action) => {
 			state.layout = action.payload;

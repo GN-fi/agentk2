@@ -30,7 +30,7 @@ export const redis = new Redis({
 export async function getOrSet<T>(
 	key: string,
 	callback: () => Promise<T>,
-	ttl: number = 3600, // 기본 TTL: 1시간
+	ttl = 3600, // 기본 TTL: 1시간
 ): Promise<T> {
 	try {
 		const cachedData = await redis.get<T>(key);

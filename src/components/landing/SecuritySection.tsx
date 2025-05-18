@@ -11,6 +11,7 @@ const securityFeatures = [
 				stroke="currentColor"
 				className="w-8 h-8 text-green-400"
 			>
+				<title>SSO 보안 아이콘</title>
 				<path
 					strokeLinecap="round"
 					strokeLinejoin="round"
@@ -32,6 +33,7 @@ const securityFeatures = [
 				stroke="currentColor"
 				className="w-8 h-8 text-blue-400"
 			>
+				<title>SOC 2 인증 아이콘</title>
 				<path
 					strokeLinecap="round"
 					strokeLinejoin="round"
@@ -53,6 +55,7 @@ const securityFeatures = [
 				stroke="currentColor"
 				className="w-8 h-8 text-yellow-400"
 			>
+				<title>비공개 배포 아이콘</title>
 				<path
 					strokeLinecap="round"
 					strokeLinejoin="round"
@@ -74,6 +77,7 @@ const securityFeatures = [
 				stroke="currentColor"
 				className="w-8 h-8 text-red-400"
 			>
+				<title>접근 제어 아이콘</title>
 				<path
 					strokeLinecap="round"
 					strokeLinejoin="round"

@@ -1,7 +1,7 @@
-import { drizzle } from "drizzle-orm/neon-http";
 import { neon } from "@neondatabase/serverless";
-import * as schema from "./db/schema"; // 생성한 스키마 파일 경로
 import dotenv from "dotenv";
+import { drizzle } from "drizzle-orm/neon-http";
+import * as schema from "./db/schema"; // 생성한 스키마 파일 경로
 
 dotenv.config({ path: ".env.local" }); // .env 파일 로드
 

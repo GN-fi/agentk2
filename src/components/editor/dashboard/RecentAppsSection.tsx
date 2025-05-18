@@ -1,7 +1,7 @@
 "use client";
 
-import AppCard from "./AppCard";
 import { FiArrowRight } from "react-icons/fi";
+import AppCard from "./AppCard";
 
 // 임시 데이터 - 추후 API 또는 상태 관리에서 가져올 데이터입니다.
 const recentAppsData = [
@@ -32,19 +32,20 @@ const RecentAppsSection = () => {
 		<div className="mb-8">
 			<div className="flex items-center justify-between mb-4">
 				<h2 className="text-2xl font-semibold text-white">최근 작업한 앱</h2>
-				<a
-					href="#" // 추후 실제 '모든 앱 보기' 페이지 링크로 변경
+				<button
+					type="button"
+					// TODO: 추후 실제 '모든 앱 보기' 페이지 이동 로직 구현
 					className="flex items-center text-sm text-purple-400 hover:text-purple-300 transition-colors"
 				>
 					모두 보기
 					<FiArrowRight className="w-4 h-4 ml-1" />
-				</a>
+				</button>
 			</div>
 			{recentAppsData.length > 0 ? (
 				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-					{recentAppsData.map((app, index) => (
+					{recentAppsData.map((app) => (
 						<AppCard
-							key={index}
+							key={app.appName}
 							appName={app.appName}
 							lastUpdated={app.lastUpdated}
 							isPublic={app.isPublic}

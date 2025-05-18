@@ -1,12 +1,12 @@
 import Link from "next/link";
 import {
 	FiArrowRight,
+	FiBookOpen,
 	FiEye,
 	FiEyeOff,
-	FiUsers,
-	FiShield,
 	FiSettings,
-	FiBookOpen,
+	FiShield,
+	FiUsers,
 } from "react-icons/fi";
 
 const VisibilityPage = () => {

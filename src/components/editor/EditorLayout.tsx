@@ -1,8 +1,8 @@
-import TopBar from "./TopBar";
-import Sidebar from "./Sidebar";
+import type React from "react";
 // import MainArea from './MainArea'; // MainArea는 이제 사용하지 않으므로 임포트 제거
 import RightPanel from "./RightPanel";
-import React from "react";
+import Sidebar from "./Sidebar";
+import TopBar from "./TopBar";
 
 interface EditorLayoutProps {
 	children: React.ReactNode;

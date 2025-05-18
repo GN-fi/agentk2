@@ -1,13 +1,13 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import {
 	FiArrowRight,
-	FiMousePointer,
 	FiCode,
-	FiTerminal,
-	FiPlay,
 	FiCpu,
 	FiEye,
+	FiMousePointer,
+	FiPlay,
+	FiTerminal,
 } from "react-icons/fi";
 
 const QuickstartsPage = () => {

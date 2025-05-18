@@ -22,7 +22,10 @@ const HeroSection = () => {
 							placeholder="예: 사용자를 위한 할 일 목록 앱 만들기..."
 							className="w-full py-4 px-6 rounded-lg text-lg bg-gray-800 bg-opacity-50 border border-gray-700 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none placeholder-gray-500 text-white"
 						/>
-						<button className="absolute right-2 top-1/2 -translate-y-1/2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-lg">
+						<button
+							type="button"
+							className="absolute right-2 top-1/2 -translate-y-1/2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-lg"
+						>
 							AI로 시작하기
 						</button>
 					</div>

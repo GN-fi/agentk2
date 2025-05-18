@@ -1,15 +1,15 @@
 import Link from "next/link";
 import {
-	FiCpu,
-	FiUsers,
-	FiTerminal,
+	FiArrowRight,
+	FiBookOpen,
 	FiCloud,
+	FiCpu,
 	FiGitMerge,
 	FiPlayCircle,
-	FiBookOpen,
-	FiArrowRight,
-	FiZap,
+	FiTerminal,
 	FiTool,
+	FiUsers,
+	FiZap,
 } from "react-icons/fi";
 
 const VibeCorePage = () => {

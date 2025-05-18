@@ -21,7 +21,10 @@ const MainArea = () => {
                         ${tab.isActive ? "bg-gray-800 text-white" : "text-gray-400 hover:bg-gray-700"}`}
 					>
 						<span>{tab.name}</span>
-						<button className="ml-2 p-0.5 rounded hover:bg-gray-600">
+						<button
+							type="button"
+							className="ml-2 p-0.5 rounded hover:bg-gray-600"
+						>
 							<XMarkIcon className="w-3 h-3" />
 						</button>
 					</div>

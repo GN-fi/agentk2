@@ -1,13 +1,13 @@
 import NextAuth, {
-	AuthOptions,
-	User,
-	Account,
-	Profile,
-	Session,
+	type AuthOptions,
+	type User,
+	type Account,
+	type Profile,
+	type Session,
 } from "next-auth";
-import { JWT } from "next-auth/jwt";
-import GoogleProvider, { GoogleProfile } from "next-auth/providers/google";
+import type { JWT } from "next-auth/jwt";
 import CredentialsProvider from "next-auth/providers/credentials";
+import GoogleProvider, { type GoogleProfile } from "next-auth/providers/google";
 
 if (!process.env.GOOGLE_CLIENT_ID) {
 	throw new Error("Missing GOOGLE_CLIENT_ID in .env.local");
@@ -24,8 +24,8 @@ export const authOptions: AuthOptions = {
 	// adapter: PrismaAdapter(prisma),
 	providers: [
 		GoogleProvider({
-			clientId: process.env.GOOGLE_CLIENT_ID!,
-			clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+			clientId: process.env.GOOGLE_CLIENT_ID || "",
+			clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
 			// authorization: {
 			//   params: {
 			//     prompt: "consent",
@@ -85,12 +85,10 @@ export const authOptions: AuthOptions = {
 					// 인증 성공 시 사용자 객체를 반환합니다.
 					// 반환되는 객체는 세션에 저장될 수 있는 정보만 포함해야 합니다. (비밀번호 제외)
 					return { id: user.id, name: user.name, email: user.email };
-				} else {
-					// 인증 실패 시 null 또는 에러를 반환합니다.
-					// throw new Error("이메일 또는 비밀번호가 일치하지 않습니다.");
-					return null; // null을 반환하면 NextAuth.js 기본 에러 페이지로 리다이렉션 됩니다.
-					// 커스텀 에러 처리는 pages.error 옵션 또는 콜백으로 가능합니다.
 				}
+				// 인증 실패 시 null 또는 에러를 반환합니다.
+				// throw new Error("이메일 또는 비밀번호가 일치하지 않습니다.");
+				return null; // null을 반환하면 NextAuth.js 기본 에러 페이지로 리다이렉션 됩니다.
 			},
 		}),
 	],
@@ -117,7 +115,7 @@ export const authOptions: AuthOptions = {
 				return url;
 			}
 			// 만약 url이 상대 경로로만 주어진 경우 (예: '/dashboard')
-			else if (url.startsWith("/")) {
+			if (url.startsWith("/")) {
 				return `${baseUrl}${url}`;
 			}
 			return baseUrl;
@@ -136,7 +134,7 @@ export const authOptions: AuthOptions = {
 			profile?: Profile | GoogleProfile;
 		}): Promise<JWT> {
 			// 초기 로그인 시 user 객체가 전달됩니다.
-			if (user && user.id) {
+			if (user?.id) {
 				token.id = user.id;
 			}
 			return token;

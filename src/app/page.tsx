@@ -1,9 +1,9 @@
-import HeroSection from "@/components/landing/HeroSection";
-import TrustedBySection from "@/components/landing/TrustedBySection";
-import FeaturesSection from "@/components/landing/FeaturesSection";
-import VibeCodingSection from "@/components/landing/VibeCodingSection";
-import SecuritySection from "@/components/landing/SecuritySection";
 import CtaSection from "@/components/landing/CtaSection";
+import FeaturesSection from "@/components/landing/FeaturesSection";
+import HeroSection from "@/components/landing/HeroSection";
+import SecuritySection from "@/components/landing/SecuritySection";
+import TrustedBySection from "@/components/landing/TrustedBySection";
+import VibeCodingSection from "@/components/landing/VibeCodingSection";
 import Footer from "@/components/layout/Footer";
 
 export default function LandingPage() {

@@ -1,15 +1,15 @@
-import Link from "next/link";
 import Image from "next/image"; // 이미지를 사용한다면 추가
+import Link from "next/link";
 import {
-	FiLayout,
-	FiZap,
+	FiArrowRight,
+	FiBookOpen,
 	FiCpu,
 	FiDatabase,
 	FiGlobe,
 	FiLayers,
-	FiArrowRight,
+	FiLayout,
 	FiPlusSquare,
-	FiBookOpen,
+	FiZap,
 } from "react-icons/fi";
 
 const TemplatesPage = () => {

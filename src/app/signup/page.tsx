@@ -1,10 +1,10 @@
 "use client";
 
+import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState, FormEvent, useEffect } from "react";
-import { FaGoogle, FaGithub, FaTwitter } from "react-icons/fa";
-import { signIn, useSession } from "next-auth/react";
+import { type FormEvent, useEffect, useState } from "react";
+import { FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
 
 const SignupPage = () => {
 	const router = useRouter();
@@ -154,6 +154,7 @@ const SignupPage = () => {
 						<div className="mt-6 grid grid-cols-3 gap-3">
 							<div>
 								<button
+									type="button"
 									onClick={() => signIn("google", { callbackUrl: "/editor/~" })}
 									className="w-full inline-flex justify-center py-3 px-4 border border-gray-700 rounded-md shadow-sm bg-gray-800 text-sm font-medium text-gray-300 hover:bg-gray-700 transition-colors"
 								>
@@ -162,13 +163,19 @@ const SignupPage = () => {
 								</button>
 							</div>
 							<div>
-								<button className="w-full inline-flex justify-center py-3 px-4 border border-gray-700 rounded-md shadow-sm bg-gray-800 text-sm font-medium text-gray-300 hover:bg-gray-700 transition-colors">
+								<button
+									type="button"
+									className="w-full inline-flex justify-center py-3 px-4 border border-gray-700 rounded-md shadow-sm bg-gray-800 text-sm font-medium text-gray-300 hover:bg-gray-700 transition-colors"
+								>
 									<span className="sr-only">GitHub 계정으로 가입</span>
 									<FaGithub className="w-5 h-5" />
 								</button>
 							</div>
 							<div>
-								<button className="w-full inline-flex justify-center py-3 px-4 border border-gray-700 rounded-md shadow-sm bg-gray-800 text-sm font-medium text-gray-300 hover:bg-gray-700 transition-colors">
+								<button
+									type="button"
+									className="w-full inline-flex justify-center py-3 px-4 border border-gray-700 rounded-md shadow-sm bg-gray-800 text-sm font-medium text-gray-300 hover:bg-gray-700 transition-colors"
+								>
 									<span className="sr-only">Twitter 계정으로 가입</span>
 									<FaTwitter className="w-5 h-5" />
 								</button>

@@ -52,7 +52,10 @@ const RightPanel = () => {
 						className="w-full bg-gray-700 text-gray-300 p-2 pr-10 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-purple-500 resize-none"
 						placeholder="AI에게 메시지 보내기..."
 					/>
-					<button className="absolute right-2 bottom-2 p-1 text-purple-400 hover:text-purple-300">
+					<button
+						type="button"
+						className="absolute right-2 bottom-2 p-1 text-purple-400 hover:text-purple-300"
+					>
 						<PaperAirplaneIcon className="w-5 h-5" />
 					</button>
 				</div>
