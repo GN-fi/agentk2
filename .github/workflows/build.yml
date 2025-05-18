@@ -13,16 +13,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: '10.11.0' # ci.yml과 동일한 버전 사용 또는 최신 버전 명시
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20' # 프로젝트에 맞는 Node.js 버전으로 수정해주세요.
           cache: 'pnpm'
-
-      - name: Install pnpm
-        run: | # 여러 명령어를 실행할 경우 | 사용
-          npm install -g pnpm 
-          pnpm --version # pnpm 설치 확인
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
