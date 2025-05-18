@@ -1,0 +1,64 @@
+import HeroSection from "@/components/landing/HeroSection";
+import TrustedBySection from "@/components/landing/TrustedBySection";
+import FeaturesSection from "@/components/landing/FeaturesSection";
+import VibeCodingSection from "@/components/landing/VibeCodingSection";
+import SecuritySection from "@/components/landing/SecuritySection";
+import CtaSection from "@/components/landing/CtaSection";
+import Footer from "@/components/layout/Footer";
+
+export default function LandingPage() {
+	return (
+		<div className="flex flex-col min-h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 text-white">
+			<main className="flex-grow">
+				<HeroSection />
+				<TrustedBySection />
+				<FeaturesSection />
+				<section id="solutions" className="py-16 sm:py-24 bg-purple-700">
+					<div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+						<h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl mb-8">
+							VIBE 솔루션
+						</h2>
+						<p className="text-lg sm:text-xl text-purple-200 max-w-3xl mx-auto mb-12">
+							VIBE는 개인 개발자부터 대규모 팀까지, 다양한 사용자에게 최적화된
+							솔루션을 제공합니다. 클라우드 기반의 강력한 개발 환경과 AI 기능을
+							통해 생산성을 극대화하세요.
+						</p>
+						<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+							<div className="bg-purple-600 p-8 rounded-lg shadow-xl">
+								<h3 className="text-2xl font-semibold text-white mb-4">
+									개인 개발자
+								</h3>
+								<p className="text-purple-200">
+									빠르게 프로토타입을 만들고 아이디어를 실험하세요. 복잡한 설정
+									없이 즉시 코딩을 시작할 수 있습니다.
+								</p>
+							</div>
+							<div className="bg-purple-600 p-8 rounded-lg shadow-xl">
+								<h3 className="text-2xl font-semibold text-white mb-4">
+									스타트업
+								</h3>
+								<p className="text-purple-200">
+									팀원들과 실시간으로 협업하고, 빠르게 제품을 빌드하여 시장에
+									출시하세요. 유연한 확장성을 제공합니다.
+								</p>
+							</div>
+							<div className="bg-purple-600 p-8 rounded-lg shadow-xl">
+								<h3 className="text-2xl font-semibold text-white mb-4">
+									교육 기관
+								</h3>
+								<p className="text-purple-200">
+									학생들에게 최신 개발 도구를 제공하고, 코딩 교육의 효율성을
+									높이세요. 관리 및 평가 기능을 지원합니다.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<VibeCodingSection />
+				<SecuritySection />
+				<CtaSection />
+			</main>
+			<Footer />
+		</div>
+	);
+}
