@@ -16,8 +16,8 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 8
+        # with: # package.json의 packageManager를 사용하므로 이 부분은 주석 처리 또는 삭제
+        #   version: 8
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
