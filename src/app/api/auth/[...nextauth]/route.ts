@@ -17,7 +17,7 @@ if (!process.env.GOOGLE_CLIENT_SECRET) {
 	throw new Error("Missing GOOGLE_CLIENT_SECRET in .env.local");
 }
 
-export const authOptions: AuthOptions = {
+const authOptions: AuthOptions = {
 	// 어댑터를 사용하지 않으면 JWT 세션이 기본값입니다.
 	// 데이터베이스에 세션을 저장하려면 어댑터를 설정해야 합니다.
 	// 예: import { PrismaAdapter } from "@next-auth/prisma-adapter"
