@@ -1,0 +1,42 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: Golden-Layout 문서를 자동 첨부
+globs:
+  - '**/*.ts'
+  - '**/*.tsx'
+  - '**/*.js'
+  - '**/*.jsx'
+type: Auto Attached
+---
+
+# 프롬프트 규칙
+use context7                 # ① 최신 버전 문서 주입 시도
+@Docs(Golden Layout 2.x Docs) # ② 실패 시 Cursor Docs 캐시 백업
+
+
+
+
+
+# Golden Layout Documentation Context Rule
+#
+# This file helps Cursor provide relevant documentation for Golden Layout.
+#
+# To make this effective:
+# 1. Ensure you have added the Golden Layout documentation URL in
+#    Cursor Settings -> Docs -> Add Docs URL (e.g., the official Golden Layout website).
+# 2. When "Golden Layout" or similar terms are mentioned in your queries to Cursor,
+#    this rule can help trigger the @Docs feature to provide relevant context.
+
+# Example of how you might define a trigger and specify a doc source (syntax is hypothetical):
+#
+# WHEN query_contains("golden layout", "goldenlayout")
+# USE_DOCS golden_layout_official_docs  // Assuming 'golden_layout_official_docs' is a name you gave in "Docs URL" settings.
+
+# For actual syntax and advanced configurations, please refer to
+
+
+# Cursor's official documentation on .mdc files and the @Docs feature.

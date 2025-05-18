@@ -1,15 +1,21 @@
+import dotenv from "dotenv";
+dotenv.config(); // .env 파일 로드
+
 import { Redis } from "@upstash/redis"; // Edge 환경용 Redis 클라이언트
 
 const UPSTASH_REDIS_REST_URL = process.env.UPSTASH_REDIS_REST_URL;
 const UPSTASH_REDIS_REST_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
 
 if (!UPSTASH_REDIS_REST_URL || !UPSTASH_REDIS_REST_TOKEN) {
+	console.error(
+		"Upstash Redis 환경 변수(URL 또는 Token)가 설정되지 않았습니다.",
+	);
 	throw new Error(
 		"Upstash Redis 환경 변수(URL 또는 Token)가 설정되지 않았습니다.",
 	);
 }
 
-const redis = new Redis({
+export const redis = new Redis({
 	url: UPSTASH_REDIS_REST_URL,
 	token: UPSTASH_REDIS_REST_TOKEN,
 });

@@ -26,5 +26,6 @@
 		"typescriptreact"
 	],
 	"prettier.enable": true,
-	"git.ignoreLimitWarning": true
+	"git.ignoreLimitWarning": true,
+	"npm.packageManager": "auto"
 }
