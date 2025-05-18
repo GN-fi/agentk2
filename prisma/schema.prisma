@@ -1,0 +1,18 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql" // 사용하시는 데이터베이스에 맞게 변경해주세요 (예: "mysql", "sqlite", "sqlserver", "mongodb")
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// 예시 모델입니다. 필요에 따라 수정하거나 삭제해주세요.
+// model User {
+//   id    Int     @id @default(autoincrement())
+//   email String  @unique
+//   name  String?
+// } 
