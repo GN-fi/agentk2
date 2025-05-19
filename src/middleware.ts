@@ -15,11 +15,16 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/login', request.url));
   }
 
+  // /login 경로에 접근하면 / 로 리다이렉트
+  if (pathname === '/login') {
+    return NextResponse.redirect(new URL('/', request.url));
+  }
+
   // 다른 경로는 그대로 처리
   return NextResponse.next();
 }
 
 // 미들웨어가 실행될 경로 설정
 export const config = {
-  matcher: ['/editor', '/signup'],
+  matcher: ['/editor', '/signup', '/login'],
 };
