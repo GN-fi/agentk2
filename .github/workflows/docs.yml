@@ -54,12 +54,13 @@ jobs:
       - name: Build Docusaurus Site
         run: npm run build
 
-      - name: Deploy to GN-fi.github.io
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs-site/build
+          destination_dir: docs  # 문서를 /docs 경로에 배포
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_message: 'Deploy documentation from ${{ github.repository }}@${{ github.sha }}'
