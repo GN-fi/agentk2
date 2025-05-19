@@ -24,9 +24,17 @@ const nextConfig = {
 	experimental: {
 		// 빌드 중 URL 검증 비활성화
 		urlImports: false,
+		// 정적 페이지 생성 비활성화
+		disableStaticGeneration: true,
 	},
 	// 모든 페이지를 동적으로 렌더링하도록 설정
 	staticPageGenerationTimeout: 1000,
+	// 정적 내보내기 비활성화
+	trailingSlash: true,
+	// 모든 페이지를 서버 사이드 렌더링으로 처리
+	distDir: '.next',
+	// 모든 페이지를 서버 사이드 렌더링으로 처리
+	exportPathMap: null,
 };
 
 module.exports = nextConfig;
