@@ -3,6 +3,9 @@
 import { useEffect } from "react";
 // import { initLayout } from '@/components/GoldenLayout'; // 경로 수정 가능성 있음
 
+// 이 페이지를 정적으로 렌더링하도록 설정
+export const dynamic = "force-static";
+
 export default function EditorPage() {
 	useEffect(() => {
 		// GoldenLayout 초기화 로직은 클라이언트 사이드에서만 실행되어야 합니다.
@@ -31,7 +34,7 @@ export default function EditorPage() {
 			>
 				{/* GoldenLayout이 이 div를 채울 것입니다. */}
 			</div>
-			{/* 
+			{/*
         TODO: 파일 탐색기 (FileExplorer 컴포넌트)
         TODO: 코드 편집기 (CodeEditor 컴포넌트 - Monaco Editor 기반)
         TODO: 터미널 (Terminal 컴포넌트)
