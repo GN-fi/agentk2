@@ -26,9 +26,11 @@ const nextConfig = {
 		urlImports: false,
 	},
 	// 모든 페이지를 동적으로 렌더링하도록 설정
-	staticPageGenerationTimeout: 1000,
+	staticPageGenerationTimeout: 1,
 	// 정적 내보내기 비활성화
 	trailingSlash: true,
+	// 모든 페이지를 서버 사이드 렌더링으로 처리
+	generateEtags: false,
 };
 
 module.exports = nextConfig;

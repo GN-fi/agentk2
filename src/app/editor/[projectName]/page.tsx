@@ -4,6 +4,9 @@ import { signIn, useSession } from "next-auth/react"; // useSession, signIn 임�
 import { useParams, usePathname } from "next/navigation"; // usePathname, useParams 임포트 (useParams는 이미 사용 중일 수 있으므로 확인)
 import { useEffect } from "react"; // useEffect 임포트
 
+// 이 페이지를 동적으로 렌더링하도록 설정
+export const dynamic = "force-dynamic";
+
 import EditorLayout from "../../../components/editor/EditorLayout";
 import QuickStartButtons from "../../../components/editor/dashboard/QuickStartButtons";
 import RecentAppsSection from "../../../components/editor/dashboard/RecentAppsSection";
