@@ -16,11 +16,10 @@ const nextConfig = {
 		resolveExtensions: [".mdx", ".tsx", ".ts", ".jsx", ".js", ".json"],
 	},
 	// CI 환경에서 빌드 오류를 방지하기 위한 설정
-	output: process.env.CI ? "export" : undefined,
+	// API 라우트와의 호환성 문제로 정적 내보내기 비활성화
+	// output: process.env.CI ? "export" : undefined,
 	// 이미지 최적화 설정
-	images: process.env.CI
-		? { unoptimized: true, domains: ["lh3.googleusercontent.com"] }
-		: { domains: ["lh3.googleusercontent.com"] },
+	images: { domains: ["lh3.googleusercontent.com"] },
 };
 
 module.exports = nextConfig;
