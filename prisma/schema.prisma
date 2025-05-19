@@ -10,7 +10,12 @@ generator client {
 
 datasource db {
   provider = "postgresql" // 사용하시는 데이터베이스에 맞게 변경해주세요 (예: "mysql", "sqlite", "sqlserver", "mongodb")
-  url      = env("DATABASE_URL")
+  // 마이그레이션(DDL)에는 DATABASE_URL_MIGRATE(postgresql://)를 사용하고,
+  // 런타임(서버리스/Accelerate)에는 DATABASE_URL(prisma://)를 사용합니다.
+  // CI 환경에서는 두 URL을 분리하여 각 단계에 맞게 사용해야 합니다.
+  url = env("DATABASE_URL_MIGRATE")
+  // 참고: Prisma schema에서는 조건부 URL을 직접 지정할 수 없으므로,
+  // 환경 변수를 통해 적절한 URL을 제공해야 합니다.
 }
 
 model Post {
@@ -29,4 +34,4 @@ model User {
   email String  @unique
   name  String?
   posts Post[] // 사용자가 작성한 게시물 목록
-} 
+}
