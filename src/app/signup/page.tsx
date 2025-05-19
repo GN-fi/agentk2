@@ -6,6 +6,9 @@ import { useRouter } from "next/navigation";
 import { type FormEvent, useEffect, useState } from "react";
 import { FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
 
+// 이 페이지를 동적으로 렌더링하도록 설정
+export const dynamic = "force-dynamic";
+
 const SignupPage = () => {
 	const router = useRouter();
 	const { data: session, status } = useSession();
