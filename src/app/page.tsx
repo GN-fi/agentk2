@@ -6,7 +6,7 @@ import TrustedBySection from "@/components/landing/TrustedBySection";
 import VibeCodingSection from "@/components/landing/VibeCodingSection";
 import Footer from "@/components/layout/Footer";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 export default function LandingPage() {
 	return (

@@ -2,6 +2,9 @@ import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import Link from "next/link";
 
+// 이 페이지를 동적으로 렌더링하도록 설정
+export const dynamic = "force-dynamic";
+
 const TermsOfServicePage = () => {
 	return (
 		<div className="flex min-h-screen flex-col bg-gray-900 text-gray-300">
