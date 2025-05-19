@@ -151,6 +151,7 @@ const OverviewPage = () => {
 							개발 환경을 조성할 수 있습니다. (자세한 내용은{" "}
 							<Link
 								href="/docs/vibe-workspace/themes"
+								prefetch={false}
 								className="text-pink-400 hover:underline"
 							>
 								테마 설정 문서
@@ -248,6 +249,7 @@ const OverviewPage = () => {
 					<li>
 						<Link
 							href="/docs/vibe-workspace/themes"
+							prefetch={false}
 							className="text-pink-400 hover:underline"
 						>
 							테마 및 사용자 정의

@@ -299,6 +299,7 @@ const FeaturesPage = () => {
 						(자세히:{" "}
 						<Link
 							href="/docs/vibe-workspace/themes"
+							prefetch={false}
 							className="text-pink-400 hover:underline"
 						>
 							테마 설정

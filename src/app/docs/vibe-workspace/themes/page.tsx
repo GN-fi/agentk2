@@ -195,6 +195,7 @@ const ThemesPage = () => {
 					개인에게 최적화된 공간으로 만들어보세요. 더 궁금한 점이 있다면{" "}
 					<Link
 						href="/docs/vibe-workspace/overview"
+						prefetch={false}
 						className="text-pink-400 hover:underline"
 					>
 						VIBE 작업 공간 개요
