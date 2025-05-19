@@ -210,6 +210,7 @@ const DeploymentsOverviewPage = () => {
 					<li>
 						<Link
 							href="/docs/getting-started/quickstarts"
+							prefetch={false}
 							className="text-pink-400 hover:underline"
 						>
 							빠른 시작 가이드: 첫 프로젝트 배포하기

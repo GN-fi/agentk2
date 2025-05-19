@@ -347,6 +347,7 @@ const DeploymentsAdvancedConfigPage = () => {
 					더 자세한 정보나 특정 기능에 대한 도움이 필요하시면 언제든지{" "}
 					<Link
 						href="/docs/deployments/overview"
+						prefetch={false}
 						className="text-pink-400 hover:underline"
 					>
 						VIBE 배포 개요
@@ -354,6 +355,7 @@ const DeploymentsAdvancedConfigPage = () => {
 					나
 					<Link
 						href="/docs/deployments/deployment-types"
+						prefetch={false}
 						className="text-pink-400 hover:underline"
 					>
 						배포 유형

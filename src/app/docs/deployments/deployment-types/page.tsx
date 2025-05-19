@@ -423,6 +423,7 @@ const DeploymentTypesPage = () => {
 					<li>
 						<Link
 							href="/docs/getting-started/quickstarts"
+							prefetch={false}
 							className="text-pink-400 hover:underline"
 						>
 							빠른 시작: 첫 VIBE 앱 배포해보기
