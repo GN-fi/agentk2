@@ -102,6 +102,7 @@ const VibeCorePage = () => {
 			<div className="my-6 rounded-lg border border-gray-700 bg-gray-800/50 p-4 text-center">
 				<Link
 					href="/editor/~"
+					prefetch={false}
 					className="group inline-flex items-center justify-center rounded-md bg-purple-600 px-6 py-3 text-lg font-semibold text-white shadow-md transition-colors hover:bg-purple-700"
 				>
 					<FiPlayCircle className="mr-2 h-5 w-5" />

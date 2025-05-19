@@ -27,8 +27,11 @@ const QuickstartsPage = () => {
 			<div className="my-6 rounded-lg border border-gray-700 bg-gray-800/50 p-4">
 				<p className="flex items-center">
 					<FiMousePointer className="mr-2 h-5 w-5 text-purple-400" />
-					VIBE에 로그인한 후, <Link href="/editor/~">대시보드</Link>로
-					이동합니다.
+					VIBE에 로그인한 후,{" "}
+					<Link href="/editor/~" prefetch={false}>
+						대시보드
+					</Link>
+					로 이동합니다.
 				</p>
 				<p className="mt-2">
 					"안녕하세요, [사용자이름]님! 무엇을 만들고 싶으신가요?" 섹션에서
