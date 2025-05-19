@@ -24,21 +24,20 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 9 # 프로젝트에서 사용하는 pnpm 버전과 일치시키세요
+          version: 9.0.4 # 명시적인 pnpm 버전 지정
+          run_install: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20' # 프로젝트에서 사용하는 Node.js 버전
-          cache: 'pnpm'
-          cache-dependency-path: 'docs-site/pnpm-lock.yaml' # docs-site의 lock 파일 경로
 
       - name: Install Dependencies (Root)
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
         working-directory: . # 루트에서 pnpm install 실행
 
       - name: Install Dependencies (docs-site)
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       - name: Get Golden Layout Version
         id: glver
