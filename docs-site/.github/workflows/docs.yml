@@ -20,17 +20,13 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 10.11.0
-          run_install: false
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          # 캐시 설정 제거
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install Dependencies (Root)
         run: pnpm install --no-frozen-lockfile
@@ -45,8 +41,7 @@ jobs:
         working-directory: .
 
       - name: Fetch and Build Golden Layout Docs
-        run: |
-          npm run docs:fetch:gl --prefix ..
+        run: npm run docs:fetch:gl --prefix ..
 
       - name: Build Internal API Docs
         run: npm run docs:build:api --prefix ..
