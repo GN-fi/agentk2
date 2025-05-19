@@ -10,6 +10,8 @@ import {
 	FiUsers,
 } from "react-icons/fi";
 
+export const dynamic = "force-static";
+
 const CollaborationPage = () => {
 	return (
 		<article className="prose prose-invert max-w-none prose-headings:text-purple-400 prose-a:text-purple-300 hover:prose-a:text-purple-200 prose-strong:text-purple-300">
