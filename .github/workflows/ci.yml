@@ -32,16 +32,12 @@ jobs:
         env:
           # Prisma Client 생성에는 Accelerate URL 사용 (prisma://)
           DATABASE_URL: ${{ secrets.DATABASE_URL || secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
-          # schema.prisma에서 사용하는 환경 변수 이름과 일치시킴
-          DATABASE_URL_MIGRATE: ${{ secrets.DATABASE_URL_MIGRATE || secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
         run: pnpm prisma generate
 
       - name: Run Prisma Migrations
         env:
           # 마이그레이션에는 직접 연결 URL 사용 (postgresql://)
           DATABASE_URL: ${{ secrets.DATABASE_URL_MIGRATE || secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
-          # schema.prisma에서 사용하는 환경 변수 이름과 일치시킴
-          DATABASE_URL_MIGRATE: ${{ secrets.DATABASE_URL_MIGRATE || secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
         run: |
           # DATABASE_URL이 postgresql://로 시작하는지 확인
           if [[ "$DATABASE_URL" == postgresql://* || "$DATABASE_URL" == postgres://* ]]; then
@@ -60,8 +56,6 @@ jobs:
         env:
           # 런타임에는 Accelerate URL 사용 (prisma://)
           DATABASE_URL: ${{ secrets.DATABASE_URL || secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
-          # schema.prisma에서 사용하는 환경 변수 이름과 일치시킴
-          DATABASE_URL_MIGRATE: ${{ secrets.DATABASE_URL_MIGRATE || secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
           NEON_HTTP_URL: ${{ secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
         run: |
           pnpm lint
@@ -75,8 +69,6 @@ jobs:
           NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET || 'dummy-nextauth-secret' }}
           # 런타임에는 Accelerate URL 사용 (prisma://)
           DATABASE_URL: ${{ secrets.DATABASE_URL || secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
-          # 마이그레이션에는 직접 연결 URL 사용 (postgresql://)
-          DATABASE_URL_MIGRATE: ${{ secrets.DATABASE_URL_MIGRATE || secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
           NEON_HTTP_URL: ${{ secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
           UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL || 'https://dummy-redis-url.upstash.io' }}
           UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN || 'dummy_token' }}
