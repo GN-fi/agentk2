@@ -1,20 +1,30 @@
 {
   "mcpServers": {
     "datapilot": {
-      "url": "http://localhost:7700/sse",
+      "url": "http://localhost:7701/sse",
       "type": "sse"
     },
     "memory": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-memory"]
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
     },
     "desktop-commander": {
       "command": "npx",
-      "args": ["-y", "@wonderwhy-er/desktop-commander"]
+      "args": [
+        "-y",
+        "@wonderwhy-er/desktop-commander"
+      ]
     },
     "playwright": {
       "command": "npx",
-      "args": ["-y", "@playwright/mcp@latest", "--vision"]
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--vision"
+      ]
     },
     "obsidian-mcp": {
       "command": "cmd",
@@ -72,7 +82,10 @@
     },
     "context7": {
       "command": "npx",
-      "args": ["-y", "@upstash/context7-mcp@latest"]
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ]
     }
   }
 }
