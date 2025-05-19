@@ -9,6 +9,8 @@ import {
 	FiUsers,
 } from "react-icons/fi";
 
+export const dynamic = "force-static";
+
 const VisibilityPage = () => {
 	return (
 		<article className="prose prose-invert max-w-none prose-headings:text-purple-400 prose-a:text-purple-300 hover:prose-a:text-purple-200 prose-strong:text-purple-300">
@@ -78,7 +80,7 @@ const VisibilityPage = () => {
 				</div>
 
 				{/* 향후 팀 또는 그룹 공유 기능이 생긴다면 아래와 같이 추가 가능 */}
-				{/* 
+				{/*
         <div className="p-6 bg-gray-800 rounded-lg shadow-lg">
           <div className="flex items-center mb-3">
             <FiUsers className="w-8 h-8 text-blue-400 mr-3 flex-shrink-0" />
@@ -86,7 +88,7 @@ const VisibilityPage = () => {
           </div>
           <p className="text-gray-300 mb-2">
             (이 기능은 현재 VIBE에서 지원 예정이거나 특정 플랜에서 제공될 수 있습니다.)
-            특정 VIBE 팀 또는 사용자 그룹의 멤버에게만 앱 접근 권한을 부여합니다. 
+            특정 VIBE 팀 또는 사용자 그룹의 멤버에게만 앱 접근 권한을 부여합니다.
             회사 내 특정 부서나 스터디 그룹 등 제한된 범위의 사용자들과 프로젝트를 공유하고 협업할 때 유용합니다.
           </p>
         </div>
