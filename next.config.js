@@ -25,6 +25,8 @@ const nextConfig = {
 		// 빌드 중 URL 검증 비활성화
 		urlImports: false,
 	},
+	// 모든 페이지를 동적으로 렌더링하도록 설정
+	staticPageGenerationTimeout: 1000,
 };
 
 module.exports = nextConfig;
