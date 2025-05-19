@@ -3,11 +3,10 @@ name: Sync Docs
 on:
   push:
     paths:
-      - 'package.json' # 루트 package.json 변경 감지
-      - 'docs-site/**' # docs-site 내부의 모든 변경 감지
+      - 'package.json'
+      - 'docs-site/**'
     branches:
-      - main # 또는 주 브랜치 이름
-  # 수동으로 워크플로우 실행 가능
+      - main
   workflow_dispatch:
 
 jobs:
@@ -15,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./docs-site # docs-site 디렉토리에서 명령어 실행
+        working-directory: ./docs-site
 
     steps:
       - name: Checkout Repository
@@ -24,59 +23,49 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 10.11.0 # 프로젝트에서 사용하는 pnpm 버전과 일치시키세요
+          version: 10.11.0
+          run_install: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # 프로젝트에서 사용하는 Node.js 버전
-          cache: 'pnpm'
-          cache-dependency-path: '**/pnpm-lock.yaml' # 모든 pnpm-lock.yaml 파일을 캐시 경로로 지정
+          node-version: '20'
+          # 캐시 설정 제거
 
       - name: Install Dependencies (Root)
-        run: pnpm install --frozen-lockfile
-        working-directory: . # 루트에서 pnpm install 실행
+        run: pnpm install --no-frozen-lockfile
+        working-directory: .
 
       - name: Install Dependencies (docs-site)
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Get Golden Layout Version
         id: glver
-        # 루트 package.json에서 버전을 가져오도록 수정
         run: echo "GL_VERSION=$(jq -r '.dependencies["golden-layout"]' ../package.json | tr -d '^~')" >> $GITHUB_OUTPUT
-        working-directory: . # 루트 package.json을 읽기 위해 작업 디렉토리 변경
+        working-directory: .
 
       - name: Fetch and Build Golden Layout Docs
         run: |
-          # devdocs를 전역으로 설치하거나 npx를 사용합니다.
-          # 여기서는 npx를 사용하며, docs:fetch:gl 스크립트가 이미 docs-site를 기준으로 경로를 잡고 있다고 가정합니다.
-          # 실제로는 docs-site 내부에서 상대 경로로 접근해야 할 수 있습니다.
-          # 또는, devdocs 명령을 docs-site/package.json 스크립트로 옮기고 npm run을 사용하는 것이 더 깔끔할 수 있습니다.
-          # 우선은 루트의 스크립트를 호출하는 방식으로 시도합니다.
           npm run docs:fetch:gl --prefix ..
-          # docs-site/static/docs/golden-layout/${{ steps.glver.outputs.GL_VERSION }} 경로에 저장됨
 
       - name: Build Internal API Docs
-        # typedoc도 루트 package.json의 스크립트를 사용합니다.
         run: npm run docs:build:api --prefix ..
-        # docs-site/docs/api 에 생성됨
 
       - name: Version Docusaurus Docs
-        if: steps.glver.outputs.GL_VERSION != '' # 버전 정보가 있을 때만 실행
+        if: steps.glver.outputs.GL_VERSION != ''
         run: npm run docusaurus docs:version ${{ steps.glver.outputs.GL_VERSION }}
-        # 예: versioned_docs/version-2.6.0 폴더 생성
 
       - name: Build Docusaurus Site
-        run: npm run build # npm run docs:build 와 동일 (docs-site 내부에서 실행)
+        run: npm run build
 
       - name: Deploy to GN-fi.github.io
         uses: peaceiris/actions-gh-pages@v4
-        if: github.ref == 'refs/heads/main' # main 브랜치에 푸시될 때만 배포
+        if: github.ref == 'refs/heads/main'
         with:
           deploy_key: ${{ secrets.DOCS_DEPLOY_KEY }}
           external_repository: GN-fi/GN-fi.github.io
           publish_branch: main
-          publish_dir: ./docs-site/build # Docusaurus 빌드 결과
+          publish_dir: ./docs-site/build
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_message: 'Deploy documentation from ${{ github.repository }}@${{ github.sha }}'
