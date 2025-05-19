@@ -47,7 +47,6 @@ jobs:
       # Skip API Docs for now
       - name: Create API Docs Directory
         run: mkdir -p ../docs-site/docs/api
-
       - name: Version Docusaurus Docs
         if: steps.glver.outputs.GL_VERSION != ''
         run: npm run docusaurus docs:version ${{ steps.glver.outputs.GL_VERSION }}
