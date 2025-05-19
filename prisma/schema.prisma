@@ -10,12 +10,14 @@ generator client {
 
 datasource db {
   provider = "postgresql" // 사용하시는 데이터베이스에 맞게 변경해주세요 (예: "mysql", "sqlite", "sqlserver", "mongodb")
-  // 마이그레이션(DDL)에는 postgresql:// URL을 사용하고,
+
   // 런타임(서버리스/Accelerate)에는 prisma:// URL을 사용합니다.
-  // CI 환경에서는 각 단계에 맞는 URL을 DATABASE_URL로 제공해야 합니다.
   url = env("DATABASE_URL")
-  // 참고: Prisma schema에서는 조건부 URL을 직접 지정할 수 없으므로,
-  // 환경 변수를 통해 적절한 URL을 제공해야 합니다.
+
+  // 마이그레이션(DDL)에는 postgresql:// URL을 사용합니다.
+  // Prisma 4.10.0부터 directUrl 속성을 사용하여 마이그레이션과 런타임에서 다른 URL을 사용할 수 있습니다.
+  // https://www.prisma.io/docs/orm/prisma-schema/overview/data-sources#using-direct-connections
+  directUrl = env("DIRECT_URL")
 }
 
 model Post {
