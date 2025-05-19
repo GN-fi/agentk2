@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+// 이 페이지를 정적으로 렌더링하도록 설정
+export const dynamic = "force-static";
+
 const VibeAgentPage = () => {
 	return (
 		<div className="prose prose-invert max-w-none">
