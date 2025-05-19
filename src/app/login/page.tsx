@@ -3,10 +3,11 @@
 import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { type FormEvent, useEffect, useState } from "react";
-import { FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
+import { type FormEvent, useEffect, useState, Suspense } from "react";
+import { FaGoogle } from "react-icons/fa";
 
-const LoginPage = () => {
+// useSearchParams를 사용하는 컴포넌트를 별도로 분리
+function LoginForm() {
 	const router = useRouter();
 	const searchParams = useSearchParams();
 	const callbackUrl = searchParams.get("callbackUrl") || "/editor/~";
@@ -204,6 +205,21 @@ const LoginPage = () => {
 				&copy; {new Date().getFullYear()} VIBE. 모든 권리 보유.
 			</footer>
 		</div>
+	);
+}
+
+// 메인 컴포넌트에서 Suspense로 감싸기
+const LoginPage = () => {
+	return (
+		<Suspense
+			fallback={
+				<div className="flex flex-col min-h-screen bg-gray-800 items-center justify-center">
+					<p className="text-white text-xl">로딩 중...</p>
+				</div>
+			}
+		>
+			<LoginForm />
+		</Suspense>
 	);
 };
 
