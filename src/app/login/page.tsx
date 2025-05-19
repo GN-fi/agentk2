@@ -6,6 +6,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { type FormEvent, Suspense, useEffect, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 
+export const dynamic = "force-static";
+
 // useSearchParams를 사용하는 컴포넌트를 별도로 분리
 function LoginForm() {
 	const router = useRouter();
