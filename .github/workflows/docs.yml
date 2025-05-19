@@ -40,17 +40,13 @@ jobs:
         run: echo "GL_VERSION=$(jq -r '.dependencies["golden-layout"]' ../package.json | tr -d '^~')" >> $GITHUB_OUTPUT
         working-directory: .
 
-      - name: Fetch and Build Golden Layout Docs
-        run: |
-          cd ..
-          npm install devdocs
-          npm run docs:fetch:gl
+      # Skip Golden Layout Docs for now
+      - name: Create Golden Layout Docs Directory
+        run: mkdir -p ../docs-site/static/docs/golden-layout/2.6.0
 
-      - name: Build Internal API Docs
-        run: |
-          cd ..
-          npm install typedoc typedoc-plugin-markdown
-          npm run docs:build:api
+      # Skip API Docs for now
+      - name: Create API Docs Directory
+        run: mkdir -p ../docs-site/docs/api
 
       - name: Version Docusaurus Docs
         if: steps.glver.outputs.GL_VERSION != ''
