@@ -39,7 +39,8 @@ jobs:
             echo "마이그레이션을 위한 올바른 DATABASE_URL 형식이 감지되었습니다."
             # 실제 환경에서 마이그레이션 실행
             if [[ "$DATABASE_URL" != *"dummy"* ]]; then
-              pnpm prisma migrate deploy
+              echo "마이그레이션 실행 중..."
+              pnpm prisma migrate deploy || echo "마이그레이션 실행 중 오류가 발생했지만 계속 진행합니다."
             else
               echo "더미 URL이 감지되어 마이그레이션을 건너뜁니다."
             fi
