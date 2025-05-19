@@ -13,7 +13,7 @@ const prisma = new PrismaClient(prismaClientOptions);
 
 // 런타임 환경에서 Accelerate URL이 있으면 확장 기능을 적용합니다.
 const prismaWithExtensions = process.env.PRISMA_ACCELERATE_URL
-  ? prisma.$extends(withAccelerate())
-  : prisma;
+	? prisma.$extends(withAccelerate())
+	: prisma;
 
 export default prismaWithExtensions;
