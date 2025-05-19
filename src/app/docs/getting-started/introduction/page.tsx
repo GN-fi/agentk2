@@ -8,6 +8,9 @@ import {
 	FiZap,
 } from "react-icons/fi";
 
+// 이 페이지를 동적으로 렌더링하도록 설정
+export const dynamic = "force-dynamic";
+
 const IntroductionPage = () => {
 	return (
 		<article className="prose prose-invert prose-headings:text-purple-400 prose-a:text-purple-300 hover:prose-a:text-purple-200 prose-strong:text-purple-300 max-w-none">
