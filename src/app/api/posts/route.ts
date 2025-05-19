@@ -7,6 +7,9 @@ import { NextResponse } from "next/server";
 // Edge 런타임은 CI 테스트를 위해 비활성화합니다.
 // export const runtime = "edge";
 
+// 빌드 시 동적 API 라우트로 처리 (CI 환경에서 빌드 오류 방지)
+export const dynamic = "force-dynamic";
+
 // 게시물 목록 캐시 키
 const POSTS_ALL_CACHE_KEY = "posts:all";
 // 개별 게시물 캐시 키 프리픽스 (뒤에 id가 붙음)

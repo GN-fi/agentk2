@@ -1,5 +1,11 @@
 import dotenv from "dotenv";
-dotenv.config(); // .env 파일 로드
+
+// 환경 변수 로드 (.env 파일이 없어도 오류가 발생하지 않도록 수정)
+try {
+	dotenv.config();
+} catch (error) {
+	console.warn("Failed to load .env file:", error);
+}
 
 import { Redis } from "@upstash/redis"; // Edge 환경용 Redis 클라이언트
 
