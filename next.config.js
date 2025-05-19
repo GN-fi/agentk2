@@ -20,6 +20,11 @@ const nextConfig = {
 	// output: process.env.CI ? "export" : undefined,
 	// 이미지 최적화 설정
 	images: { domains: ["lh3.googleusercontent.com"] },
+	// 빌드 중 URL 오류 해결을 위한 설정
+	experimental: {
+		// 빌드 중 URL 검증 비활성화
+		urlImports: false,
+	},
 };
 
 module.exports = nextConfig;
