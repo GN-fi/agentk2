@@ -9,7 +9,6 @@
 				".next/**",
 				"!.next/cache/**",
 				"dist/**"
-				// Force change for commit
 			],
 			"env": [
 				"GOOGLE_CLIENT_ID",
