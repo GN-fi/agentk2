@@ -12,7 +12,7 @@ import {
 	FiZap,
 } from "react-icons/fi";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 const TemplatesPage = () => {
 	return (

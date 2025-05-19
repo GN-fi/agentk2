@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+// 이 페이지를 동적으로 렌더링하도록 설정
+export const dynamic = "force-dynamic";
+
 const GettingStartedPage = () => {
 	return (
 		<div>
