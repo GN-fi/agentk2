@@ -29,12 +29,17 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Generate Prisma Client
+        env:
+          DATABASE_URL: ${{ secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
         run: pnpm prisma generate
 
       - name: Run linters and type checker
+        env:
+          DATABASE_URL: ${{ secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
+          NEON_HTTP_URL: ${{ secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
         run: |
           pnpm lint
-          pnpm type-check # tsc --noEmit 
+          pnpm type-check # tsc --noEmit
 
       - name: Build project
         env:
@@ -46,4 +51,4 @@ jobs:
           NEON_HTTP_URL: ${{ secrets.NEON_HTTP_URL }}
           UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
           UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
-        run: pnpm turbo run build --cache-dir=.turbo 
+        run: pnpm turbo run build --cache-dir=.turbo

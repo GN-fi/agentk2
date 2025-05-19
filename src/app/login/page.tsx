@@ -3,7 +3,7 @@
 import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { type FormEvent, useEffect, useState, Suspense } from "react";
+import { type FormEvent, Suspense, useEffect, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 
 // useSearchParams를 사용하는 컴포넌트를 별도로 분리
