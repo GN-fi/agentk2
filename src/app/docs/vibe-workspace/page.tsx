@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 const VibeWorkspacePage = () => {
 	return (
 		<div>
