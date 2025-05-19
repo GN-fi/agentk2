@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+export const dynamic = "force-static";
+
 const OverviewPage = () => {
 	return (
 		<div className="prose prose-invert max-w-none">
