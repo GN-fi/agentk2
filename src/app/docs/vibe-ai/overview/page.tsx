@@ -1,3 +1,6 @@
+// 이 페이지를 정적으로 렌더링하도록 설정
+export const dynamic = "force-static";
+
 const OverviewPage = () => {
 	return (
 		<div>
