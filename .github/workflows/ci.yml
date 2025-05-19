@@ -33,6 +33,16 @@ jobs:
           DATABASE_URL: ${{ secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
         run: pnpm prisma generate
 
+      - name: Run Prisma Migrations
+        env:
+          DATABASE_URL: ${{ secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
+        run: |
+          if [ -n "${{ secrets.NEON_HTTP_URL }}" ]; then
+            pnpm prisma migrate deploy
+          else
+            echo "Skipping migrations in CI environment without valid DATABASE_URL"
+          fi
+
       - name: Run linters and type checker
         env:
           DATABASE_URL: ${{ secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
@@ -43,12 +53,12 @@ jobs:
 
       - name: Build project
         env:
-          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
-          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
-          NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
-          NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
-          DATABASE_URL: ${{ secrets.NEON_HTTP_URL }}
-          NEON_HTTP_URL: ${{ secrets.NEON_HTTP_URL }}
-          UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
-          UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID || 'dummy-client-id' }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET || 'dummy-client-secret' }}
+          NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL || 'http://localhost:3000' }}
+          NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET || 'dummy-nextauth-secret' }}
+          DATABASE_URL: ${{ secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
+          NEON_HTTP_URL: ${{ secrets.NEON_HTTP_URL || 'postgresql://dummy:dummy@localhost:5432/dummy' }}
+          UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL || 'https://dummy-redis-url.upstash.io' }}
+          UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN || 'dummy_token' }}
         run: pnpm turbo run build --cache-dir=.turbo

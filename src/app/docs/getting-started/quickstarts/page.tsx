@@ -10,6 +10,9 @@ import {
 	FiTerminal,
 } from "react-icons/fi";
 
+// 이 페이지를 정적으로 렌더링하도록 설정
+export const dynamic = "force-static";
+
 const QuickstartsPage = () => {
 	return (
 		<article className="prose prose-invert max-w-none prose-headings:text-purple-400 prose-a:text-purple-300 hover:prose-a:text-purple-200 prose-strong:text-purple-300">
