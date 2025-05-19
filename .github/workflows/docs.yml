@@ -58,9 +58,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
         with:
-          deploy_key: ${{ secrets.DOCS_DEPLOY_KEY }}
-          external_repository: GN-fi/GN-fi.github.io
-          publish_branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs-site/build
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
