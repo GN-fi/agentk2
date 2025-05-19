@@ -4,7 +4,8 @@ import { type Post, posts as postsSchema } from "@/lib/db/schema"; // Drizzle po
 import prisma from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
-// export const runtime = "edge"; // Edge 런타임 활성화 (CI 테스트를 위한 주석 수정 - 2024-07-10)
+// Edge 런타임은 CI 테스트를 위해 비활성화합니다.
+// export const runtime = "edge";
 
 // 게시물 목록 캐시 키
 const POSTS_ALL_CACHE_KEY = "posts:all";

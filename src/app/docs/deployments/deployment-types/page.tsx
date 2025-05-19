@@ -3,10 +3,10 @@ import Link from "next/link";
 const DeploymentTypesPage = () => {
 	return (
 		<div className="prose prose-invert max-w-none">
-			<h1 className="text-3xl font-bold mb-6 text-purple-400">
+			<h1 className="mb-6 text-3xl font-bold text-purple-400">
 				VIBE 애플리케이션 배포 유형 완벽 가이드
 			</h1>
-			<p className="text-lg mb-8">
+			<p className="mb-8 text-lg">
 				VIBE는 현대 웹 애플리케이션의 다양한 아키텍처와 요구사항을 충족시키기
 				위해 여러 가지 배포 유형을 지원합니다. 프로젝트의 특성, 성능 요구사항,
 				확장성, 관리 편의성 등을 고려하여 최적의 배포 유형을 선택하는 것이
@@ -15,8 +15,8 @@ const DeploymentTypesPage = () => {
 			</p>
 
 			{/* 1. 정적 웹사이트 배포 */}
-			<section className="mb-12 p-6 bg-gray-800 rounded-lg shadow-lg">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+			<section className="mb-12 rounded-lg bg-gray-800 p-6 shadow-lg">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					1. 정적 웹사이트 배포 (Static Site Deployment)
 				</h2>
 				<p className="mb-4">
@@ -26,12 +26,12 @@ const DeploymentTypesPage = () => {
 					VIBE는 Next.js, Gatsby, Hugo, Jekyll 등 다양한 정적 사이트
 					생성기(SSG)로 빌드된 프로젝트를 손쉽게 배포할 수 있도록 지원합니다.
 				</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+				<div className="mb-4 grid grid-cols-1 gap-6 md:grid-cols-2">
 					<div>
-						<h4 className="font-semibold text-lg text-purple-200 mb-2">
+						<h4 className="mb-2 text-lg font-semibold text-purple-200">
 							장점:
 						</h4>
-						<ul className="list-disc pl-5 space-y-1 text-sm">
+						<ul className="list-disc space-y-1 pl-5 text-sm">
 							<li>
 								<strong>최고의 속도와 성능:</strong> CDN(Content Delivery
 								Network)을 통해 전 세계 사용자에게 빠르게 콘텐츠를 제공할 수
@@ -52,10 +52,10 @@ const DeploymentTypesPage = () => {
 						</ul>
 					</div>
 					<div>
-						<h4 className="font-semibold text-lg text-purple-200 mb-2">
+						<h4 className="mb-2 text-lg font-semibold text-purple-200">
 							단점:
 						</h4>
-						<ul className="list-disc pl-5 space-y-1 text-sm">
+						<ul className="list-disc space-y-1 pl-5 text-sm">
 							<li>
 								<strong>동적 콘텐츠 처리 한계:</strong> 실시간 데이터나 사용자별
 								맞춤 콘텐츠 제공이 어렵습니다. (API 연동으로 일부 해결 가능)
@@ -67,10 +67,10 @@ const DeploymentTypesPage = () => {
 						</ul>
 					</div>
 				</div>
-				<h4 className="font-semibold text-lg text-purple-200 mb-2">
+				<h4 className="mb-2 text-lg font-semibold text-purple-200">
 					VIBE에서의 설정 및 고려사항:
 				</h4>
-				<ul className="list-disc pl-5 space-y-1 text-sm mb-4">
+				<ul className="mb-4 list-disc space-y-1 pl-5 text-sm">
 					<li>
 						<strong>빌드 명령어 설정:</strong> 프로젝트의 정적 파일을 생성하는
 						빌드 명령어를 정확히 지정해야 합니다. (예: `next build && next
@@ -99,8 +99,8 @@ const DeploymentTypesPage = () => {
 			</section>
 
 			{/* 2. 서버 사이드 렌더링(SSR) 애플리케이션 배포 */}
-			<section className="mb-12 p-6 bg-gray-800 rounded-lg shadow-lg">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+			<section className="mb-12 rounded-lg bg-gray-800 p-6 shadow-lg">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					2. 서버 사이드 렌더링(SSR) 애플리케이션 배포
 				</h2>
 				<p className="mb-4">
@@ -110,12 +110,12 @@ const DeploymentTypesPage = () => {
 					VIBE는 Next.js (SSR 모드), Nuxt.js 등 주요 SSR 프레임워크를
 					지원합니다.
 				</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+				<div className="mb-4 grid grid-cols-1 gap-6 md:grid-cols-2">
 					<div>
-						<h4 className="font-semibold text-lg text-purple-200 mb-2">
+						<h4 className="mb-2 text-lg font-semibold text-purple-200">
 							장점:
 						</h4>
-						<ul className="list-disc pl-5 space-y-1 text-sm">
+						<ul className="list-disc space-y-1 pl-5 text-sm">
 							<li>
 								<strong>우수한 SEO 성능:</strong> 검색 엔진 크롤러가 완전한 HTML
 								콘텐츠를 수집할 수 있습니다.
@@ -131,10 +131,10 @@ const DeploymentTypesPage = () => {
 						</ul>
 					</div>
 					<div>
-						<h4 className="font-semibold text-lg text-purple-200 mb-2">
+						<h4 className="mb-2 text-lg font-semibold text-purple-200">
 							단점:
 						</h4>
-						<ul className="list-disc pl-5 space-y-1 text-sm">
+						<ul className="list-disc space-y-1 pl-5 text-sm">
 							<li>
 								<strong>서버 부하 증가:</strong> 모든 요청을 서버에서 처리하므로
 								서버 리소스 요구량이 높습니다.
@@ -150,10 +150,10 @@ const DeploymentTypesPage = () => {
 						</ul>
 					</div>
 				</div>
-				<h4 className="font-semibold text-lg text-purple-200 mb-2">
+				<h4 className="mb-2 text-lg font-semibold text-purple-200">
 					VIBE에서의 설정 및 고려사항:
 				</h4>
-				<ul className="list-disc pl-5 space-y-1 text-sm mb-4">
+				<ul className="mb-4 list-disc space-y-1 pl-5 text-sm">
 					<li>
 						<strong>애플리케이션 실행 환경:</strong> Node.js 버전 등
 						애플리케이션 실행에 필요한 서버 환경을 올바르게 설정해야 합니다.
@@ -187,8 +187,8 @@ const DeploymentTypesPage = () => {
 			</section>
 
 			{/* 3. 컨테이너 기반 애플리케이션 배포 (Docker) */}
-			<section className="mb-12 p-6 bg-gray-800 rounded-lg shadow-lg">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+			<section className="mb-12 rounded-lg bg-gray-800 p-6 shadow-lg">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					3. 컨테이너 기반 애플리케이션 배포 (Docker)
 				</h2>
 				<p className="mb-4">
@@ -198,12 +198,12 @@ const DeploymentTypesPage = () => {
 					인한 문제를 최소화합니다. VIBE는 `Dockerfile`을 프로젝트에 포함하여
 					컨테이너 이미지를 빌드하고 배포하는 기능을 지원합니다.
 				</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+				<div className="mb-4 grid grid-cols-1 gap-6 md:grid-cols-2">
 					<div>
-						<h4 className="font-semibold text-lg text-purple-200 mb-2">
+						<h4 className="mb-2 text-lg font-semibold text-purple-200">
 							장점:
 						</h4>
-						<ul className="list-disc pl-5 space-y-1 text-sm">
+						<ul className="list-disc space-y-1 pl-5 text-sm">
 							<li>
 								<strong>환경 일관성 보장:</strong> "내 컴퓨터에서는 됐는데..."
 								문제를 해결합니다.
@@ -223,10 +223,10 @@ const DeploymentTypesPage = () => {
 						</ul>
 					</div>
 					<div>
-						<h4 className="font-semibold text-lg text-purple-200 mb-2">
+						<h4 className="mb-2 text-lg font-semibold text-purple-200">
 							단점:
 						</h4>
-						<ul className="list-disc pl-5 space-y-1 text-sm">
+						<ul className="list-disc space-y-1 pl-5 text-sm">
 							<li>
 								<strong>Docker 학습 곡선:</strong> Docker 및 컨테이너 개념에
 								대한 이해가 필요합니다.
@@ -243,10 +243,10 @@ const DeploymentTypesPage = () => {
 						</ul>
 					</div>
 				</div>
-				<h4 className="font-semibold text-lg text-purple-200 mb-2">
+				<h4 className="mb-2 text-lg font-semibold text-purple-200">
 					VIBE에서의 설정 및 고려사항:
 				</h4>
-				<ul className="list-disc pl-5 space-y-1 text-sm mb-4">
+				<ul className="mb-4 list-disc space-y-1 pl-5 text-sm">
 					<li>
 						<strong>`Dockerfile` 작성:</strong> 애플리케이션 실행 환경, 종속성
 						설치, 실행 명령어 등을 정의하는 `Dockerfile`을 프로젝트 루트에
@@ -281,8 +281,8 @@ const DeploymentTypesPage = () => {
 			</section>
 
 			{/* 4. 서버리스 기능 배포 (Serverless Functions) */}
-			<section className="mb-12 p-6 bg-gray-800 rounded-lg shadow-lg">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+			<section className="mb-12 rounded-lg bg-gray-800 p-6 shadow-lg">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					4. 서버리스 기능 배포 (Serverless Functions)
 				</h2>
 				<p className="mb-4">
@@ -293,12 +293,12 @@ const DeploymentTypesPage = () => {
 					Functions와 같은 서버리스 플랫폼으로의 함수 배포를 지원하거나 통합할
 					수 있습니다.
 				</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+				<div className="mb-4 grid grid-cols-1 gap-6 md:grid-cols-2">
 					<div>
-						<h4 className="font-semibold text-lg text-purple-200 mb-2">
+						<h4 className="mb-2 text-lg font-semibold text-purple-200">
 							장점:
 						</h4>
-						<ul className="list-disc pl-5 space-y-1 text-sm">
+						<ul className="list-disc space-y-1 pl-5 text-sm">
 							<li>
 								<strong>운영 부담 감소:</strong> 서버 프로비저닝, 관리, 패치
 								등이 필요 없습니다.
@@ -318,10 +318,10 @@ const DeploymentTypesPage = () => {
 						</ul>
 					</div>
 					<div>
-						<h4 className="font-semibold text-lg text-purple-200 mb-2">
+						<h4 className="mb-2 text-lg font-semibold text-purple-200">
 							단점:
 						</h4>
-						<ul className="list-disc pl-5 space-y-1 text-sm">
+						<ul className="list-disc space-y-1 pl-5 text-sm">
 							<li>
 								<strong>콜드 스타트(Cold Start):</strong> 함수가 처음 호출되거나
 								오랜만에 호출될 때 실행 지연이 발생할 수 있습니다.
@@ -346,10 +346,10 @@ const DeploymentTypesPage = () => {
 						</ul>
 					</div>
 				</div>
-				<h4 className="font-semibold text-lg text-purple-200 mb-2">
+				<h4 className="mb-2 text-lg font-semibold text-purple-200">
 					VIBE에서의 설정 및 고려사항:
 				</h4>
-				<ul className="list-disc pl-5 space-y-1 text-sm mb-4">
+				<ul className="mb-4 list-disc space-y-1 pl-5 text-sm">
 					<li>
 						<strong>함수 핸들러 및 트리거 설정:</strong> 각 함수 코드의
 						진입점(핸들러)과 함수를 실행시킬 이벤트 트리거(예: HTTP 요청,
@@ -383,7 +383,7 @@ const DeploymentTypesPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					어떤 배포 유형을 선택해야 할까요?
 				</h2>
 				<p className="mb-4">
@@ -408,10 +408,10 @@ const DeploymentTypesPage = () => {
 			</section>
 
 			<section>
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					다음 단계
 				</h2>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<Link
 							href="/docs/deployments/overview"

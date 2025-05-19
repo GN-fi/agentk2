@@ -65,30 +65,30 @@ function LoginForm() {
 
 	if (status === "loading" && !loading) {
 		return (
-			<div className="flex flex-col min-h-screen bg-gray-800 items-center justify-center">
-				<p className="text-white text-xl">세션 확인 중...</p>
+			<div className="flex min-h-screen flex-col items-center justify-center bg-gray-800">
+				<p className="text-xl text-white">세션 확인 중...</p>
 			</div>
 		);
 	}
 
 	return (
-		<div className="flex flex-col min-h-screen bg-gray-800">
-			<div className="sm:mx-auto sm:w-full sm:max-w-md pt-10">
+		<div className="flex min-h-screen flex-col bg-gray-800">
+			<div className="pt-10 sm:mx-auto sm:w-full sm:max-w-md">
 				<Link href="/" className="flex justify-center">
-					<h1 className="text-4xl font-bold text-white ml-2">VIBE</h1>
+					<h1 className="ml-2 text-4xl font-bold text-white">VIBE</h1>
 				</Link>
 				<h2 className="mt-6 text-center text-3xl font-extrabold text-gray-300">
 					계정에 로그인하세요
 				</h2>
 			</div>
 
-			<main className="flex-grow flex items-center justify-center p-4 sm:p-6 lg:p-8">
-				<div className="bg-gray-900 p-8 sm:p-10 rounded-xl shadow-2xl w-full max-w-md">
-					<div className="text-center mb-8">
-						<h1 className="text-3xl sm:text-4xl font-bold text-purple-400">
+			<main className="flex flex-grow items-center justify-center p-4 sm:p-6 lg:p-8">
+				<div className="w-full max-w-md rounded-xl bg-gray-900 p-8 shadow-2xl sm:p-10">
+					<div className="mb-8 text-center">
+						<h1 className="text-3xl font-bold text-purple-400 sm:text-4xl">
 							VIBE에 다시 오신 것을 환영합니다
 						</h1>
-						<p className="text-gray-400 mt-2">계정에 로그인하여 계속하세요.</p>
+						<p className="mt-2 text-gray-400">계정에 로그인하여 계속하세요.</p>
 					</div>
 
 					<form onSubmit={handleSubmit} className="space-y-6">
@@ -108,7 +108,7 @@ function LoginForm() {
 								disabled={loading}
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
-								className="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm text-white disabled:opacity-50"
+								className="mt-1 block w-full rounded-md border border-gray-600 bg-gray-700 px-4 py-3 text-white placeholder-gray-500 shadow-sm focus:border-purple-500 focus:ring-purple-500 focus:outline-none disabled:opacity-50 sm:text-sm"
 								placeholder="user@example.com"
 							/>
 						</div>
@@ -127,7 +127,7 @@ function LoginForm() {
 										onClick={() =>
 											alert("비밀번호 찾기 기능은 현재 준비 중입니다.")
 										}
-										className="font-medium text-purple-400 hover:text-purple-300 transition-colors"
+										className="font-medium text-purple-400 transition-colors hover:text-purple-300"
 									>
 										비밀번호를 잊으셨나요?
 									</button>
@@ -142,20 +142,20 @@ function LoginForm() {
 								disabled={loading}
 								value={password}
 								onChange={(e) => setPassword(e.target.value)}
-								className="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm text-white disabled:opacity-50"
+								className="mt-1 block w-full rounded-md border border-gray-600 bg-gray-700 px-4 py-3 text-white placeholder-gray-500 shadow-sm focus:border-purple-500 focus:ring-purple-500 focus:outline-none disabled:opacity-50 sm:text-sm"
 								placeholder="password123"
 							/>
 						</div>
 
 						{error && (
-							<p className="text-sm text-red-400 text-center">{error}</p>
+							<p className="text-center text-sm text-red-400">{error}</p>
 						)}
 
 						<div>
 							<button
 								type="submit"
 								disabled={loading}
-								className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 focus:ring-offset-gray-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+								className="flex w-full justify-center rounded-md border border-transparent bg-purple-600 px-4 py-3 text-sm font-medium text-white shadow-sm transition-colors hover:bg-purple-700 focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
 							>
 								{loading ? "로그인 중..." : "로그인"}
 							</button>
@@ -168,21 +168,21 @@ function LoginForm() {
 								<div className="w-full border-t border-gray-700" />
 							</div>
 							<div className="relative flex justify-center text-sm">
-								<span className="px-2 bg-gray-900 text-gray-500">
+								<span className="bg-gray-900 px-2 text-gray-500">
 									또는 다음으로 계속하기
 								</span>
 							</div>
 						</div>
 
-						<div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+						<div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
 							<div className="sm:col-span-3">
 								<button
 									type="button"
 									onClick={() => !loading && signIn("google", { callbackUrl })}
 									disabled={loading}
-									className="w-full inline-flex justify-center items-center py-3 px-4 border border-gray-700 rounded-md shadow-sm bg-gray-800 text-sm font-medium text-gray-300 hover:bg-gray-700 transition-colors disabled:opacity-50"
+									className="inline-flex w-full items-center justify-center rounded-md border border-gray-700 bg-gray-800 px-4 py-3 text-sm font-medium text-gray-300 shadow-sm transition-colors hover:bg-gray-700 disabled:opacity-50"
 								>
-									<FaGoogle className="w-5 h-5 mr-2" />
+									<FaGoogle className="mr-2 h-5 w-5" />
 									Google 계정으로 로그인
 								</button>
 							</div>
@@ -194,7 +194,7 @@ function LoginForm() {
 							계정이 없으신가요?{" "}
 							<Link
 								href="/signup"
-								className="font-medium text-purple-400 hover:text-purple-300 transition-colors"
+								className="font-medium text-purple-400 transition-colors hover:text-purple-300"
 							>
 								새 계정 만들기
 							</Link>
@@ -215,8 +215,8 @@ const LoginPage = () => {
 	return (
 		<Suspense
 			fallback={
-				<div className="flex flex-col min-h-screen bg-gray-800 items-center justify-center">
-					<p className="text-white text-xl">로딩 중...</p>
+				<div className="flex min-h-screen flex-col items-center justify-center bg-gray-800">
+					<p className="text-xl text-white">로딩 중...</p>
 				</div>
 			}
 		>

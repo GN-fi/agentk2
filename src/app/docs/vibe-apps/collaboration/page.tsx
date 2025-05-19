@@ -14,7 +14,7 @@ export const dynamic = "force-static";
 
 const CollaborationPage = () => {
 	return (
-		<article className="prose prose-invert max-w-none prose-headings:text-purple-400 prose-a:text-purple-300 hover:prose-a:text-purple-200 prose-strong:text-purple-300">
+		<article className="prose prose-invert prose-headings:text-purple-400 prose-a:text-purple-300 hover:prose-a:text-purple-200 prose-strong:text-purple-300 max-w-none">
 			<h1 id="collaboration-title">VIBE 앱에서 협업하기: 함께 만드는 즐거움</h1>
 			<p className="lead">
 				VIBE는 혼자만의 개발 도구를 넘어, 팀원들과 함께 아이디어를 현실로 만들
@@ -30,53 +30,53 @@ const CollaborationPage = () => {
 				겪을 필요가 없습니다. 모든 것이 하나의 통합된 환경에서 실시간으로
 				이루어집니다.
 			</p>
-			<ul className="not-prose list-none my-6 space-y-4">
-				<li className="flex items-start p-4 bg-gray-800 rounded-lg shadow">
-					<FiUsers className="w-10 h-10 text-purple-400 mr-4 mt-1 flex-shrink-0" />
+			<ul className="not-prose my-6 list-none space-y-4">
+				<li className="flex items-start rounded-lg bg-gray-800 p-4 shadow">
+					<FiUsers className="mt-1 mr-4 h-10 w-10 flex-shrink-0 text-purple-400" />
 					<div>
 						<h3 className="text-lg font-semibold text-purple-300">
 							실시간 동시 편집 (Multiplayer)
 						</h3>
-						<p className="text-gray-300 text-sm">
+						<p className="text-sm text-gray-300">
 							여러 명이 동시에 같은 파일을 열고 코드를 수정하세요. 각자의 커서와
 							변경 사항이 실시간으로 반영되어 마치 한 공간에서 작업하는 듯한
 							경험을 제공합니다. 페어 프로그래밍이나 코드 리뷰에 이상적입니다.
 						</p>
 					</div>
 				</li>
-				<li className="flex items-start p-4 bg-gray-800 rounded-lg shadow">
-					<FiShare2 className="w-10 h-10 text-purple-400 mr-4 mt-1 flex-shrink-0" />
+				<li className="flex items-start rounded-lg bg-gray-800 p-4 shadow">
+					<FiShare2 className="mt-1 mr-4 h-10 w-10 flex-shrink-0 text-purple-400" />
 					<div>
 						<h3 className="text-lg font-semibold text-purple-300">
 							간편한 프로젝트 공유 및 초대
 						</h3>
-						<p className="text-gray-300 text-sm">
+						<p className="text-sm text-gray-300">
 							이메일 주소나 VIBE 사용자 이름만으로 팀원을 프로젝트에 쉽게 초대할
 							수 있습니다. 읽기 전용 또는 편집 가능 등 세밀한 권한 설정도
 							가능하여 프로젝트 접근을 안전하게 관리할 수 있습니다.
 						</p>
 					</div>
 				</li>
-				<li className="flex items-start p-4 bg-gray-800 rounded-lg shadow">
-					<FiMessageSquare className="w-10 h-10 text-purple-400 mr-4 mt-1 flex-shrink-0" />
+				<li className="flex items-start rounded-lg bg-gray-800 p-4 shadow">
+					<FiMessageSquare className="mt-1 mr-4 h-10 w-10 flex-shrink-0 text-purple-400" />
 					<div>
 						<h3 className="text-lg font-semibold text-purple-300">
 							내장된 실시간 채팅
 						</h3>
-						<p className="text-gray-300 text-sm">
+						<p className="text-sm text-gray-300">
 							VIBE 작업 공간 내에서 팀원들과 즉시 소통하세요. 코드에 대한 질문,
 							아이디어 논의, 작업 조율 등을 별도의 메신저 없이 바로 해결할 수
 							있어 집중력을 유지하고 효율성을 높입니다.
 						</p>
 					</div>
 				</li>
-				<li className="flex items-start p-4 bg-gray-800 rounded-lg shadow">
-					<FiGitMerge className="w-10 h-10 text-purple-400 mr-4 mt-1 flex-shrink-0" />
+				<li className="flex items-start rounded-lg bg-gray-800 p-4 shadow">
+					<FiGitMerge className="mt-1 mr-4 h-10 w-10 flex-shrink-0 text-purple-400" />
 					<div>
 						<h3 className="text-lg font-semibold text-purple-300">
 							통합된 버전 관리 (Git)
 						</h3>
-						<p className="text-gray-300 text-sm">
+						<p className="text-sm text-gray-300">
 							VIBE는 Git을 기반으로 한 강력한 버전 관리 기능을 제공합니다.
 							팀원들의 변경 사항을 체계적으로 추적하고, 브랜치를 활용하여
 							안전하게 기능을 개발하며, 필요시 이전 버전으로 쉽게 되돌릴 수
@@ -92,13 +92,13 @@ const CollaborationPage = () => {
 
 			<h2 id="how-to-start-collaboration">협업 시작하기: 단계별 가이드</h2>
 			<p>VIBE에서 팀원들과 협업을 시작하는 방법은 매우 간단합니다.</p>
-			<ol className="list-decimal list-inside my-4 space-y-3 pl-4 marker:text-purple-400 marker:font-semibold">
+			<ol className="my-4 list-inside list-decimal space-y-3 pl-4 marker:font-semibold marker:text-purple-400">
 				<li>
 					<strong>프로젝트 소유자가 협업자 초대:</strong>
-					<ul className="list-disc list-inside mt-1 ml-4 space-y-1 text-gray-300 text-sm">
+					<ul className="mt-1 ml-4 list-inside list-disc space-y-1 text-sm text-gray-300">
 						<li>
 							VIBE 작업 공간 상단에 있는{" "}
-							<FiUserPlus className="inline w-4 h-4 mr-1" /> "초대" 버튼을
+							<FiUserPlus className="mr-1 inline h-4 w-4" /> "초대" 버튼을
 							클릭합니다.
 						</li>
 						<li>
@@ -114,7 +114,7 @@ const CollaborationPage = () => {
 				</li>
 				<li>
 					<strong>초대받은 사용자가 프로젝트 접근:</strong>
-					<ul className="list-disc list-inside mt-1 ml-4 space-y-1 text-gray-300 text-sm">
+					<ul className="mt-1 ml-4 list-inside list-disc space-y-1 text-sm text-gray-300">
 						<li>
 							초대받은 팀원은 VIBE 내 알림 또는 이메일을 통해 초대 사실을
 							확인합니다.
@@ -127,7 +127,7 @@ const CollaborationPage = () => {
 				</li>
 				<li>
 					<strong>실시간으로 함께 작업 시작:</strong>
-					<ul className="list-disc list-inside mt-1 ml-4 space-y-1 text-gray-300 text-sm">
+					<ul className="mt-1 ml-4 list-inside list-disc space-y-1 text-sm text-gray-300">
 						<li>
 							이제 모든 팀원이 동일한 작업 공간에서 실시간으로 파일을 편집하고,
 							변경 사항을 확인하며, 내장 채팅으로 소통할 수 있습니다.
@@ -138,38 +138,38 @@ const CollaborationPage = () => {
 			{/* 여기에 협업 초대 및 작업 화면 예시 이미지 추가 가능 */}
 
 			<h2 id="tips-for-successful-collaboration">성공적인 협업을 위한 팁</h2>
-			<ul className="list-disc list-inside my-4 space-y-2 pl-4 text-gray-300">
+			<ul className="my-4 list-inside list-disc space-y-2 pl-4 text-gray-300">
 				<li>
-					<FiCheckCircle className="inline w-5 h-5 mr-2 text-green-400" />
+					<FiCheckCircle className="mr-2 inline h-5 w-5 text-green-400" />
 					<strong>명확한 역할 분담과 주기적인 소통:</strong> 누가 어떤 부분을
 					담당하는지 명확히 하고, 정기적으로 진행 상황을 공유하여 오해를 줄이고
 					효율성을 높입니다.
 				</li>
 				<li>
-					<FiCheckCircle className="inline w-5 h-5 mr-2 text-green-400" />
+					<FiCheckCircle className="mr-2 inline h-5 w-5 text-green-400" />
 					<strong>Git 브랜치 전략 적극 활용:</strong> 여러 기능을 동시에
 					개발하거나 실험적인 작업을 할 때는 Git 브랜치를 사용하여 메인
 					코드베이스를 안정적으로 유지합니다.
 				</li>
 				<li>
-					<FiCheckCircle className="inline w-5 h-5 mr-2 text-green-400" />
+					<FiCheckCircle className="mr-2 inline h-5 w-5 text-green-400" />
 					<strong>코드 리뷰 생활화:</strong> 팀원들이 작성한 코드를 서로
 					검토하고 피드백을 주고받음으로써 코드의 질을 높이고 잠재적인 버그를
 					사전에 방지할 수 있습니다.
 				</li>
 				<li>
-					<FiCheckCircle className="inline w-5 h-5 mr-2 text-green-400" />
+					<FiCheckCircle className="mr-2 inline h-5 w-5 text-green-400" />
 					<strong>VIBE의 모든 협업 기능 활용:</strong> 동시 편집뿐만 아니라
 					채팅, 파일 공유, 버전 관리 등 VIBE가 제공하는 다양한 협업 도구를
 					적극적으로 사용해보세요.
 				</li>
 			</ul>
 
-			<div className="mt-10 p-6 bg-gray-800 rounded-lg shadow-md">
-				<h3 className="text-xl font-semibold text-purple-300 mb-3">
+			<div className="mt-10 rounded-lg bg-gray-800 p-6 shadow-md">
+				<h3 className="mb-3 text-xl font-semibold text-purple-300">
 					다음 단계
 				</h3>
-				<p className="text-gray-300 mb-4">
+				<p className="mb-4 text-gray-300">
 					VIBE의 강력한 협업 기능을 통해 팀 프로젝트를 한 단계
 					업그레이드해보세요. 다음 문서들을 통해 VIBE 앱 관리에 대해 더 자세히
 					알아보세요.
@@ -177,17 +177,17 @@ const CollaborationPage = () => {
 				<div className="flex flex-wrap gap-4">
 					<Link
 						href="/docs/vibe-apps/visibility" // 공개 범위 설정 페이지 경로 (추후 생성)
-						className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md shadow-md transition-colors group"
+						className="group inline-flex items-center rounded-md bg-purple-600 px-6 py-3 font-semibold text-white shadow-md transition-colors hover:bg-purple-700"
 					>
 						앱 공개 범위 설정하기
-						<FiArrowRight className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
+						<FiArrowRight className="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-1" />
 					</Link>
 					<Link
 						href="/docs/vibe-workspace/version-control"
-						className="inline-flex items-center px-6 py-3 border border-purple-500 hover:bg-purple-500/20 text-purple-300 font-semibold rounded-md shadow-md transition-colors group"
+						className="group inline-flex items-center rounded-md border border-purple-500 px-6 py-3 font-semibold text-purple-300 shadow-md transition-colors hover:bg-purple-500/20"
 					>
 						Git으로 버전 관리하기
-						<FiArrowRight className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
+						<FiArrowRight className="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-1" />
 					</Link>
 				</div>
 			</div>

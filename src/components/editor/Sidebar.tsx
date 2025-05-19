@@ -49,9 +49,9 @@ const Sidebar = () => {
 				{items.map((item) => (
 					<li
 						key={item.name}
-						className="flex items-center space-x-2 p-1 hover:bg-gray-700 rounded cursor-pointer text-sm"
+						className="flex cursor-pointer items-center space-x-2 rounded p-1 text-sm hover:bg-gray-700"
 					>
-						<item.icon className="w-4 h-4 text-gray-400" />
+						<item.icon className="h-4 w-4 text-gray-400" />
 						<span>{item.name}</span>
 					</li>
 				))}
@@ -62,39 +62,39 @@ const Sidebar = () => {
 	return (
 		<div className="flex h-full">
 			{/* 아이콘 기반 툴바 (VIBE의 왼쪽 세로 툴바와 유사) */}
-			<div className="w-14 bg-gray-900 p-2 flex flex-col items-center space-y-3 border-r border-gray-700">
+			<div className="flex w-14 flex-col items-center space-y-3 border-r border-gray-700 bg-gray-900 p-2">
 				{tools.map((tool) => (
 					<button
 						type="button"
 						key={tool.name}
 						title={tool.name}
-						className={`p-2 rounded hover:bg-gray-700 ${tool.current ? "bg-gray-700 text-white" : "text-gray-400"}`}
+						className={`rounded p-2 hover:bg-gray-700 ${tool.current ? "bg-gray-700 text-white" : "text-gray-400"}`}
 					>
-						<tool.icon className="w-6 h-6" />
+						<tool.icon className="h-6 w-6" />
 					</button>
 				))}
 				<div className="mt-auto flex flex-col items-center space-y-3">
 					<button
 						type="button"
 						title="Help"
-						className="p-2 rounded hover:bg-gray-700 text-gray-400"
+						className="rounded p-2 text-gray-400 hover:bg-gray-700"
 					>
-						<LifebuoyIcon className="w-6 h-6" />
+						<LifebuoyIcon className="h-6 w-6" />
 					</button>
 					<button
 						type="button"
 						title="Account"
-						className="p-2 rounded hover:bg-gray-700 text-gray-400"
+						className="rounded p-2 text-gray-400 hover:bg-gray-700"
 					>
-						<UserCircleIcon className="w-6 h-6" />
+						<UserCircleIcon className="h-6 w-6" />
 					</button>
 				</div>
 			</div>
 
 			{/* 파일 탐색기 및 기타 도구 패널 */}
-			<div className="w-64 bg-gray-800 p-3 space-y-4 overflow-y-auto">
+			<div className="w-64 space-y-4 overflow-y-auto bg-gray-800 p-3">
 				<div>
-					<h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+					<h3 className="mb-2 text-xs font-semibold tracking-wider text-gray-400 uppercase">
 						Files
 					</h3>
 					{renderFileTree(files)}

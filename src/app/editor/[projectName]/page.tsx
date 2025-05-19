@@ -36,7 +36,7 @@ const EditorPage = (/* { params }: EditorPageProps */) => {
 		// 로딩 중이거나 세션이 없으면 (리다이렉션 전까지) 로딩 메시지 또는 빈 화면 표시
 		return (
 			<EditorLayout>
-				<div className="flex-grow flex flex-col items-center justify-center bg-gray-800 text-white">
+				<div className="flex flex-grow flex-col items-center justify-center bg-gray-800 text-white">
 					<p>세션 정보를 확인 중입니다...</p>
 					{/* 또는 로딩 스피너 컴포넌트 */}
 				</div>
@@ -61,8 +61,8 @@ const EditorPage = (/* { params }: EditorPageProps */) => {
 	return (
 		<EditorLayout>
 			{/* 기존 MainArea 내용 또는 에디터 관련 컴포넌트들 */}
-			<div className="flex-grow flex flex-col items-center justify-center bg-gray-800 text-white">
-				<h1 className="text-3xl font-bold mb-4">
+			<div className="flex flex-grow flex-col items-center justify-center bg-gray-800 text-white">
+				<h1 className="mb-4 text-3xl font-bold">
 					프로젝트: {decodeURIComponent(projectName)}
 				</h1>
 				<p>
@@ -70,7 +70,7 @@ const EditorPage = (/* { params }: EditorPageProps */) => {
 					표시됩니다.
 				</p>
 				<textarea
-					className="w-3/4 h-1/2 p-4 mt-4 bg-gray-900 border border-gray-700 rounded-md text-sm resize-none"
+					className="mt-4 h-1/2 w-3/4 resize-none rounded-md border border-gray-700 bg-gray-900 p-4 text-sm"
 					defaultValue={`// ${decodeURIComponent(projectName)} 프로젝트의 코드...
 function hello() {
   console.log("Hello, ${decodeURIComponent(projectName)}!");

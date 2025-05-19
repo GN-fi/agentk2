@@ -6,17 +6,17 @@ export const dynamic = "force-static";
 const AdvancedConfigurationPage = () => {
 	return (
 		<div className="prose prose-invert max-w-none">
-			<h1 className="text-3xl font-bold mb-6 text-purple-400">
+			<h1 className="mb-6 text-3xl font-bold text-purple-400">
 				VIBE 앱: 고급 설정
 			</h1>
-			<p className="text-lg mb-8">
+			<p className="mb-8 text-lg">
 				VIBE 앱은 기본적인 사용 외에도 다양한 고급 설정 옵션을 제공하여 사용자가
 				자신의 앱을 보다 세밀하게 제어하고 최적화할 수 있도록 지원합니다. 이
 				문서에서는 VIBE 앱의 고급 설정 기능들을 자세히 안내합니다.
 			</p>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					환경 변수 관리
 				</h2>
 				<p className="mb-4">
@@ -24,7 +24,7 @@ const AdvancedConfigurationPage = () => {
 					API 키, 데이터베이스 연결 정보, 외부 서비스 엔드포인트 등 민감하거나
 					환경에 따라 변경되어야 하는 값들을 코드와 분리하여 관리할 수 있습니다.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>설정 방법:</strong> VIBE 앱 대시보드의 '설정' 탭 또는 VIBE
 						CLI를 통해 환경 변수를 추가, 수정, 삭제할 수 있습니다.
@@ -37,12 +37,12 @@ const AdvancedConfigurationPage = () => {
 					<li>
 						<strong>예약된 환경 변수:</strong> VIBE 플랫폼에서 기본적으로
 						제공하는 환경 변수들이 있을 수 있습니다 (예:{" "}
-						<code className="bg-gray-700 px-1 rounded">VIBE_APP_ID</code>,{" "}
-						<code className="bg-gray-700 px-1 rounded">VIBE_ENVIRONMENT</code>).
+						<code className="rounded bg-gray-700 px-1">VIBE_APP_ID</code>,{" "}
+						<code className="rounded bg-gray-700 px-1">VIBE_ENVIRONMENT</code>).
 					</li>
 				</ul>
-				<div className="bg-gray-800 p-4 rounded-md shadow">
-					<h4 className="font-semibold text-purple-200 mb-2">팁:</h4>
+				<div className="rounded-md bg-gray-800 p-4 shadow">
+					<h4 className="mb-2 font-semibold text-purple-200">팁:</h4>
 					<p className="text-sm">
 						환경 변수 변경 후에는 앱을 재시작하거나 재배포해야 적용될 수
 						있습니다. VIBE는 변경 사항을 감지하고 자동으로 재시작 옵션을 제공할
@@ -52,7 +52,7 @@ const AdvancedConfigurationPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					사용자 정의 도메인 연결
 				</h2>
 				<p className="mb-4">
@@ -60,7 +60,7 @@ const AdvancedConfigurationPage = () => {
 					도메인을 연결하여 브랜드 이미지를 강화하고 사용자 접근성을 높일 수
 					있습니다.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>연결 절차:</strong> VIBE 앱 대시보드에서 '도메인' 설정을
 						통해 원하는 도메인을 추가하고, 안내에 따라 DNS 레코드(예: CNAME, A
@@ -73,23 +73,23 @@ const AdvancedConfigurationPage = () => {
 					</li>
 					<li>
 						<strong>하위 도메인 및 와일드카드:</strong> 특정 하위 도메인(
-						<code className="bg-gray-700 px-1 rounded">blog.example.com</code>)
+						<code className="rounded bg-gray-700 px-1">blog.example.com</code>)
 						뿐만 아니라 와일드카드 도메인(
-						<code className="bg-gray-700 px-1 rounded">*.example.com</code>)
+						<code className="rounded bg-gray-700 px-1">*.example.com</code>)
 						연결도 지원될 수 있습니다. (VIBE 플랜별 지원 여부 확인 필요)
 					</li>
 				</ul>
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					리소스 관리 및 확장
 				</h2>
 				<p className="mb-4">
 					애플리케이션의 트래픽 및 요구사항에 따라 할당된 컴퓨팅 리소스를 조정할
 					수 있습니다.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>리소스 할당:</strong> 앱의 플랜 또는 설정을 통해 CPU,
 						메모리, 스토리지 등의 할당량을 조절할 수 있습니다. 더 높은 성능이
@@ -110,14 +110,14 @@ const AdvancedConfigurationPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					네트워킹 및 보안
 				</h2>
 				<p className="mb-4">
 					VIBE 앱의 네트워크 접근을 제어하고 보안을 강화하기 위한 다양한 설정을
 					제공합니다.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>IP 접근 제어:</strong> 특정 IP 주소나 대역에서의 접근을
 						허용하거나 차단하는 IP 화이트리스트/블랙리스트 기능을 설정할 수
@@ -149,7 +149,7 @@ const AdvancedConfigurationPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					빌드 및 배포 설정
 				</h2>
 				<p className="mb-4">
@@ -157,12 +157,12 @@ const AdvancedConfigurationPage = () => {
 					제공하지만, 필요에 따라 사용자 정의 설정을 통해 유연성을 확보할 수
 					있습니다.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>사용자 정의 빌드 스크립트:</strong> VIBE가 감지하는 기본
 						빌드 명령어 외에 추가적인 빌드 단계나 명령어를 직접 정의하여 실행할
 						수 있습니다. (예:{" "}
-						<code className="bg-gray-700 px-1 rounded">package.json</code>의
+						<code className="rounded bg-gray-700 px-1">package.json</code>의
 						스크립트 수정 또는 VIBE 설정 파일)
 					</li>
 					<li>
@@ -184,7 +184,7 @@ const AdvancedConfigurationPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					백업 및 복원
 				</h2>
 				<p className="mb-4">
@@ -192,7 +192,7 @@ const AdvancedConfigurationPage = () => {
 					백업하고 필요시 복원할 수 있는 기능을 제공합니다. (앱의 종류 및 사용
 					데이터베이스에 따라 지원 범위 상이)
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>자동 백업:</strong> 설정된 주기에 따라 (예: 매일, 매주) 앱의
 						데이터베이스, 스토리지 등을 자동으로 백업합니다. 백업 보관 기간도
@@ -211,7 +211,7 @@ const AdvancedConfigurationPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					모니터링 및 로깅
 				</h2>
 				<p className="mb-4">
@@ -219,7 +219,7 @@ const AdvancedConfigurationPage = () => {
 					위해 다양한 모니터링 및 로깅 도구를 통합하거나 VIBE 자체 기능을 활용할
 					수 있습니다.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>실시간 로그 스트리밍:</strong> VIBE 대시보드나 CLI를 통해
 						애플리케이션의 실시간 로그를 확인할 수 있습니다.
@@ -243,14 +243,14 @@ const AdvancedConfigurationPage = () => {
 			</section>
 
 			<section>
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					문제 해결 및 FAQ
 				</h2>
 				<p className="mb-4">
 					고급 설정과 관련하여 자주 발생하는 문제나 궁금증에 대한 해결 방법을
 					안내합니다.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>Q: 환경 변수를 변경했는데 적용되지 않아요.</strong>
 						<br />

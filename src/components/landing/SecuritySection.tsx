@@ -9,7 +9,7 @@ const securityFeatures = [
 				viewBox="0 0 24 24"
 				strokeWidth={1.5}
 				stroke="currentColor"
-				className="w-8 h-8 text-green-400"
+				className="h-8 w-8 text-green-400"
 			>
 				<title>SSO 보안 아이콘</title>
 				<path
@@ -31,7 +31,7 @@ const securityFeatures = [
 				viewBox="0 0 24 24"
 				strokeWidth={1.5}
 				stroke="currentColor"
-				className="w-8 h-8 text-blue-400"
+				className="h-8 w-8 text-blue-400"
 			>
 				<title>SOC 2 인증 아이콘</title>
 				<path
@@ -53,7 +53,7 @@ const securityFeatures = [
 				viewBox="0 0 24 24"
 				strokeWidth={1.5}
 				stroke="currentColor"
-				className="w-8 h-8 text-yellow-400"
+				className="h-8 w-8 text-yellow-400"
 			>
 				<title>비공개 배포 아이콘</title>
 				<path
@@ -75,7 +75,7 @@ const securityFeatures = [
 				viewBox="0 0 24 24"
 				strokeWidth={1.5}
 				stroke="currentColor"
-				className="w-8 h-8 text-red-400"
+				className="h-8 w-8 text-red-400"
 			>
 				<title>접근 제어 아이콘</title>
 				<path
@@ -92,32 +92,32 @@ const SecuritySection = () => {
 	return (
 		<section className="py-20">
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="text-center mb-16">
-					<h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+				<div className="mb-16 text-center">
+					<h2 className="mb-4 text-4xl font-extrabold md:text-5xl">
 						신뢰할 수 있는{" "}
-						<span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-yellow-400">
+						<span className="bg-gradient-to-r from-green-400 via-blue-400 to-yellow-400 bg-clip-text text-transparent">
 							강력한 보안
 						</span>
 					</h2>
-					<p className="text-xl text-gray-300 max-w-2xl mx-auto">
+					<p className="mx-auto max-w-2xl text-xl text-gray-300">
 						VIBE는 최첨단 보안 기능으로 여러분의 소중한 데이터를 안전하게
 						보호합니다.
 					</p>
 				</div>
-				<div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+				<div className="grid gap-8 md:grid-cols-2 lg:gap-12">
 					{securityFeatures.map((feature) => (
 						<div
 							key={feature.name}
-							className="flex items-start space-x-6 bg-gray-800 bg-opacity-50 p-8 rounded-xl shadow-lg hover:shadow-blue-500/30 transition-shadow duration-300"
+							className="bg-opacity-50 flex items-start space-x-6 rounded-xl bg-gray-800 p-8 shadow-lg transition-shadow duration-300 hover:shadow-blue-500/30"
 						>
-							<div className="flex-shrink-0 flex items-center justify-center w-16 h-16 bg-gray-700 bg-opacity-70 rounded-full">
+							<div className="bg-opacity-70 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-gray-700">
 								{feature.icon}
 							</div>
 							<div>
-								<h3 className="text-2xl font-semibold mb-2 text-white">
+								<h3 className="mb-2 text-2xl font-semibold text-white">
 									{feature.name}
 								</h3>
-								<p className="text-gray-400 leading-relaxed">
+								<p className="leading-relaxed text-gray-400">
 									{feature.description}
 								</p>
 							</div>

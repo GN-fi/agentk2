@@ -1,78 +1,78 @@
 {
-	"mcpServers": {
-		"datapilot": {
-			"url": "http://localhost:7700/sse",
-			"type": "sse"
-		},
-		"memory": {
-			"command": "npx",
-			"args": ["-y", "@modelcontextprotocol/server-memory"]
-		},
-		"desktop-commander": {
-			"command": "npx",
-			"args": ["-y", "@wonderwhy-er/desktop-commander"]
-		},
-		"playwright": {
-			"command": "npx",
-			"args": ["-y", "@playwright/mcp@latest", "--vision"]
-		},
-		"obsidian-mcp": {
-			"command": "cmd",
-			"args": [
-				"/c",
-				"npx",
-				"-y",
-				"@smithery/cli@latest",
-				"run",
-				"obsidian-mcp",
-				"--key",
-				"a22a0dd7-d99a-4c13-8379-d8d73c9ab76e",
-				"--profile",
-				"prepared-minnow-tEMWpT"
-			]
-		},
-		"server-sequential-thinking": {
-			"command": "cmd",
-			"args": [
-				"/c",
-				"npx",
-				"-y",
-				"@smithery/cli@latest",
-				"run",
-				"@smithery-ai/server-sequential-thinking",
-				"--key",
-				"a22a0dd7-d99a-4c13-8379-d8d73c9ab76e"
-			]
-		},
-		"clear-thought": {
-			"command": "cmd",
-			"args": [
-				"/c",
-				"npx",
-				"-y",
-				"@smithery/cli@latest",
-				"run",
-				"@waldzellai/clear-thought",
-				"--key",
-				"a22a0dd7-d99a-4c13-8379-d8d73c9ab76e"
-			]
-		},
-		"memory-bank-mcp": {
-			"command": "cmd",
-			"args": [
-				"/c",
-				"npx",
-				"-y",
-				"@smithery/cli@latest",
-				"run",
-				"@aakarsh-sasi/memory-bank-mcp",
-				"--key",
-				"a22a0dd7-d99a-4c13-8379-d8d73c9ab76e"
-			]
-		},
-		"context7": {
-			"command": "npx",
-			"args": ["-y", "@upstash/context7-mcp@latest"]
-		}
-	}
+  "mcpServers": {
+    "datapilot": {
+      "url": "http://localhost:7700/sse",
+      "type": "sse"
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"]
+    },
+    "desktop-commander": {
+      "command": "npx",
+      "args": ["-y", "@wonderwhy-er/desktop-commander"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest", "--vision"]
+    },
+    "obsidian-mcp": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "obsidian-mcp",
+        "--key",
+        "a22a0dd7-d99a-4c13-8379-d8d73c9ab76e",
+        "--profile",
+        "prepared-minnow-tEMWpT"
+      ]
+    },
+    "server-sequential-thinking": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@smithery-ai/server-sequential-thinking",
+        "--key",
+        "a22a0dd7-d99a-4c13-8379-d8d73c9ab76e"
+      ]
+    },
+    "clear-thought": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@waldzellai/clear-thought",
+        "--key",
+        "a22a0dd7-d99a-4c13-8379-d8d73c9ab76e"
+      ]
+    },
+    "memory-bank-mcp": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@aakarsh-sasi/memory-bank-mcp",
+        "--key",
+        "a22a0dd7-d99a-4c13-8379-d8d73c9ab76e"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"]
+    }
+  }
 }

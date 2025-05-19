@@ -5,10 +5,10 @@ export const dynamic = "force-static";
 const FeaturesPage = () => {
 	return (
 		<div className="prose prose-invert max-w-none">
-			<h1 className="text-3xl font-bold mb-6 text-purple-400">
+			<h1 className="mb-6 text-3xl font-bold text-purple-400">
 				VIBE 작업 공간: 생산성을 극대화하는 주요 기능
 			</h1>
-			<p className="text-lg mb-8">
+			<p className="mb-8 text-lg">
 				VIBE 작업 공간은 개발자 여러분의 창의적인 아이디어를 현실로 만들 수
 				있도록 강력하고 다양한 기능들을 제공합니다. 단순한 코드 편집기를 넘어,
 				개발의 모든 단계를 지원하는 통합 환경을 경험해보세요. VIBE 작업 공간의
@@ -16,7 +16,7 @@ const FeaturesPage = () => {
 			</p>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					1. 차세대 웹 기반 코드 에디터
 				</h2>
 				<p className="mb-4">
@@ -24,7 +24,7 @@ const FeaturesPage = () => {
 					데스크톱 IDE와 견주어도 손색없는 풍부한 기능을 제공하여 어디서든
 					편리하게 코드를 작성하고 수정할 수 있습니다.
 				</p>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>다양한 언어 지원:</strong> JavaScript, TypeScript, Python,
 						Java, C++, Go 등 주요 프로그래밍 언어에 대한 구문 강조, 자동 완성,
@@ -57,7 +57,7 @@ const FeaturesPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					2. 내장 터미널 및 명령줄 인터페이스
 				</h2>
 				<p className="mb-4">
@@ -65,7 +65,7 @@ const FeaturesPage = () => {
 					별도의 터미널 프로그램을 열 필요 없이 IDE 내에서 직접 명령을 실행할 수
 					있습니다.
 				</p>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>다중 터미널 인스턴스:</strong> 여러 개의 터미널 세션을
 						동시에 열고 관리할 수 있어 병렬 작업에 유용합니다.
@@ -89,14 +89,14 @@ const FeaturesPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					3. 직관적인 파일 관리 시스템
 				</h2>
 				<p className="mb-4">
 					드래그 앤 드롭을 지원하는 직관적인 파일 탐색기를 통해 프로젝트 내
 					파일과 폴더를 쉽게 생성, 수정, 삭제하고 관리할 수 있습니다.
 				</p>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>트리 뷰 탐색기:</strong> 익숙한 트리 구조로 프로젝트 파일을
 						한눈에 파악하고 빠르게 접근할 수 있습니다.
@@ -122,7 +122,7 @@ const FeaturesPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					4. Git 기반 버전 관리 통합
 				</h2>
 				<p className="mb-4">
@@ -130,7 +130,7 @@ const FeaturesPage = () => {
 					추적하고, 브랜치를 관리하며, 원격 저장소와 손쉽게 동기화할 수 있도록
 					지원합니다.
 				</p>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>직관적인 Git 인터페이스:</strong> UI를 통해 스테이징, 커밋,
 						푸시, 풀, 브랜치 변경, 병합 등 주요 Git 작업을 쉽게 수행할 수
@@ -162,7 +162,7 @@ const FeaturesPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					5. VIBE AI: 지능형 개발 동반자
 				</h2>
 				<p className="mb-4">
@@ -175,7 +175,7 @@ const FeaturesPage = () => {
 					</Link>
 					의 강력한 기능들을 바로 사용할 수 있도록 통합되어 있습니다.
 				</p>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>VIBE 어시스턴트:</strong> 코드 관련 질문, 오류 해결, 새로운
 						기술 학습 등 개발 중 궁금한 점을 언제든지 물어보고 즉각적인 답변과
@@ -208,14 +208,14 @@ const FeaturesPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					6. 실시간 협업 및 공유
 				</h2>
 				<p className="mb-4">
 					VIBE 작업 공간은 팀 단위 개발을 위한 강력한 협업 기능을 제공합니다.
 					프로젝트와 파일을 팀원과 공유하고 실시간으로 함께 작업하세요.
 				</p>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>실시간 공동 편집:</strong> 여러 사용자가 동시에 같은 파일을
 						열고 편집하며, 각자의 커서 위치와 변경 사항을 실시간으로 확인할 수
@@ -249,14 +249,14 @@ const FeaturesPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					7. 실시간 미리보기 및 디버깅
 				</h2>
 				<p className="mb-4">
 					웹 애플리케이션 개발 시 변경 사항을 즉시 확인하고 문제를 빠르게 해결할
 					수 있도록 실시간 미리보기와 강력한 디버깅 도구를 제공합니다.
 				</p>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>통합 웹 서버 및 미리보기:</strong> 코드 수정 시 자동으로
 						변경 사항을 감지하고 빌드하여 작업 공간 내에서 바로 웹
@@ -281,14 +281,14 @@ const FeaturesPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					8. 유연한 환경 설정 및 커스터마이징
 				</h2>
 				<p className="mb-4">
 					개발자의 작업 스타일과 프로젝트 요구사항에 맞춰 작업 공간 환경을
 					유연하게 설정하고 커스터마이징할 수 있습니다.
 				</p>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>환경 변수 관리:</strong> API 키, 데이터베이스 연결 정보 등
 						민감한 정보를 안전하게 관리하고 애플리케이션에 주입할 수 있습니다.
@@ -319,7 +319,7 @@ const FeaturesPage = () => {
 			</section>
 
 			<section>
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					지속적인 발전
 				</h2>
 				<p className="mb-4">

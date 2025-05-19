@@ -4,15 +4,15 @@ export const dynamic = "force-static";
 const OverviewPage = () => {
 	return (
 		<div>
-			<h1 className="text-3xl font-bold mb-4 text-purple-400">VIBE AI: 개요</h1>
+			<h1 className="mb-4 text-3xl font-bold text-purple-400">VIBE AI: 개요</h1>
 			<p>
 				VIBE AI는 코드 작성, 디버깅, 학습 등 개발의 모든 단계에서 도움을 주는
 				강력한 인공지능 기능 모음입니다. VIBE의 개발 환경에 깊숙이 통합되어
 				있어, 개발자가 더욱 생산적이고 창의적으로 작업할 수 있도록 지원합니다.
 			</p>
 
-			<h2 className="text-2xl font-semibold mt-6 mb-3">주요 기능</h2>
-			<ul className="list-disc list-inside space-y-2">
+			<h2 className="mt-6 mb-3 text-2xl font-semibold">주요 기능</h2>
+			<ul className="list-inside list-disc space-y-2">
 				<li>
 					<strong>AI 코드 자동 완성:</strong> 문맥에 맞는 코드를 실시간으로
 					제안하여 작성 속도를 높입니다.
@@ -35,7 +35,7 @@ const OverviewPage = () => {
 				</li>
 			</ul>
 
-			<h2 className="text-2xl font-semibold mt-6 mb-3">VIBE AI 활용하기</h2>
+			<h2 className="mt-6 mb-3 text-2xl font-semibold">VIBE AI 활용하기</h2>
 			<p>
 				VIBE AI 기능들은 에디터 곳곳에서 자연스럽게 접근할 수 있도록
 				설계되었습니다. 각 기능의 상세한 사용법은 해당 문서 페이지를

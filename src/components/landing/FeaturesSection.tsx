@@ -10,7 +10,7 @@ const features = [
 				viewBox="0 0 24 24"
 				strokeWidth={1.5}
 				stroke="currentColor"
-				className="w-8 h-8 text-purple-400"
+				className="h-8 w-8 text-purple-400"
 			>
 				<title>데이터베이스 아이콘</title>
 				<path
@@ -32,7 +32,7 @@ const features = [
 				viewBox="0 0 24 24"
 				strokeWidth={1.5}
 				stroke="currentColor"
-				className="w-8 h-8 text-pink-400"
+				className="h-8 w-8 text-pink-400"
 			>
 				<title>사용자 인증 아이콘</title>
 				<path
@@ -54,7 +54,7 @@ const features = [
 				viewBox="0 0 24 24"
 				strokeWidth={1.5}
 				stroke="currentColor"
-				className="w-8 h-8 text-indigo-400"
+				className="h-8 w-8 text-indigo-400"
 			>
 				<title>보안 통합 아이콘</title>
 				<path
@@ -71,32 +71,32 @@ const FeaturesSection = () => {
 	return (
 		<section id="features" className="py-20">
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="text-center mb-16">
-					<h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+				<div className="mb-16 text-center">
+					<h2 className="mb-4 text-4xl font-extrabold md:text-5xl">
 						앱 개발,{" "}
-						<span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
+						<span className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
 							VIBE
 						</span>
 						와 함께라면 쉬워집니다
 					</h2>
-					<p className="text-xl text-gray-300 max-w-2xl mx-auto">
+					<p className="mx-auto max-w-2xl text-xl text-gray-300">
 						VIBE는 강력하고 사용하기 쉬운 기능들로 여러분의 아이디어 실현을
 						돕습니다.
 					</p>
 				</div>
-				<div className="grid md:grid-cols-3 gap-8">
+				<div className="grid gap-8 md:grid-cols-3">
 					{features.map((feature) => (
 						<div
 							key={feature.name}
-							className="bg-gray-800 bg-opacity-50 p-8 rounded-xl shadow-xl hover:shadow-purple-500/30 transition-shadow duration-300"
+							className="bg-opacity-50 rounded-xl bg-gray-800 p-8 shadow-xl transition-shadow duration-300 hover:shadow-purple-500/30"
 						>
-							<div className="flex items-center justify-center w-16 h-16 mb-6 bg-gray-700 bg-opacity-70 rounded-full">
+							<div className="bg-opacity-70 mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gray-700">
 								{feature.icon}
 							</div>
-							<h3 className="text-2xl font-semibold mb-3 text-white">
+							<h3 className="mb-3 text-2xl font-semibold text-white">
 								{feature.name}
 							</h3>
-							<p className="text-gray-400 leading-relaxed">
+							<p className="leading-relaxed text-gray-400">
 								{feature.description}
 							</p>
 						</div>

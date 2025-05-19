@@ -5,10 +5,10 @@ export const dynamic = "force-static";
 const VersionControlPage = () => {
 	return (
 		<div className="prose prose-invert max-w-none">
-			<h1 className="text-3xl font-bold mb-6 text-purple-400">
+			<h1 className="mb-6 text-3xl font-bold text-purple-400">
 				VIBE 작업 공간: Git으로 스마트하게 버전 관리하기
 			</h1>
-			<p className="text-lg mb-8">
+			<p className="mb-8 text-lg">
 				소프트웨어 개발에서 버전 관리는 프로젝트의 변경 이력을 체계적으로
 				추적하고, 여러 개발자가 협업하며 발생할 수 있는 코드 충돌을 효과적으로
 				관리하기 위한 필수적인 과정입니다. VIBE 작업 공간은 강력한 분산 버전
@@ -17,10 +17,10 @@ const VersionControlPage = () => {
 			</p>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					버전 관리, 왜 중요할까요?
 				</h2>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>변경 이력 추적:</strong> 코드의 모든 변경 사항을 기록하여
 						언제든지 특정 시점의 코드로 돌아가거나 변경 내용을 확인할 수
@@ -50,7 +50,7 @@ const VersionControlPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					VIBE 작업 공간의 Git 통합 기능
 				</h2>
 				<p className="mb-4">
@@ -59,9 +59,9 @@ const VersionControlPage = () => {
 					시작할 수 있도록 돕습니다. 물론, 숙련된 사용자는 내장 터미널을 통해
 					모든 Git 명령어를 직접 사용할 수도 있습니다.
 				</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+				<div className="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							1. 직관적인 Git UI
 						</h4>
 						<p className="text-sm">
@@ -71,8 +71,8 @@ const VersionControlPage = () => {
 						</p>
 						{/* TODO: VIBE Git UI 스크린샷 (변경사항, 스테이징, 커밋 버튼 등) */}
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							2. 변경 사항 시각화 (Diff View)
 						</h4>
 						<p className="text-sm">
@@ -82,8 +82,8 @@ const VersionControlPage = () => {
 						</p>
 						{/* TODO: VIBE Diff View 스크린샷 */}
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							3. 손쉬운 브랜치 관리
 						</h4>
 						<p className="text-sm">
@@ -93,8 +93,8 @@ const VersionControlPage = () => {
 						</p>
 						{/* TODO: VIBE 브랜치 관리 UI 스크린샷 (브랜치 목록, 생성, 병합 등) */}
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							4. 원격 저장소 연동
 						</h4>
 						<p className="text-sm">
@@ -103,8 +103,8 @@ const VersionControlPage = () => {
 							프로젝트를 원격 저장소로 푸시할 수 있습니다.
 						</p>
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							5. 커밋 히스토리 조회
 						</h4>
 						<p className="text-sm">
@@ -113,8 +113,8 @@ const VersionControlPage = () => {
 						</p>
 						{/* TODO: VIBE 커밋 히스토리 뷰 스크린샷 */}
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							6. 내장 터미널을 통한 고급 Git 명령어 사용
 						</h4>
 						<p className="text-sm">
@@ -132,10 +132,10 @@ const VersionControlPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					VIBE에서 버전 관리 시작하기
 				</h2>
-				<ol className="list-decimal pl-6 mb-6 space-y-3">
+				<ol className="mb-6 list-decimal space-y-3 pl-6">
 					<li>
 						<strong>새 프로젝트에서 Git 초기화:</strong> VIBE에서 새 프로젝트를
 						생성하면 자동으로 Git 저장소가 초기화됩니다. 또는 기존 프로젝트
@@ -170,14 +170,14 @@ const VersionControlPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					일반적인 브랜치 전략 (예시)
 				</h2>
 				<p className="mb-4">
 					효율적인 협업과 안정적인 릴리스를 위해 다음과 같은 브랜치 전략을
 					고려해볼 수 있습니다 (프로젝트 규모와 팀 특성에 맞게 조정 가능):
 				</p>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>`main` (또는 `master`):</strong> 항상 안정적이고 배포 가능한
 						상태를 유지하는 메인 브랜치입니다. 직접적인 커밋은 지양하고,
@@ -218,10 +218,10 @@ const VersionControlPage = () => {
 			</section>
 
 			<section>
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					팁 및 추가 정보
 				</h2>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>커밋 메시지 명확하게 작성:</strong> 변경 사항을 쉽게 이해할
 						수 있도록 명확하고 일관된 형식으로 커밋 메시지를 작성하는 것이

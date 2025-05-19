@@ -15,7 +15,7 @@ export const dynamic = "force-static";
 
 const AppsOverviewPage = () => {
 	return (
-		<article className="prose prose-invert max-w-none prose-headings:text-purple-400 prose-a:text-purple-300 hover:prose-a:text-purple-200 prose-strong:text-purple-300">
+		<article className="prose prose-invert prose-headings:text-purple-400 prose-a:text-purple-300 hover:prose-a:text-purple-200 prose-strong:text-purple-300 max-w-none">
 			<h1 id="vibe-apps-overview-title">VIBE 앱 개요: 아이디어를 현실로</h1>
 			<p className="lead">
 				VIBE 앱은 여러분의 창의적인 아이디어를 실제 작동하는 애플리케이션으로
@@ -37,53 +37,53 @@ const AppsOverviewPage = () => {
 			<h2 id="what-can-you-do-with-vibe-apps">
 				VIBE 앱으로 무엇을 할 수 있나요?
 			</h2>
-			<div className="not-prose my-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-				<div className="bg-gray-800 p-6 rounded-lg shadow-md">
-					<FiZap className="w-8 h-8 text-purple-400 mb-3" />
-					<h3 className="text-xl font-semibold text-purple-300 mb-2">
+			<div className="not-prose my-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+				<div className="rounded-lg bg-gray-800 p-6 shadow-md">
+					<FiZap className="mb-3 h-8 w-8 text-purple-400" />
+					<h3 className="mb-2 text-xl font-semibold text-purple-300">
 						신속한 프로토타이핑
 					</h3>
-					<p className="text-gray-300 text-sm">
+					<p className="text-sm text-gray-300">
 						VIBE AI의 도움과 다양한 프로젝트 템플릿을 활용하여 아이디어를 빠르게
 						시제품으로 만들어보고 검증할 수 있습니다.
 					</p>
 				</div>
-				<div className="bg-gray-800 p-6 rounded-lg shadow-md">
-					<FiLayers className="w-8 h-8 text-purple-400 mb-3" />
-					<h3 className="text-xl font-semibold text-purple-300 mb-2">
+				<div className="rounded-lg bg-gray-800 p-6 shadow-md">
+					<FiLayers className="mb-3 h-8 w-8 text-purple-400" />
+					<h3 className="mb-2 text-xl font-semibold text-purple-300">
 						풀스택 애플리케이션 개발
 					</h3>
-					<p className="text-gray-300 text-sm">
+					<p className="text-sm text-gray-300">
 						프론트엔드 UI부터 백엔드 로직, 데이터베이스 연동까지, 복잡한 풀스택
 						애플리케이션 개발에 필요한 모든 것을 VIBE에서 해결하세요.
 					</p>
 				</div>
-				<div className="bg-gray-800 p-6 rounded-lg shadow-md">
-					<FiUsers className="w-8 h-8 text-purple-400 mb-3" />
-					<h3 className="text-xl font-semibold text-purple-300 mb-2">
+				<div className="rounded-lg bg-gray-800 p-6 shadow-md">
+					<FiUsers className="mb-3 h-8 w-8 text-purple-400" />
+					<h3 className="mb-2 text-xl font-semibold text-purple-300">
 						실시간 공동 작업
 					</h3>
-					<p className="text-gray-300 text-sm">
+					<p className="text-sm text-gray-300">
 						팀원들과 함께 실시간으로 코드를 작성하고, 의견을 나누며 프로젝트를
 						효율적으로 진행할 수 있습니다. 페어 프로그래밍도 문제없습니다.
 					</p>
 				</div>
-				<div className="bg-gray-800 p-6 rounded-lg shadow-md">
-					<FiUploadCloud className="w-8 h-8 text-purple-400 mb-3" />
-					<h3 className="text-xl font-semibold text-purple-300 mb-2">
+				<div className="rounded-lg bg-gray-800 p-6 shadow-md">
+					<FiUploadCloud className="mb-3 h-8 w-8 text-purple-400" />
+					<h3 className="mb-2 text-xl font-semibold text-purple-300">
 						간편한 배포 및 공유
 					</h3>
-					<p className="text-gray-300 text-sm">
+					<p className="text-sm text-gray-300">
 						단 몇 번의 클릭만으로 여러분의 VIBE 앱을 전 세계에 공개하거나, 특정
 						사용자와 안전하게 공유할 수 있습니다.
 					</p>
 				</div>
-				<div className="bg-gray-800 p-6 rounded-lg shadow-md">
-					<FiGrid className="w-8 h-8 text-purple-400 mb-3" />
-					<h3 className="text-xl font-semibold text-purple-300 mb-2">
+				<div className="rounded-lg bg-gray-800 p-6 shadow-md">
+					<FiGrid className="mb-3 h-8 w-8 text-purple-400" />
+					<h3 className="mb-2 text-xl font-semibold text-purple-300">
 						다양한 기술 실험 및 학습
 					</h3>
-					<p className="text-gray-300 text-sm">
+					<p className="text-sm text-gray-300">
 						새로운 프로그래밍 언어, 프레임워크, 라이브러리를 VIBE의 격리된
 						환경에서 부담 없이 실험하고 학습하는 데 최적의 공간입니다.
 					</p>
@@ -95,7 +95,7 @@ const AppsOverviewPage = () => {
 				모든 VIBE 앱은 일반적으로 다음과 같은 주요 구성 요소들을 포함합니다
 				(프로젝트 유형에 따라 다를 수 있습니다):
 			</p>
-			<ul className="list-disc list-inside my-4 space-y-2 pl-4">
+			<ul className="my-4 list-inside list-disc space-y-2 pl-4">
 				<li>
 					<strong className="text-purple-300">작업 공간 (Workspace):</strong>{" "}
 					코드를 작성하고 파일을 관리하는 공간입니다. 파일 탐색기, 코드 에디터,
@@ -133,28 +133,28 @@ const AppsOverviewPage = () => {
 				모든 정보를 제공할 것입니다.
 			</p>
 
-			<div className="mt-10 p-6 bg-gray-800 rounded-lg shadow-md">
-				<h3 className="text-xl font-semibold text-purple-300 mb-3">
+			<div className="mt-10 rounded-lg bg-gray-800 p-6 shadow-md">
+				<h3 className="mb-3 text-xl font-semibold text-purple-300">
 					다음으로 이동
 				</h3>
-				<p className="text-gray-300 mb-4">
+				<p className="mb-4 text-gray-300">
 					VIBE 앱의 기본 개념을 이해하셨다면, 이제 직접 앱을 만들어보거나 다른
 					기능들을 살펴보세요.
 				</p>
 				<div className="flex flex-wrap gap-4">
 					<Link
 						href="/docs/vibe-apps/templates" // 템플릿 페이지 경로 (추후 생성)
-						className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md shadow-md transition-colors group"
+						className="group inline-flex items-center rounded-md bg-purple-600 px-6 py-3 font-semibold text-white shadow-md transition-colors hover:bg-purple-700"
 					>
 						템플릿으로 앱 만들기
-						<FiArrowRight className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
+						<FiArrowRight className="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-1" />
 					</Link>
 					<Link
 						href="/docs/vibe-apps/collaboration"
-						className="inline-flex items-center px-6 py-3 border border-purple-500 hover:bg-purple-500/20 text-purple-300 font-semibold rounded-md shadow-md transition-colors group"
+						className="group inline-flex items-center rounded-md border border-purple-500 px-6 py-3 font-semibold text-purple-300 shadow-md transition-colors hover:bg-purple-500/20"
 					>
 						협업 기능 알아보기
-						<FiArrowRight className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
+						<FiArrowRight className="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-1" />
 					</Link>
 				</div>
 			</div>

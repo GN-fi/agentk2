@@ -54,8 +54,8 @@ const SignupPage = () => {
 
 	if (status === "loading") {
 		return (
-			<div className="flex flex-col min-h-screen bg-gray-800 items-center justify-center">
-				<p className="text-white text-xl">로그인 상태 확인 중...</p>
+			<div className="flex min-h-screen flex-col items-center justify-center bg-gray-800">
+				<p className="text-xl text-white">로그인 상태 확인 중...</p>
 			</div>
 		);
 	}
@@ -65,7 +65,7 @@ const SignupPage = () => {
 	}
 
 	return (
-		<div className="flex flex-col min-h-screen bg-gray-800">
+		<div className="flex min-h-screen flex-col bg-gray-800">
 			<div className="sm:mx-auto sm:w-full sm:max-w-md">
 				<Link href="/" className="flex justify-center">
 					<h1 className="text-4xl font-bold text-white">VIBE</h1>
@@ -75,13 +75,13 @@ const SignupPage = () => {
 				</h2>
 			</div>
 
-			<main className="flex-grow flex items-center justify-center p-4 sm:p-6 lg:p-8">
-				<div className="bg-gray-900 p-8 sm:p-10 rounded-xl shadow-2xl w-full max-w-md">
-					<div className="text-center mb-8">
-						<h1 className="text-3xl sm:text-4xl font-bold text-purple-400">
+			<main className="flex flex-grow items-center justify-center p-4 sm:p-6 lg:p-8">
+				<div className="w-full max-w-md rounded-xl bg-gray-900 p-8 shadow-2xl sm:p-10">
+					<div className="mb-8 text-center">
+						<h1 className="text-3xl font-bold text-purple-400 sm:text-4xl">
 							VIBE 시작하기
 						</h1>
-						<p className="text-gray-400 mt-2">
+						<p className="mt-2 text-gray-400">
 							새로운 계정을 만들고 코딩 여정을 시작하세요.
 						</p>
 					</div>
@@ -102,7 +102,7 @@ const SignupPage = () => {
 								required
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
-								className="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm text-white"
+								className="mt-1 block w-full rounded-md border border-gray-600 bg-gray-700 px-4 py-3 text-white placeholder-gray-500 shadow-sm focus:border-purple-500 focus:ring-purple-500 focus:outline-none sm:text-sm"
 								placeholder="you@example.com"
 							/>
 						</div>
@@ -122,7 +122,7 @@ const SignupPage = () => {
 								required
 								value={password}
 								onChange={(e) => setPassword(e.target.value)}
-								className="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm text-white"
+								className="mt-1 block w-full rounded-md border border-gray-600 bg-gray-700 px-4 py-3 text-white placeholder-gray-500 shadow-sm focus:border-purple-500 focus:ring-purple-500 focus:outline-none sm:text-sm"
 								placeholder="8자 이상 입력해주세요"
 							/>
 						</div>
@@ -132,7 +132,7 @@ const SignupPage = () => {
 						<div>
 							<button
 								type="submit"
-								className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 focus:ring-offset-gray-900 transition-colors"
+								className="flex w-full justify-center rounded-md border border-transparent bg-purple-600 px-4 py-3 text-sm font-medium text-white shadow-sm transition-colors hover:bg-purple-700 focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 focus:outline-none"
 							>
 								계정 만들기
 							</button>
@@ -145,7 +145,7 @@ const SignupPage = () => {
 								<div className="w-full border-t border-gray-700" />
 							</div>
 							<div className="relative flex justify-center text-sm">
-								<span className="px-2 bg-gray-900 text-gray-500">
+								<span className="bg-gray-900 px-2 text-gray-500">
 									또는 다음으로 계속하기
 								</span>
 							</div>
@@ -156,28 +156,28 @@ const SignupPage = () => {
 								<button
 									type="button"
 									onClick={() => signIn("google", { callbackUrl: "/editor/~" })}
-									className="w-full inline-flex justify-center py-3 px-4 border border-gray-700 rounded-md shadow-sm bg-gray-800 text-sm font-medium text-gray-300 hover:bg-gray-700 transition-colors"
+									className="inline-flex w-full justify-center rounded-md border border-gray-700 bg-gray-800 px-4 py-3 text-sm font-medium text-gray-300 shadow-sm transition-colors hover:bg-gray-700"
 								>
 									<span className="sr-only">Google 계정으로 가입</span>
-									<FaGoogle className="w-5 h-5" />
+									<FaGoogle className="h-5 w-5" />
 								</button>
 							</div>
 							<div>
 								<button
 									type="button"
-									className="w-full inline-flex justify-center py-3 px-4 border border-gray-700 rounded-md shadow-sm bg-gray-800 text-sm font-medium text-gray-300 hover:bg-gray-700 transition-colors"
+									className="inline-flex w-full justify-center rounded-md border border-gray-700 bg-gray-800 px-4 py-3 text-sm font-medium text-gray-300 shadow-sm transition-colors hover:bg-gray-700"
 								>
 									<span className="sr-only">GitHub 계정으로 가입</span>
-									<FaGithub className="w-5 h-5" />
+									<FaGithub className="h-5 w-5" />
 								</button>
 							</div>
 							<div>
 								<button
 									type="button"
-									className="w-full inline-flex justify-center py-3 px-4 border border-gray-700 rounded-md shadow-sm bg-gray-800 text-sm font-medium text-gray-300 hover:bg-gray-700 transition-colors"
+									className="inline-flex w-full justify-center rounded-md border border-gray-700 bg-gray-800 px-4 py-3 text-sm font-medium text-gray-300 shadow-sm transition-colors hover:bg-gray-700"
 								>
 									<span className="sr-only">Twitter 계정으로 가입</span>
-									<FaTwitter className="w-5 h-5" />
+									<FaTwitter className="h-5 w-5" />
 								</button>
 							</div>
 						</div>
@@ -188,7 +188,7 @@ const SignupPage = () => {
 							이미 계정이 있으신가요?{" "}
 							<Link
 								href="/login"
-								className="font-medium text-purple-400 hover:text-purple-300 transition-colors"
+								className="font-medium text-purple-400 transition-colors hover:text-purple-300"
 							>
 								로그인하기
 							</Link>

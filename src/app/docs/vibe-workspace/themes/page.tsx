@@ -3,10 +3,10 @@ import Link from "next/link";
 const ThemesPage = () => {
 	return (
 		<div className="prose prose-invert max-w-none">
-			<h1 className="text-3xl font-bold mb-6 text-purple-400">
+			<h1 className="mb-6 text-3xl font-bold text-purple-400">
 				VIBE 작업 공간 테마: 나만의 개발 환경 꾸미기
 			</h1>
-			<p className="text-lg mb-8">
+			<p className="mb-8 text-lg">
 				VIBE 작업 공간은 개발자 여러분이 장시간 집중하여 작업하는 공간입니다.
 				VIBE는 다양한 테마 옵션을 제공하여 사용자가 자신의 취향과 작업 환경에
 				맞게 IDE의 시각적 스타일을 자유롭게 변경할 수 있도록 지원합니다. 이를
@@ -15,10 +15,10 @@ const ThemesPage = () => {
 			</p>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					왜 테마 설정이 중요한가요?
 				</h2>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>시각적 편안함 증대:</strong> 개인의 선호도와 작업 환경(예:
 						밝은 곳, 어두운 곳)에 맞는 테마를 선택하여 눈의 피로를 줄이고
@@ -42,14 +42,14 @@ const ThemesPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					테마 변경 방법
 				</h2>
 				<p className="mb-4">
 					VIBE 작업 공간의 테마는 몇 번의 클릭만으로 쉽게 변경할 수 있습니다.
 					일반적으로 다음과 같은 방법으로 접근할 수 있습니다:
 				</p>
-				<ol className="list-decimal pl-6 mb-6 space-y-3">
+				<ol className="mb-6 list-decimal space-y-3 pl-6">
 					<li>
 						<strong>설정 메뉴 접근:</strong> VIBE 작업 공간 우측 상단 또는 좌측
 						하단의 사용자 프로필 아이콘이나 설정(톱니바퀴 모양) 아이콘을
@@ -72,7 +72,7 @@ const ThemesPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					기본 제공 테마
 				</h2>
 				<p className="mb-4">
@@ -80,9 +80,9 @@ const ThemesPage = () => {
 					사전 정의된 테마를 제공합니다. 일반적으로 다음과 같은 종류의 테마가
 					포함될 수 있습니다 (실제 제공되는 테마는 업데이트될 수 있습니다):
 				</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+				<div className="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							라이트 테마 (VIBE Light)
 						</h4>
 						<p className="text-sm">
@@ -91,8 +91,8 @@ const ThemesPage = () => {
 						</p>
 						{/* TODO: 라이트 테마 스크린샷 */}
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							다크 테마 (VIBE Dark)
 						</h4>
 						<p className="text-sm">
@@ -101,8 +101,8 @@ const ThemesPage = () => {
 						</p>
 						{/* TODO: 다크 테마 스크린샷 */}
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							고대비 테마 (High Contrast)
 						</h4>
 						<p className="text-sm">
@@ -111,8 +111,8 @@ const ThemesPage = () => {
 						</p>
 						{/* TODO: 고대비 테마 스크린샷 */}
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							솔라라이즈드 (Solarized Light/Dark)
 						</h4>
 						<p className="text-sm">
@@ -122,8 +122,8 @@ const ThemesPage = () => {
 						</p>
 						{/* TODO: 솔라라이즈드 테마 스크린샷 */}
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							모노카이 (Monokai)
 						</h4>
 						<p className="text-sm">
@@ -132,8 +132,8 @@ const ThemesPage = () => {
 						</p>
 						{/* TODO: 모노카이 테마 스크린샷 */}
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							더 많은 테마...
 						</h4>
 						<p className="text-sm">
@@ -145,7 +145,7 @@ const ThemesPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					사용자 정의 테마 (향후 계획)
 				</h2>
 				<p className="mb-4">
@@ -153,7 +153,7 @@ const ThemesPage = () => {
 					커스터마이징하거나, 자신만의 테마를 만들어 다른 사용자와 공유할 수
 					있는 기능을 제공하는 것을 목표로 하고 있습니다.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>테마 편집기:</strong> 색상, 폰트, 아이콘 스타일 등을 직접
 						수정할 수 있는 비주얼 편집기 또는 설정 파일(JSON, CSS 등)을 통한
@@ -173,10 +173,10 @@ const ThemesPage = () => {
 			</section>
 
 			<section>
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					팁 및 권장 사항
 				</h2>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>작업 환경 고려:</strong> 주변 밝기나 개인적인 시각 민감도에
 						따라 적절한 테마를 선택하세요.

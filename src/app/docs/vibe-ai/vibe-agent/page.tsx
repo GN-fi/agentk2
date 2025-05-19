@@ -6,10 +6,10 @@ export const dynamic = "force-static";
 const VibeAgentPage = () => {
 	return (
 		<div className="prose prose-invert max-w-none">
-			<h1 className="text-3xl font-bold mb-6 text-purple-400">
+			<h1 className="mb-6 text-3xl font-bold text-purple-400">
 				VIBE 에이전트: 개발 워크플로우 자동화
 			</h1>
-			<p className="text-lg mb-8">
+			<p className="mb-8 text-lg">
 				VIBE 에이전트는 반복적이고 시간 소모적인 개발 작업을 자동화하여 개발자가
 				보다 창의적이고 중요한 문제 해결에 집중할 수 있도록 돕는 지능형 AI
 				파트너입니다. VIBE 작업 공간과 긴밀하게 통합되어 프로젝트 관리, 코드
@@ -17,10 +17,10 @@ const VibeAgentPage = () => {
 			</p>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					VIBE 에이전트의 주요 기능
 				</h2>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>지능형 작업 자동화:</strong> 단순 스크립트 실행을 넘어,
 						문맥을 이해하고 사용자의 의도에 맞는 복잡한 작업을 수행합니다. 예를
@@ -53,8 +53,8 @@ const VibeAgentPage = () => {
 						제공합니다.
 					</li>
 				</ul>
-				<div className="bg-gray-800 p-4 rounded-md shadow">
-					<h4 className="font-semibold text-purple-200 mb-2">
+				<div className="rounded-md bg-gray-800 p-4 shadow">
+					<h4 className="mb-2 font-semibold text-purple-200">
 						VIBE 에이전트의 목표:
 					</h4>
 					<p className="text-sm">
@@ -65,18 +65,18 @@ const VibeAgentPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					VIBE 에이전트 사용 방법
 				</h2>
 				<p className="mb-4">
 					VIBE 에이전트는 VIBE IDE 내의 여러 인터페이스를 통해 접근하고 활용할
 					수 있습니다.
 				</p>
-				<ol className="list-decimal pl-6 mb-6 space-y-3">
+				<ol className="mb-6 list-decimal space-y-3 pl-6">
 					<li>
 						<strong>명령 팔레트 (Command Palette):</strong>{" "}
-						<code className="bg-gray-700 px-1 rounded">Ctrl+Shift+P</code> (또는{" "}
-						<code className="bg-gray-700 px-1 rounded">Cmd+Shift+P</code> on
+						<code className="rounded bg-gray-700 px-1">Ctrl+Shift+P</code> (또는{" "}
+						<code className="rounded bg-gray-700 px-1">Cmd+Shift+P</code> on
 						Mac)를 눌러 명령 팔레트를 열고, "VIBE Agent:" 또는 "에이전트:"로
 						시작하는 명령을 검색하여 실행합니다.
 					</li>
@@ -105,8 +105,8 @@ const VibeAgentPage = () => {
 						대한 단위 테스트 생성")
 					</li>
 				</ol>
-				<div className="bg-gray-800 p-4 rounded-md shadow">
-					<h4 className="font-semibold text-purple-200 mb-2">팁:</h4>
+				<div className="rounded-md bg-gray-800 p-4 shadow">
+					<h4 className="mb-2 font-semibold text-purple-200">팁:</h4>
 					<p className="text-sm">
 						자주 사용하는 에이전트 작업은 단축키를 지정하거나 즐겨찾기에
 						추가하여 더욱 빠르게 접근할 수 있도록 지원될 예정입니다.
@@ -115,12 +115,12 @@ const VibeAgentPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					주요 사용 사례
 				</h2>
-				<ul className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-					<li className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+				<ul className="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+					<li className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							코드 생성 및 리팩토링
 						</h4>
 						<p className="text-sm">
@@ -129,8 +129,8 @@ const VibeAgentPage = () => {
 							클라이언트 코드 생성 등.
 						</p>
 					</li>
-					<li className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<li className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							테스트 자동화
 						</h4>
 						<p className="text-sm">
@@ -139,8 +139,8 @@ const VibeAgentPage = () => {
 							분석 및 수정 제안.
 						</p>
 					</li>
-					<li className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<li className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							문서화 지원
 						</h4>
 						<p className="text-sm">
@@ -148,8 +148,8 @@ const VibeAgentPage = () => {
 							변경 사항에 대한 릴리스 노트 초안 작성.
 						</p>
 					</li>
-					<li className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<li className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							프로젝트 관리 및 분석
 						</h4>
 						<p className="text-sm">
@@ -158,8 +158,8 @@ const VibeAgentPage = () => {
 							적용).
 						</p>
 					</li>
-					<li className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<li className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							배포 자동화
 						</h4>
 						<p className="text-sm">
@@ -167,8 +167,8 @@ const VibeAgentPage = () => {
 							상태 점검, 롤백 절차 자동화.
 						</p>
 					</li>
-					<li className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<li className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							오류 모니터링 및 알림
 						</h4>
 						<p className="text-sm">
@@ -180,7 +180,7 @@ const VibeAgentPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					에이전트 커스터마이징 (향후 계획)
 				</h2>
 				<p className="mb-4">
@@ -189,7 +189,7 @@ const VibeAgentPage = () => {
 					스택, 프로젝트 요구사항, 또는 팀의 독특한 워크플로우에 최적화된 자동화
 					도구를 직접 만들 수 있게 됩니다.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>스크립트 기반 정의:</strong> Python, JavaScript 등 익숙한
 						스크립트 언어를 사용하여 에이전트의 행동 로직을 직접 작성합니다.
@@ -207,10 +207,10 @@ const VibeAgentPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					제한 사항 및 고려 사항
 				</h2>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>초기 학습 곡선:</strong> VIBE 에이전트의 모든 기능을
 						효과적으로 활용하기 위해서는 약간의 학습 시간이 필요할 수 있습니다.
@@ -235,14 +235,14 @@ const VibeAgentPage = () => {
 			</section>
 
 			<section>
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					다음 단계
 				</h2>
 				<p className="mb-4">
 					VIBE 에이전트를 통해 개발 생산성을 한층 끌어올려 보세요. 다음 문서들을
 					통해 VIBE AI의 다른 기능들도 확인해보세요.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<Link
 							href="/docs/vibe-ai/overview"

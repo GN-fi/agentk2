@@ -4,11 +4,11 @@ import Header from "./Header";
 
 const DocsLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<div className="flex flex-col min-h-screen bg-gray-900 text-white">
+		<div className="flex min-h-screen flex-col bg-gray-900 text-white">
 			<Header />
-			<div className="flex flex-1 container mx-auto pt-6 pb-12 px-4 sm:px-6 lg:px-8">
+			<div className="container mx-auto flex flex-1 px-4 pt-6 pb-12 sm:px-6 lg:px-8">
 				<DocsSidebar />
-				<main className="flex-1 ml-8 p-4 bg-gray-800 rounded-lg shadow">
+				<main className="ml-8 flex-1 rounded-lg bg-gray-800 p-4 shadow">
 					{children}
 				</main>
 			</div>

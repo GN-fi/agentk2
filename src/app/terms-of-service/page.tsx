@@ -4,15 +4,15 @@ import Link from "next/link";
 
 const TermsOfServicePage = () => {
 	return (
-		<div className="flex flex-col min-h-screen bg-gray-900 text-gray-300">
+		<div className="flex min-h-screen flex-col bg-gray-900 text-gray-300">
 			<Header />
-			<main className="flex-grow container mx-auto px-4 py-8 sm:px-6 lg:px-8">
-				<h1 className="text-4xl font-bold text-purple-400 mb-8">
+			<main className="container mx-auto flex-grow px-4 py-8 sm:px-6 lg:px-8">
+				<h1 className="mb-8 text-4xl font-bold text-purple-400">
 					서비스 이용약관
 				</h1>
 
 				<section className="mb-6">
-					<h2 className="text-2xl font-semibold text-purple-300 mb-3">
+					<h2 className="mb-3 text-2xl font-semibold text-purple-300">
 						제1조 (목적)
 					</h2>
 					<p className="mb-2">
@@ -23,13 +23,13 @@ const TermsOfServicePage = () => {
 				</section>
 
 				<section className="mb-6">
-					<h2 className="text-2xl font-semibold text-purple-300 mb-3">
+					<h2 className="mb-3 text-2xl font-semibold text-purple-300">
 						제2조 (정의)
 					</h2>
 					<p className="mb-2">
 						본 약관에서 사용하는 용어의 정의는 다음과 같습니다.
 					</p>
-					<ul className="list-disc list-inside mb-2 pl-4">
+					<ul className="mb-2 list-inside list-disc pl-4">
 						<li>
 							"서비스"라 함은 구현되는 단말기(PC, 모바일, 태블릿 등의 각종
 							유무선 장치를 포함)와 상관없이 "회원"이 이용할 수 있는 VIBE 플랫폼
@@ -65,7 +65,7 @@ const TermsOfServicePage = () => {
 				<div className="mt-8">
 					<Link
 						href="/"
-						className="text-purple-400 hover:text-purple-300 transition-colors"
+						className="text-purple-400 transition-colors hover:text-purple-300"
 					>
 						&larr; 홈으로 돌아가기
 					</Link>

@@ -58,9 +58,9 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 	}, [dropdownRef, mobileMenuRef]);
 
 	return (
-		<div className="flex items-center justify-between p-2 bg-gray-900 border-b border-gray-700 text-white">
+		<div className="flex items-center justify-between border-b border-gray-700 bg-gray-900 p-2 text-white">
 			<div className="flex items-center space-x-4">
-				<Link href="/" className="flex items-center flex-shrink-0">
+				<Link href="/" className="flex flex-shrink-0 items-center">
 					<Image
 						src="/images/logo.svg"
 						alt="VIBE 로고"
@@ -69,16 +69,16 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 					/>
 					<span className="ml-2 text-lg font-semibold">VIBE</span>
 				</Link>
-				<div className="flex items-center space-x-1 cursor-pointer hover:bg-gray-700 p-1 rounded">
+				<div className="flex cursor-pointer items-center space-x-1 rounded p-1 hover:bg-gray-700">
 					<span className="text-sm font-medium">{displayProjectName}</span>
-					<ChevronDownIcon className="w-4 h-4" />
+					<ChevronDownIcon className="h-4 w-4" />
 				</div>
 				{projectName !== "~" && ( // 대시보드에서는 실행 버튼 숨김
 					<button
 						type="button"
-						className="flex items-center space-x-2 bg-green-500 hover:bg-green-600 px-3 py-1.5 rounded text-sm font-medium"
+						className="flex items-center space-x-2 rounded bg-green-500 px-3 py-1.5 text-sm font-medium hover:bg-green-600"
 					>
-						<PlayIcon className="w-5 h-5" />
+						<PlayIcon className="h-5 w-5" />
 						<span>실행</span>
 					</button>
 				)}
@@ -89,26 +89,26 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 			</div>
 
 			{/* Desktop Menu */}
-			<div className="hidden md:flex items-center space-x-3">
+			<div className="hidden items-center space-x-3 md:flex">
 				<button
 					type="button"
-					className="flex items-center space-x-2 bg-blue-500 hover:bg-blue-600 px-3 py-1.5 rounded text-sm font-medium"
+					className="flex items-center space-x-2 rounded bg-blue-500 px-3 py-1.5 text-sm font-medium hover:bg-blue-600"
 				>
-					<CloudArrowUpIcon className="w-5 h-5" />
+					<CloudArrowUpIcon className="h-5 w-5" />
 					<span>배포</span>
 				</button>
 				<button
 					type="button"
-					className="flex items-center space-x-2 border border-gray-600 hover:bg-gray-700 px-3 py-1.5 rounded text-sm font-medium"
+					className="flex items-center space-x-2 rounded border border-gray-600 px-3 py-1.5 text-sm font-medium hover:bg-gray-700"
 				>
-					<UserPlusIcon className="w-5 h-5" />
+					<UserPlusIcon className="h-5 w-5" />
 					<span>초대</span>
 				</button>
-				<button type="button" className="p-1.5 hover:bg-gray-700 rounded">
-					<BellIcon className="w-5 h-5" />
+				<button type="button" className="rounded p-1.5 hover:bg-gray-700">
+					<BellIcon className="h-5 w-5" />
 				</button>
-				<button type="button" className="p-1.5 hover:bg-gray-700 rounded">
-					<QuestionMarkCircleIcon className="w-5 h-5" />
+				<button type="button" className="rounded p-1.5 hover:bg-gray-700">
+					<QuestionMarkCircleIcon className="h-5 w-5" />
 				</button>
 
 				{/* 사용자 인증 상태에 따른 UI */}
@@ -119,13 +119,13 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 					<div className="space-x-2">
 						<Link
 							href="/login"
-							className="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-1.5 px-3 rounded-md transition-colors text-sm"
+							className="rounded-md bg-pink-600 px-3 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-pink-700"
 						>
 							로그인
 						</Link>
 						<Link
 							href="/signup"
-							className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-1.5 px-3 rounded-md transition-colors text-sm"
+							className="rounded-md bg-purple-600 px-3 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-purple-700"
 						>
 							회원가입
 						</Link>
@@ -137,7 +137,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 							<button
 								onClick={() => setDropdownOpen(!dropdownOpen)}
 								type="button"
-								className="flex items-center max-w-xs bg-gray-800 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+								className="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-none"
 								id="user-menu-button"
 								aria-expanded={dropdownOpen}
 								aria-haspopup="true"
@@ -152,35 +152,35 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 										height={28}
 									/>
 								) : (
-									<span className="inline-flex items-center justify-center h-7 w-7 rounded-full bg-purple-600">
-										<span className="text-xs font-medium leading-none text-white">
+									<span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-purple-600">
+										<span className="text-xs leading-none font-medium text-white">
 											{session.user.name?.charAt(0)?.toUpperCase() ||
 												session.user.email?.charAt(0)?.toUpperCase()}
 										</span>
 									</span>
 								)}
 								<ChevronDownIcon
-									className={`ml-1 h-4 w-4 text-gray-400 group-hover:text-gray-200 transition-transform duration-200 ${dropdownOpen ? "transform rotate-180" : ""}`}
+									className={`ml-1 h-4 w-4 text-gray-400 transition-transform duration-200 group-hover:text-gray-200 ${dropdownOpen ? "rotate-180 transform" : ""}`}
 								/>
 							</button>
 						</div>
 						{dropdownOpen && (
 							<div
-								className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg py-1 bg-gray-800 ring-1 ring-black ring-opacity-5 focus:outline-none z-50"
+								className="ring-opacity-5 absolute right-0 z-50 mt-2 w-56 origin-top-right rounded-md bg-gray-800 py-1 shadow-lg ring-1 ring-black focus:outline-none"
 								role="menu"
 								aria-orientation="vertical"
 								aria-labelledby="user-menu-button"
 								tabIndex={-1}
 							>
-								<div className="px-4 py-3 border-b border-gray-700">
+								<div className="border-b border-gray-700 px-4 py-3">
 									<p className="text-sm text-gray-300">로그인 계정:</p>
-									<p className="text-sm font-medium text-purple-300 truncate">
+									<p className="truncate text-sm font-medium text-purple-300">
 										{session.user.name || session.user.email}
 									</p>
 								</div>
 								<Link
 									href="/settings"
-									className="group flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+									className="group flex w-full items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
 									role="menuitem"
 									tabIndex={-1}
 									onClick={() => setDropdownOpen(false)}
@@ -190,7 +190,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 								</Link>
 								<Link
 									href="/settings"
-									className="group flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+									className="group flex w-full items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
 									role="menuitem"
 									tabIndex={-1}
 									onClick={() => setDropdownOpen(false)}
@@ -204,7 +204,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 										signOut();
 										setDropdownOpen(false);
 									}}
-									className="group flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+									className="group flex w-full items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
 									role="menuitem"
 									tabIndex={-1}
 								>
@@ -218,11 +218,11 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 			</div>
 
 			{/* Mobile Menu Button */}
-			<div className="md:hidden flex items-center">
+			<div className="flex items-center md:hidden">
 				<button
 					type="button"
 					onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-					className="p-1.5 hover:bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+					className="rounded-md p-1.5 hover:bg-gray-700 focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
 					aria-expanded={mobileMenuOpen}
 					aria-controls="mobile-menu"
 				>
@@ -240,26 +240,26 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 				<div
 					id="mobile-menu"
 					ref={mobileMenuRef}
-					className="md:hidden origin-top-right absolute right-0 top-12 mt-2 w-64 rounded-md shadow-lg py-1 bg-gray-800 ring-1 ring-black ring-opacity-5 focus:outline-none z-50"
+					className="ring-opacity-5 absolute top-12 right-0 z-50 mt-2 w-64 origin-top-right rounded-md bg-gray-800 py-1 shadow-lg ring-1 ring-black focus:outline-none md:hidden"
 				>
 					<div
-						className="px-2 pt-2 pb-3 space-y-1"
+						className="space-y-1 px-2 pt-2 pb-3"
 						role="menu"
 						aria-orientation="vertical"
 						aria-labelledby="mobile-menu-button"
 					>
 						{status === "authenticated" && session?.user && (
 							<>
-								<div className="px-3 py-2 border-b border-gray-700 mb-2">
+								<div className="mb-2 border-b border-gray-700 px-3 py-2">
 									<p className="text-sm text-gray-300">로그인 계정:</p>
-									<p className="text-sm font-medium text-purple-300 truncate">
+									<p className="truncate text-sm font-medium text-purple-300">
 										{session.user.name || session.user.email}
 									</p>
 								</div>
 								<Link
 									href="/settings"
 									onClick={() => setMobileMenuOpen(false)}
-									className="group flex items-center w-full px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+									className="group flex w-full items-center rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
 									role="menuitem"
 								>
 									<FiUser className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-300" />{" "}
@@ -268,7 +268,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 								<Link
 									href="/settings"
 									onClick={() => setMobileMenuOpen(false)}
-									className="group flex items-center w-full px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+									className="group flex w-full items-center rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
 									role="menuitem"
 								>
 									<FiSettings className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-300" />{" "}
@@ -284,7 +284,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 								alert("배포 기능이 구현될 예정입니다.");
 								setMobileMenuOpen(false);
 							}}
-							className="group flex items-center w-full px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+							className="group flex w-full items-center rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
 							role="menuitem"
 						>
 							<CloudArrowUpIcon className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-300" />{" "}
@@ -297,7 +297,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 								alert("초대 기능이 구현될 예정입니다.");
 								setMobileMenuOpen(false);
 							}}
-							className="group flex items-center w-full px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+							className="group flex w-full items-center rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
 							role="menuitem"
 						>
 							<UserPlusIcon className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-300" />{" "}
@@ -310,7 +310,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 								alert("알림 기능이 구현될 예정입니다.");
 								setMobileMenuOpen(false);
 							}}
-							className="group flex items-center w-full px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+							className="group flex w-full items-center rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
 							role="menuitem"
 						>
 							<BellIcon className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-300" />{" "}
@@ -323,7 +323,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 								alert("도움말 기능이 구현될 예정입니다.");
 								setMobileMenuOpen(false);
 							}}
-							className="group flex items-center w-full px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+							className="group flex w-full items-center rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
 							role="menuitem"
 						>
 							<QuestionMarkCircleIcon className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-300" />{" "}
@@ -335,7 +335,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 								<Link
 									href="/login"
 									onClick={() => setMobileMenuOpen(false)}
-									className="block w-full text-left bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-3 rounded-md transition-colors text-base mt-2"
+									className="mt-2 block w-full rounded-md bg-pink-600 px-3 py-2 text-left text-base font-semibold text-white transition-colors hover:bg-pink-700"
 									role="menuitem"
 								>
 									로그인
@@ -343,7 +343,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 								<Link
 									href="/signup"
 									onClick={() => setMobileMenuOpen(false)}
-									className="block w-full text-left bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-3 rounded-md transition-colors text-base mt-2"
+									className="mt-2 block w-full rounded-md bg-purple-600 px-3 py-2 text-left text-base font-semibold text-white transition-colors hover:bg-purple-700"
 									role="menuitem"
 								>
 									회원가입
@@ -357,7 +357,7 @@ const TopBar = (/*{ projectName }: TopBarProps*/) => {
 									signOut();
 									setMobileMenuOpen(false);
 								}}
-								className="group flex items-center w-full px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white mt-2 border-t border-gray-700 pt-3"
+								className="group mt-2 flex w-full items-center rounded-md border-t border-gray-700 px-3 py-2 pt-3 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
 								role="menuitem"
 							>
 								<FiLogOut className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-300" />{" "}

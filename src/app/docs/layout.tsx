@@ -5,6 +5,8 @@ export const dynamic = "force-static";
 
 export default function DocsPageLayout({
 	children,
-}: { children: React.ReactNode }) {
+}: {
+	children: React.ReactNode;
+}) {
 	return <DocsLayout>{children}</DocsLayout>;
 }

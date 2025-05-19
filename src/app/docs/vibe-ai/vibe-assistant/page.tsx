@@ -6,10 +6,10 @@ export const dynamic = "force-static";
 const VibeAssistantPage = () => {
 	return (
 		<div className="prose prose-invert max-w-none">
-			<h1 className="text-3xl font-bold mb-6 text-purple-400">
+			<h1 className="mb-6 text-3xl font-bold text-purple-400">
 				VIBE 어시스턴트: 당신의 지능형 코딩 동반자
 			</h1>
-			<p className="text-lg mb-8">
+			<p className="mb-8 text-lg">
 				VIBE 어시스턴트는 VIBE IDE에 내장된 대화형 AI 챗봇으로, 개발자가 코드
 				작성, 문제 해결, 학습 등 개발의 모든 과정에서 실시간으로 도움을 받을 수
 				있도록 설계되었습니다. 단순한 질문 답변을 넘어, 현재 작업 중인 코드의
@@ -17,10 +17,10 @@ const VibeAssistantPage = () => {
 			</p>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					VIBE 어시스턴트의 핵심 기능
 				</h2>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>맥락 인지 기반 코드 생성 및 수정:</strong> 현재 열려 있는
 						파일, 선택된 코드 블록, 프로젝트 구조 등을 파악하여 사용자의
@@ -61,8 +61,8 @@ const VibeAssistantPage = () => {
 						수 있습니다. (예: "@agent 새 컴포넌트 만들어줘")
 					</li>
 				</ul>
-				<div className="bg-gray-800 p-4 rounded-md shadow">
-					<h4 className="font-semibold text-purple-200 mb-2">
+				<div className="rounded-md bg-gray-800 p-4 shadow">
+					<h4 className="mb-2 font-semibold text-purple-200">
 						VIBE 어시스턴트의 지향점:
 					</h4>
 					<p className="text-sm">
@@ -73,17 +73,17 @@ const VibeAssistantPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					VIBE 어시스턴트 시작하기
 				</h2>
 				<p className="mb-4">
 					VIBE 어시스턴트는 IDE 내에서 쉽게 접근하고 사용할 수 있습니다.
 				</p>
-				<ol className="list-decimal pl-6 mb-6 space-y-3">
+				<ol className="mb-6 list-decimal space-y-3 pl-6">
 					<li>
 						<strong>어시스턴트 패널 열기:</strong> VIBE IDE의 사이드바에서
 						'어시스턴트' 아이콘을 클릭하거나, 단축키(예:{" "}
-						<code className="bg-gray-700 px-1 rounded">Ctrl+Shift+A</code>)를
+						<code className="rounded bg-gray-700 px-1">Ctrl+Shift+A</code>)를
 						사용하여 어시스턴트 채팅 패널을 엽니다.
 					</li>
 					<li>
@@ -108,10 +108,10 @@ const VibeAssistantPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					효과적인 어시스턴트 활용 팁
 				</h2>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>명확하고 구체적인 질문:</strong> 원하는 답변을 얻기 위해서는
 						질문이나 요청을 최대한 명확하고 구체적으로 작성하는 것이 좋습니다.
@@ -142,7 +142,7 @@ const VibeAssistantPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					어시스턴트와 에이전트의 시너지
 				</h2>
 				<p className="mb-4">
@@ -165,7 +165,7 @@ const VibeAssistantPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					개인 정보 보호 및 보안
 				</h2>
 				<p className="mb-4">
@@ -185,14 +185,14 @@ const VibeAssistantPage = () => {
 			</section>
 
 			<section>
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					다음 단계
 				</h2>
 				<p className="mb-4">
 					VIBE 어시스턴트와 함께 더욱 스마트하고 효율적인 개발을 경험해보세요.
 					VIBE AI의 다른 강력한 기능들도 살펴보시는 것을 추천합니다.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<Link
 							href="/docs/vibe-ai/overview"

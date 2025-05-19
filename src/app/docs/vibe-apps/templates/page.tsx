@@ -16,7 +16,7 @@ export const dynamic = "force-static";
 
 const TemplatesPage = () => {
 	return (
-		<article className="prose prose-invert max-w-none prose-headings:text-purple-400 prose-a:text-purple-300 hover:prose-a:text-purple-200 prose-strong:text-purple-300">
+		<article className="prose prose-invert prose-headings:text-purple-400 prose-a:text-purple-300 hover:prose-a:text-purple-200 prose-strong:text-purple-300 max-w-none">
 			<h1 id="vibe-templates-title">
 				VIBE 앱 템플릿: 개발 속도를 높이는 시작점
 			</h1>
@@ -35,12 +35,12 @@ const TemplatesPage = () => {
 				이를 통해 생산성을 크게 향상시키고, 다양한 기술 스택을 쉽게 경험해볼 수
 				있는 기회를 제공합니다.
 			</p>
-			<div className="my-6 p-6 bg-gray-800 rounded-lg shadow-lg not-prose">
-				<h3 className="flex items-center text-xl font-semibold text-purple-300 mb-3">
-					<FiZap className="w-6 h-6 mr-2" />
+			<div className="not-prose my-6 rounded-lg bg-gray-800 p-6 shadow-lg">
+				<h3 className="mb-3 flex items-center text-xl font-semibold text-purple-300">
+					<FiZap className="mr-2 h-6 w-6" />
 					템플릿 사용의 이점
 				</h3>
-				<ul className="list-disc list-inside space-y-2 text-gray-300">
+				<ul className="list-inside list-disc space-y-2 text-gray-300">
 					<li>
 						<strong>개발 시간 단축:</strong> 프로젝트 초기 설정 및 구성 시간을
 						대폭 줄여줍니다.
@@ -72,7 +72,7 @@ const TemplatesPage = () => {
         <Image src="/images/docs/template-selection.png" alt="VIBE 템플릿 선택 과정 예시" width={1200} height={675} layout="responsive" />
         <p className="text-center text-sm text-gray-500 p-2 bg-gray-800">그림 1: 새 프로젝트 생성 시 템플릿 선택 화면</p>
       </div> */}
-			<p className="text-center my-4 text-gray-500 italic">
+			<p className="my-4 text-center text-gray-500 italic">
 				{" "}
 				(템플릿 선택 과정을 보여주는 이미지/설명이 여기에 들어갑니다.)
 			</p>
@@ -83,78 +83,78 @@ const TemplatesPage = () => {
 				추가하고 업데이트하고 있습니다. 현재 제공되는 주요 템플릿들은 다음과
 				같습니다:
 			</p>
-			<div className="not-prose grid md:grid-cols-2 gap-6 my-8">
-				<div className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-purple-500/30 transition-shadow">
-					<h3 className="flex items-center text-xl font-semibold text-purple-300 mb-2">
-						<FiGlobe className="w-6 h-6 mr-2" />
+			<div className="not-prose my-8 grid gap-6 md:grid-cols-2">
+				<div className="rounded-lg bg-gray-800 p-6 shadow-md transition-shadow hover:shadow-purple-500/30">
+					<h3 className="mb-2 flex items-center text-xl font-semibold text-purple-300">
+						<FiGlobe className="mr-2 h-6 w-6" />
 						React 웹 앱 (Next.js)
 					</h3>
-					<p className="text-gray-300 text-sm mb-3">
+					<p className="mb-3 text-sm text-gray-300">
 						최신 React 기능을 활용한 동적 웹 애플리케이션을 빠르게 구축합니다.
 						서버 사이드 렌더링, 라우팅 등이 미리 설정되어 있습니다.
 					</p>
-					<span className="text-xs bg-purple-500/30 text-purple-300 px-2 py-1 rounded-full">
+					<span className="rounded-full bg-purple-500/30 px-2 py-1 text-xs text-purple-300">
 						#React #NextJS #WebApp
 					</span>
 				</div>
-				<div className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-purple-500/30 transition-shadow">
-					<h3 className="flex items-center text-xl font-semibold text-purple-300 mb-2">
-						<FiLayers className="w-6 h-6 mr-2" />
+				<div className="rounded-lg bg-gray-800 p-6 shadow-md transition-shadow hover:shadow-purple-500/30">
+					<h3 className="mb-2 flex items-center text-xl font-semibold text-purple-300">
+						<FiLayers className="mr-2 h-6 w-6" />
 						Node.js API 서버 (Express)
 					</h3>
-					<p className="text-gray-300 text-sm mb-3">
+					<p className="mb-3 text-sm text-gray-300">
 						확장 가능하고 효율적인 RESTful API 서버를 구축하기 위한 Express.js
 						기반 템플릿입니다. 기본 라우팅 및 미들웨어 설정이 포함됩니다.
 					</p>
-					<span className="text-xs bg-purple-500/30 text-purple-300 px-2 py-1 rounded-full">
+					<span className="rounded-full bg-purple-500/30 px-2 py-1 text-xs text-purple-300">
 						#NodeJS #Express #API
 					</span>
 				</div>
-				<div className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-purple-500/30 transition-shadow">
-					<h3 className="flex items-center text-xl font-semibold text-purple-300 mb-2">
-						<FiDatabase className="w-6 h-6 mr-2" />
+				<div className="rounded-lg bg-gray-800 p-6 shadow-md transition-shadow hover:shadow-purple-500/30">
+					<h3 className="mb-2 flex items-center text-xl font-semibold text-purple-300">
+						<FiDatabase className="mr-2 h-6 w-6" />
 						Python 데이터 분석
 					</h3>
-					<p className="text-gray-300 text-sm mb-3">
+					<p className="mb-3 text-sm text-gray-300">
 						Jupyter Notebook 환경과 Pandas, NumPy 등 필수 라이브러리가 설치되어
 						있어 데이터 분석 및 시각화 작업을 바로 시작할 수 있습니다.
 					</p>
-					<span className="text-xs bg-purple-500/30 text-purple-300 px-2 py-1 rounded-full">
+					<span className="rounded-full bg-purple-500/30 px-2 py-1 text-xs text-purple-300">
 						#Python #DataAnalysis #Jupyter
 					</span>
 				</div>
-				<div className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-purple-500/30 transition-shadow">
-					<h3 className="flex items-center text-xl font-semibold text-purple-300 mb-2">
-						<FiCpu className="w-6 h-6 mr-2" />
+				<div className="rounded-lg bg-gray-800 p-6 shadow-md transition-shadow hover:shadow-purple-500/30">
+					<h3 className="mb-2 flex items-center text-xl font-semibold text-purple-300">
+						<FiCpu className="mr-2 h-6 w-6" />
 						AI 챗봇 (기본 프레임워크)
 					</h3>
-					<p className="text-gray-300 text-sm mb-3">
+					<p className="mb-3 text-sm text-gray-300">
 						VIBE AI 와 연동하거나 자체 로직을 구현하여 대화형 AI 챗봇을 만들 수
 						있는 기본 구조를 제공합니다.
 					</p>
-					<span className="text-xs bg-purple-500/30 text-purple-300 px-2 py-1 rounded-full">
+					<span className="rounded-full bg-purple-500/30 px-2 py-1 text-xs text-purple-300">
 						#AI #Chatbot #VIBE-AI
 					</span>
 				</div>
-				<div className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-purple-500/30 transition-shadow">
-					<h3 className="flex items-center text-xl font-semibold text-purple-300 mb-2">
-						<FiLayout className="w-6 h-6 mr-2" />
+				<div className="rounded-lg bg-gray-800 p-6 shadow-md transition-shadow hover:shadow-purple-500/30">
+					<h3 className="mb-2 flex items-center text-xl font-semibold text-purple-300">
+						<FiLayout className="mr-2 h-6 w-6" />
 						정적 웹사이트 (HTML/CSS/JS)
 					</h3>
-					<p className="text-gray-300 text-sm mb-3">
+					<p className="mb-3 text-sm text-gray-300">
 						간단한 포트폴리오, 랜딩 페이지 등 정적 웹사이트를 빠르게 제작하고
 						VIBE를 통해 쉽게 호스팅할 수 있습니다.
 					</p>
-					<span className="text-xs bg-purple-500/30 text-purple-300 px-2 py-1 rounded-full">
+					<span className="rounded-full bg-purple-500/30 px-2 py-1 text-xs text-purple-300">
 						#HTML #CSS #StaticSite
 					</span>
 				</div>
-				<div className="bg-gray-800 p-6 rounded-lg shadow-md flex flex-col items-center justify-center text-center hover:shadow-purple-500/30 transition-shadow">
-					<FiPlusSquare className="w-10 h-10 text-purple-400 mb-3" />
-					<h3 className="text-xl font-semibold text-purple-300 mb-2">
+				<div className="flex flex-col items-center justify-center rounded-lg bg-gray-800 p-6 text-center shadow-md transition-shadow hover:shadow-purple-500/30">
+					<FiPlusSquare className="mb-3 h-10 w-10 text-purple-400" />
+					<h3 className="mb-2 text-xl font-semibold text-purple-300">
 						더 많은 템플릿
 					</h3>
-					<p className="text-gray-300 text-sm">
+					<p className="text-sm text-gray-300">
 						VIBE는 계속해서 유용한 템플릿을 추가하고 있습니다. '새 앱
 						만들기'에서 전체 목록을 확인하세요!
 					</p>
@@ -170,7 +170,7 @@ const TemplatesPage = () => {
 			</p>
 
 			<h2 id="template-tips">템플릿 활용 팁</h2>
-			<ul className="list-disc list-inside my-4 space-y-2 pl-4">
+			<ul className="my-4 list-inside list-disc space-y-2 pl-4">
 				<li>
 					<strong>템플릿 코드 이해하기:</strong> 템플릿을 선택한 후, 먼저 전체
 					폴더 구조와 주요 파일들의 역할을 파악해보세요. 이는 프로젝트 이해도를
@@ -193,35 +193,35 @@ const TemplatesPage = () => {
 				</li>
 			</ul>
 
-			<div className="mt-10 p-6 bg-gray-800/70 rounded-xl shadow-xl">
-				<h3 className="text-xl font-semibold text-purple-300 mb-3 flex items-center">
-					<FiBookOpen className="w-6 h-6 mr-2" /> 관련 문서 및 다음 단계
+			<div className="mt-10 rounded-xl bg-gray-800/70 p-6 shadow-xl">
+				<h3 className="mb-3 flex items-center text-xl font-semibold text-purple-300">
+					<FiBookOpen className="mr-2 h-6 w-6" /> 관련 문서 및 다음 단계
 				</h3>
-				<p className="text-gray-300 mb-4">
+				<p className="mb-4 text-gray-300">
 					템플릿을 활용하여 VIBE 앱 개발을 시작해보세요. 더 궁금한 점이 있다면
 					다음 문서들을 참고하세요.
 				</p>
 				<div className="flex flex-wrap gap-4">
 					<Link
 						href="/docs/getting-started/quickstarts"
-						className="inline-flex items-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md shadow-md transition-colors group text-sm"
+						className="group inline-flex items-center rounded-md bg-purple-600 px-4 py-2 text-sm font-semibold text-white shadow-md transition-colors hover:bg-purple-700"
 					>
 						빠른 시작 가이드로 앱 만들기
-						<FiArrowRight className="w-4 h-4 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
+						<FiArrowRight className="ml-2 h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-1" />
 					</Link>
 					<Link
 						href="/docs/vibe-apps/collaboration"
-						className="inline-flex items-center px-4 py-2 border border-purple-500 hover:bg-purple-500/20 text-purple-300 font-semibold rounded-md shadow-md transition-colors group text-sm"
+						className="group inline-flex items-center rounded-md border border-purple-500 px-4 py-2 text-sm font-semibold text-purple-300 shadow-md transition-colors hover:bg-purple-500/20"
 					>
 						VIBE 앱 협업 기능 알아보기
-						<FiArrowRight className="w-4 h-4 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
+						<FiArrowRight className="ml-2 h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-1" />
 					</Link>
 					<Link
 						href="/docs/vibe-workspace/overview"
-						className="inline-flex items-center px-4 py-2 border border-purple-500 hover:bg-purple-500/20 text-purple-300 font-semibold rounded-md shadow-md transition-colors group text-sm"
+						className="group inline-flex items-center rounded-md border border-purple-500 px-4 py-2 text-sm font-semibold text-purple-300 shadow-md transition-colors hover:bg-purple-500/20"
 					>
 						작업 공간 사용법
-						<FiArrowRight className="w-4 h-4 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
+						<FiArrowRight className="ml-2 h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-1" />
 					</Link>
 				</div>
 			</div>

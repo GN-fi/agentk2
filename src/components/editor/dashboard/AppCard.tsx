@@ -11,14 +11,14 @@ interface AppCardProps {
 
 const AppCard = ({ appName, lastUpdated, isPublic }: AppCardProps) => {
 	return (
-		<div className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-			<div className="flex items-center mb-3">
+		<div className="rounded-lg bg-gray-800 p-4 shadow-md transition-shadow duration-300 hover:shadow-lg">
+			<div className="mb-3 flex items-center">
 				{/* 임시 아이콘, 추후 썸네일 또는 프로젝트 타입 아이콘으로 대체 가능 */}
-				<div className="w-10 h-10 bg-purple-600 rounded-md flex items-center justify-center mr-3">
-					<FiFileText className="w-6 h-6 text-white" />
+				<div className="mr-3 flex h-10 w-10 items-center justify-center rounded-md bg-purple-600">
+					<FiFileText className="h-6 w-6 text-white" />
 				</div>
 				<h3
-					className="text-lg font-semibold text-white truncate"
+					className="truncate text-lg font-semibold text-white"
 					title={appName}
 				>
 					{appName}
@@ -27,17 +27,17 @@ const AppCard = ({ appName, lastUpdated, isPublic }: AppCardProps) => {
 					type="button"
 					className="ml-auto text-gray-400 hover:text-white"
 				>
-					<FiMoreVertical className="w-5 h-5" />
+					<FiMoreVertical className="h-5 w-5" />
 				</button>
 			</div>
-			<p className="text-xs text-gray-400 mb-1">
+			<p className="mb-1 text-xs text-gray-400">
 				마지막 업데이트: {lastUpdated}
 			</p>
 			<div className="flex items-center text-xs text-gray-400">
 				{isPublic ? (
-					<FiGlobe className="w-3.5 h-3.5 mr-1.5 text-green-400" />
+					<FiGlobe className="mr-1.5 h-3.5 w-3.5 text-green-400" />
 				) : (
-					<FiLock className="w-3.5 h-3.5 mr-1.5 text-yellow-400" />
+					<FiLock className="mr-1.5 h-3.5 w-3.5 text-yellow-400" />
 				)}
 				<span>{isPublic ? "공개" : "비공개"}</span>
 			</div>

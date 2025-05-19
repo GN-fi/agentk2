@@ -4,15 +4,15 @@ import Link from "next/link";
 
 const PrivacyPolicyPage = () => {
 	return (
-		<div className="flex flex-col min-h-screen bg-gray-900 text-gray-300">
+		<div className="flex min-h-screen flex-col bg-gray-900 text-gray-300">
 			<Header />
-			<main className="flex-grow container mx-auto px-4 py-8 sm:px-6 lg:px-8">
-				<h1 className="text-4xl font-bold text-purple-400 mb-8">
+			<main className="container mx-auto flex-grow px-4 py-8 sm:px-6 lg:px-8">
+				<h1 className="mb-8 text-4xl font-bold text-purple-400">
 					개인정보처리방침
 				</h1>
 
 				<section className="mb-6">
-					<h2 className="text-2xl font-semibold text-purple-300 mb-3">
+					<h2 className="mb-3 text-2xl font-semibold text-purple-300">
 						1. 총칙
 					</h2>
 					<p className="mb-2">
@@ -33,14 +33,14 @@ const PrivacyPolicyPage = () => {
 				</section>
 
 				<section className="mb-6">
-					<h2 className="text-2xl font-semibold text-purple-300 mb-3">
+					<h2 className="mb-3 text-2xl font-semibold text-purple-300">
 						2. 수집하는 개인정보 항목 및 수집방법
 					</h2>
 					<p className="mb-2">
 						회사는 회원가입, 원활한 고객상담, 각종 서비스의 제공 등을 위해
 						아래와 같은 최소한의 개인정보를 필수항목으로 수집하고 있습니다.
 					</p>
-					<ul className="list-disc list-inside mb-2 pl-4">
+					<ul className="mb-2 list-inside list-disc pl-4">
 						<li>
 							필수항목: 이메일 주소, 비밀번호 (소셜 로그인 시 해당
 							프로바이더로부터 제공받는 정보)
@@ -65,7 +65,7 @@ const PrivacyPolicyPage = () => {
 				<div className="mt-8">
 					<Link
 						href="/"
-						className="text-purple-400 hover:text-purple-300 transition-colors"
+						className="text-purple-400 transition-colors hover:text-purple-300"
 					>
 						&larr; 홈으로 돌아가기
 					</Link>

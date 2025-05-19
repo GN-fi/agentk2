@@ -7,8 +7,16 @@ dotenv.config({ path: ".env.local" }); // .env 파일 로드
 
 // CI 환경에서는 환경 변수가 없어도 빌드가 가능하도록 체크를 수정합니다.
 // 실제 환경에서는 NEON_HTTP_URL이 필요하지만, CI 빌드에서는 더미 URL을 사용합니다.
+// 주의: Neon HTTP URL은 반드시 postgresql:// 형식이어야 합니다.
 const neonUrl =
 	process.env.NEON_HTTP_URL || "postgresql://dummy:dummy@localhost:5432/dummy";
+
+// URL이 postgresql://로 시작하는지 확인
+if (!neonUrl.startsWith("postgresql://")) {
+	throw new Error(
+		"Database connection string format for `neon()` should be: postgresql://user:password@host.tld/dbname?option=value",
+	);
+}
 
 const sql = neon(neonUrl);
 export const db = drizzle(sql, { schema });

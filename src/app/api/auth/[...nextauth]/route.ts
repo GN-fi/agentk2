@@ -145,7 +145,11 @@ const authOptions: AuthOptions = {
 			session,
 			token,
 			user: sessionUser,
-		}: { session: Session; token: JWT; user: User }): Promise<Session> {
+		}: {
+			session: Session;
+			token: JWT;
+			user: User;
+		}): Promise<Session> {
 			// token에서 id를 가져와 session.user에 할당합니다.
 			if (token.id && session.user) {
 				session.user.id = token.id;

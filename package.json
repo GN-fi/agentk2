@@ -11,7 +11,7 @@
 		"start": "next start",
 		"start:server": "node dist/server.js",
 		"lint:next": "next lint",
-		"lint": "biome check . && eslint . --max-warnings 0",
+		"lint": "biome check . --apply && eslint . --max-warnings 0",
 		"format": "biome format . --write && prettier -w .",
 		"type-check": "tsc --noEmit",
 		"lint-staged": "lint-staged",

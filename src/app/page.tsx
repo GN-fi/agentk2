@@ -10,24 +10,24 @@ export const dynamic = "force-static";
 
 export default function LandingPage() {
 	return (
-		<div className="flex flex-col min-h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 text-white">
+		<div className="flex min-h-screen flex-col bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 text-white">
 			<main className="flex-grow">
 				<HeroSection />
 				<TrustedBySection />
 				<FeaturesSection />
-				<section id="solutions" className="py-16 sm:py-24 bg-purple-700">
-					<div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-						<h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl mb-8">
+				<section id="solutions" className="bg-purple-700 py-16 sm:py-24">
+					<div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
+						<h2 className="mb-8 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
 							VIBE 솔루션
 						</h2>
-						<p className="text-lg sm:text-xl text-purple-200 max-w-3xl mx-auto mb-12">
+						<p className="mx-auto mb-12 max-w-3xl text-lg text-purple-200 sm:text-xl">
 							VIBE는 개인 개발자부터 대규모 팀까지, 다양한 사용자에게 최적화된
 							솔루션을 제공합니다. 클라우드 기반의 강력한 개발 환경과 AI 기능을
 							통해 생산성을 극대화하세요.
 						</p>
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-							<div className="bg-purple-600 p-8 rounded-lg shadow-xl">
-								<h3 className="text-2xl font-semibold text-white mb-4">
+						<div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+							<div className="rounded-lg bg-purple-600 p-8 shadow-xl">
+								<h3 className="mb-4 text-2xl font-semibold text-white">
 									개인 개발자
 								</h3>
 								<p className="text-purple-200">
@@ -35,8 +35,8 @@ export default function LandingPage() {
 									없이 즉시 코딩을 시작할 수 있습니다.
 								</p>
 							</div>
-							<div className="bg-purple-600 p-8 rounded-lg shadow-xl">
-								<h3 className="text-2xl font-semibold text-white mb-4">
+							<div className="rounded-lg bg-purple-600 p-8 shadow-xl">
+								<h3 className="mb-4 text-2xl font-semibold text-white">
 									스타트업
 								</h3>
 								<p className="text-purple-200">
@@ -44,8 +44,8 @@ export default function LandingPage() {
 									출시하세요. 유연한 확장성을 제공합니다.
 								</p>
 							</div>
-							<div className="bg-purple-600 p-8 rounded-lg shadow-xl">
-								<h3 className="text-2xl font-semibold text-white mb-4">
+							<div className="rounded-lg bg-purple-600 p-8 shadow-xl">
+								<h3 className="mb-4 text-2xl font-semibold text-white">
 									교육 기관
 								</h3>
 								<p className="text-purple-200">

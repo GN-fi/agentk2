@@ -49,11 +49,11 @@ const Footer = () => {
 	];
 
 	return (
-		<footer className="bg-gray-900 text-gray-400 py-16 px-4 sm:px-6 lg:px-8">
+		<footer className="bg-gray-900 px-4 py-16 text-gray-400 sm:px-6 lg:px-8">
 			<div className="container mx-auto">
-				<div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
-					<div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
-						<Link href="/" className="flex items-center space-x-2 mb-4">
+				<div className="mb-12 grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
+					<div className="col-span-2 mb-8 md:col-span-4 lg:col-span-1 lg:mb-0">
+						<Link href="/" className="mb-4 flex items-center space-x-2">
 							<Image
 								src="/images/logo.svg"
 								alt="VIBE 로고"
@@ -66,7 +66,7 @@ const Footer = () => {
 					</div>
 					{linkGroups.map((group) => (
 						<div key={group.title}>
-							<h3 className="text-sm font-semibold text-gray-200 tracking-wider uppercase mb-4">
+							<h3 className="mb-4 text-sm font-semibold tracking-wider text-gray-200 uppercase">
 								{group.title}
 							</h3>
 							<ul className="space-y-3">
@@ -74,7 +74,7 @@ const Footer = () => {
 									<li key={link.name}>
 										<Link
 											href={link.href}
-											className="hover:text-white transition-colors text-sm"
+											className="text-sm transition-colors hover:text-white"
 										>
 											{link.name}
 										</Link>
@@ -84,10 +84,10 @@ const Footer = () => {
 						</div>
 					))}
 				</div>
-				<div className="border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm">
+				<div className="flex flex-col items-center justify-between border-t border-gray-700 pt-8 text-sm sm:flex-row">
 					<p>&copy; {currentYear} VIBE Technologies Inc. 모든 권리 보유.</p>
 					{/* 소셜 미디어 아이콘 등 추가 가능 */}
-					<div className="flex space-x-4 mt-4 sm:mt-0">
+					<div className="mt-4 flex space-x-4 sm:mt-0">
 						{/* 예시: <Link href="#" className="hover:text-white"><IconComponent /></Link> */}
 					</div>
 				</div>

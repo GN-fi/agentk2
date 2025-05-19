@@ -56,50 +56,50 @@ const pricingTiers = [
 
 export default function PricingPage() {
 	return (
-		<div className="flex flex-col min-h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 text-white">
+		<div className="flex min-h-screen flex-col bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 text-white">
 			<Header />
-			<main className="flex-grow py-20 px-4 sm:px-6 lg:px-8">
+			<main className="flex-grow px-4 py-20 sm:px-6 lg:px-8">
 				<div className="container mx-auto text-center">
-					<h1 className="text-5xl md:text-6xl font-extrabold mb-6">
+					<h1 className="mb-6 text-5xl font-extrabold md:text-6xl">
 						당신에게 맞는{" "}
-						<span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
+						<span className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
 							VIBE 플랜
 						</span>
 						을 선택하세요
 					</h1>
-					<p className="text-xl text-gray-300 mb-16 max-w-2xl mx-auto">
+					<p className="mx-auto mb-16 max-w-2xl text-xl text-gray-300">
 						개인 프로젝트부터 대규모 엔터프라이즈 솔루션까지, VIBE는 모든 규모의
 						요구사항을 충족하는 다양한 플랜을 제공합니다.
 					</p>
 
-					<div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+					<div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-3">
 						{pricingTiers.map((tier) => (
 							<div
 								key={tier.name}
-								className={`relative flex flex-col p-8 rounded-xl shadow-2xl bg-gray-800 bg-opacity-60 ${tier.mostPopular ? "border-2 border-pink-500" : "border border-gray-700"}`}
+								className={`bg-opacity-60 relative flex flex-col rounded-xl bg-gray-800 p-8 shadow-2xl ${tier.mostPopular ? "border-2 border-pink-500" : "border border-gray-700"}`}
 							>
 								{tier.mostPopular && (
-									<div className="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2">
-										<span className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-semibold tracking-wide bg-pink-500 text-white">
+									<div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+										<span className="inline-flex items-center rounded-full bg-pink-500 px-3 py-0.5 text-sm font-semibold tracking-wide text-white">
 											가장 인기있는 플랜
 										</span>
 									</div>
 								)}
-								<h2 className="text-3xl font-semibold mb-2">{tier.name}</h2>
-								<p className="text-gray-400 mb-6 h-12">{tier.description}</p>
+								<h2 className="mb-2 text-3xl font-semibold">{tier.name}</h2>
+								<p className="mb-6 h-12 text-gray-400">{tier.description}</p>
 
 								<div className="mb-6">
 									<span className="text-5xl font-extrabold">{tier.price}</span>
 									{tier.frequency && (
-										<span className="text-gray-400 ml-1">{tier.frequency}</span>
+										<span className="ml-1 text-gray-400">{tier.frequency}</span>
 									)}
 								</div>
 
-								<ul className="space-y-3 text-gray-300 mb-8 flex-grow">
+								<ul className="mb-8 flex-grow space-y-3 text-gray-300">
 									{tier.features.map((feature) => (
 										<li key={feature} className="flex items-center">
 											<svg
-												className="w-5 h-5 text-green-400 mr-2 flex-shrink-0"
+												className="mr-2 h-5 w-5 flex-shrink-0 text-green-400"
 												xmlns="http://www.w3.org/2000/svg"
 												viewBox="0 0 20 20"
 												fill="currentColor"
@@ -118,7 +118,7 @@ export default function PricingPage() {
 
 								<Link
 									href={tier.href}
-									className={`w-full text-center font-semibold py-3 px-6 rounded-lg transition-colors text-lg ${tier.mostPopular ? "bg-pink-600 hover:bg-pink-700 text-white" : "bg-purple-600 hover:bg-purple-700 text-white"}`}
+									className={`w-full rounded-lg px-6 py-3 text-center text-lg font-semibold transition-colors ${tier.mostPopular ? "bg-pink-600 text-white hover:bg-pink-700" : "bg-purple-600 text-white hover:bg-purple-700"}`}
 								>
 									{tier.cta}
 								</Link>

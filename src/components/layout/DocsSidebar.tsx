@@ -87,11 +87,11 @@ const docSections = [
 
 const DocsSidebar = () => {
 	return (
-		<aside className="w-64 flex-shrink-0 bg-gray-800 p-4 rounded-lg shadow">
+		<aside className="w-64 flex-shrink-0 rounded-lg bg-gray-800 p-4 shadow">
 			<nav className="space-y-6">
 				{docSections.map((section) => (
 					<div key={section.title}>
-						<h3 className="text-sm font-semibold text-purple-400 uppercase tracking-wider mb-2">
+						<h3 className="mb-2 text-sm font-semibold tracking-wider text-purple-400 uppercase">
 							{section.title}
 						</h3>
 						<ul className="space-y-1">
@@ -99,7 +99,7 @@ const DocsSidebar = () => {
 								<li key={link.href}>
 									<Link
 										href={`${section.basePath}${link.href}`}
-										className="block px-3 py-1.5 text-sm text-gray-300 hover:bg-gray-700 hover:text-white rounded-md transition-colors"
+										className="block rounded-md px-3 py-1.5 text-sm text-gray-300 transition-colors hover:bg-gray-700 hover:text-white"
 									>
 										{link.text}
 									</Link>

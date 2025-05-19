@@ -9,8 +9,8 @@ const Header = () => {
 	const loading = status === "loading";
 
 	return (
-		<header className="py-6 px-4 sm:px-6 lg:px-8 sticky top-0 z-50 bg-opacity-80 backdrop-blur-md border-b border-gray-700">
-			<div className="container mx-auto flex justify-between items-center">
+		<header className="bg-opacity-80 sticky top-0 z-50 border-b border-gray-700 px-4 py-6 backdrop-blur-md sm:px-6 lg:px-8">
+			<div className="container mx-auto flex items-center justify-between">
 				<Link href="/" className="flex items-center space-x-2">
 					<Image
 						src="/images/logo.svg"
@@ -20,34 +20,34 @@ const Header = () => {
 					/>
 					<span className="text-2xl font-bold text-white">VIBE</span>
 				</Link>
-				<nav className="hidden md:flex space-x-6 items-center">
+				<nav className="hidden items-center space-x-6 md:flex">
 					<Link
 						href="/#features"
-						className="text-gray-300 hover:text-white transition-colors"
+						className="text-gray-300 transition-colors hover:text-white"
 					>
 						주요 기능
 					</Link>
 					<Link
 						href="/#solutions"
-						className="text-gray-300 hover:text-white transition-colors"
+						className="text-gray-300 transition-colors hover:text-white"
 					>
 						솔루션
 					</Link>
 					<Link
 						href="/pricing"
-						className="text-gray-300 hover:text-white transition-colors"
+						className="text-gray-300 transition-colors hover:text-white"
 					>
 						가격
 					</Link>
 					<Link
 						href="/docs"
-						className="text-gray-300 hover:text-white transition-colors"
+						className="text-gray-300 transition-colors hover:text-white"
 					>
 						문서
 					</Link>
 
 					{loading ? (
-						<div className="h-8 w-20 animate-pulse bg-gray-600 rounded-lg" />
+						<div className="h-8 w-20 animate-pulse rounded-lg bg-gray-600" />
 					) : session ? (
 						<>
 							{session.user?.image && (
@@ -62,7 +62,7 @@ const Header = () => {
 							<button
 								type="button"
 								onClick={() => signOut({ callbackUrl: "/" })}
-								className="text-gray-300 hover:text-white transition-colors"
+								className="text-gray-300 transition-colors hover:text-white"
 							>
 								로그아웃
 							</button>
@@ -72,13 +72,13 @@ const Header = () => {
 							<button
 								type="button"
 								onClick={() => signIn()}
-								className="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+								className="rounded-lg bg-pink-600 px-4 py-2 font-semibold text-white transition-colors hover:bg-pink-700"
 							>
 								로그인
 							</button>
 							<Link
 								href="/signup"
-								className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+								className="rounded-lg bg-purple-600 px-4 py-2 font-semibold text-white transition-colors hover:bg-purple-700"
 							>
 								회원가입
 							</Link>
@@ -87,7 +87,7 @@ const Header = () => {
 				</nav>
 				<button
 					type="button"
-					className="md:hidden text-gray-300 hover:text-white focus:outline-none"
+					className="text-gray-300 hover:text-white focus:outline-none md:hidden"
 				>
 					{/* 모바일 메뉴 아이콘 (추후 SVG로 교체 및 기능 구현) */}
 					<svg
@@ -96,7 +96,7 @@ const Header = () => {
 						viewBox="0 0 24 24"
 						strokeWidth={1.5}
 						stroke="currentColor"
-						className="w-6 h-6"
+						className="h-6 w-6"
 					>
 						<title>모바일 메뉴 열기</title>
 						<path

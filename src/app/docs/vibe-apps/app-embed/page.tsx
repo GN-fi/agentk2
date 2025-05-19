@@ -6,10 +6,10 @@ export const dynamic = "force-static";
 const AppEmbedPage = () => {
 	return (
 		<div className="prose prose-invert max-w-none">
-			<h1 className="text-3xl font-bold mb-6 text-purple-400">
+			<h1 className="mb-6 text-3xl font-bold text-purple-400">
 				VIBE 앱: 앱 임베드
 			</h1>
-			<p className="text-lg mb-8">
+			<p className="mb-8 text-lg">
 				VIBE에서 제작한 애플리케이션을 기존 웹사이트나 다른 플랫폼에 손쉽게
 				통합하여 사용자 경험을 확장하고 서비스의 가치를 높일 수 있습니다. 이
 				문서에서는 VIBE 앱을 외부 웹사이트에 임베드하는 다양한 방법과 고려
@@ -17,7 +17,7 @@ const AppEmbedPage = () => {
 			</p>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					앱 임베딩이란?
 				</h2>
 				<p className="mb-4">
@@ -26,10 +26,10 @@ const AppEmbedPage = () => {
 					기술입니다. 이를 통해 사용자는 별도의 사이트로 이동하지 않고도 VIBE
 					앱의 기능을 편리하게 이용할 수 있습니다.
 				</p>
-				<h3 className="text-xl font-medium mb-2 text-purple-200">
+				<h3 className="mb-2 text-xl font-medium text-purple-200">
 					임베딩의 주요 이점
 				</h3>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>향상된 사용자 경험:</strong> 사용자가 여러 서비스를 오가는
 						번거로움을 줄여줍니다.
@@ -50,7 +50,7 @@ const AppEmbedPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					임베드 방법
 				</h2>
 				<p className="mb-4">
@@ -58,18 +58,18 @@ const AppEmbedPage = () => {
 					요구 사항에 따라 선택할 수 있습니다.
 				</p>
 
-				<div className="mb-8 p-6 bg-gray-800 rounded-lg shadow">
-					<h3 className="text-xl font-medium mb-3 text-purple-200">
+				<div className="mb-8 rounded-lg bg-gray-800 p-6 shadow">
+					<h3 className="mb-3 text-xl font-medium text-purple-200">
 						1. iframe을 이용한 임베드
 					</h3>
 					<p className="mb-4">
 						가장 간단하고 널리 사용되는 방법입니다. HTML{" "}
-						<code className="bg-gray-700 px-1 rounded">&lt;iframe&gt;</code>{" "}
+						<code className="rounded bg-gray-700 px-1">&lt;iframe&gt;</code>{" "}
 						태그를 사용하여 VIBE 앱의 특정 URL을 지정하면 해당 영역에 앱이
 						로드됩니다.
 					</p>
-					<h4 className="font-semibold text-purple-100 mb-2">장점:</h4>
-					<ul className="list-disc list-inside text-sm mb-3 space-y-1">
+					<h4 className="mb-2 font-semibold text-purple-100">장점:</h4>
+					<ul className="mb-3 list-inside list-disc space-y-1 text-sm">
 						<li>구현이 매우 쉽고 빠릅니다.</li>
 						<li>대부분의 브라우저에서 잘 지원됩니다.</li>
 						<li>
@@ -77,12 +77,12 @@ const AppEmbedPage = () => {
 							명확합니다.
 						</li>
 					</ul>
-					<h4 className="font-semibold text-purple-100 mb-2">단점:</h4>
-					<ul className="list-disc list-inside text-sm mb-3 space-y-1">
+					<h4 className="mb-2 font-semibold text-purple-100">단점:</h4>
+					<ul className="mb-3 list-inside list-disc space-y-1 text-sm">
 						<li>
 							모(母)사이트와 임베드된 앱 간의 직접적인 통신(데이터 교환, 이벤트
 							호출 등)이 제한적입니다. (
-							<code className="bg-gray-700 px-1 rounded">postMessage</code> API
+							<code className="rounded bg-gray-700 px-1">postMessage</code> API
 							사용 필요)
 						</li>
 						<li>
@@ -91,8 +91,8 @@ const AppEmbedPage = () => {
 						</li>
 						<li>SEO(검색 엔진 최적화)에 불리할 수 있습니다.</li>
 					</ul>
-					<h4 className="font-semibold text-purple-100 mb-2">예시 코드:</h4>
-					<pre className="bg-gray-900 text-white p-3 rounded-md text-sm overflow-x-auto">
+					<h4 className="mb-2 font-semibold text-purple-100">예시 코드:</h4>
+					<pre className="overflow-x-auto rounded-md bg-gray-900 p-3 text-sm text-white">
 						<code>
 							{`
               <iframe
@@ -106,9 +106,9 @@ const AppEmbedPage = () => {
               `}
 						</code>
 					</pre>
-					<p className="text-xs mt-2 text-gray-400">
+					<p className="mt-2 text-xs text-gray-400">
 						*{" "}
-						<code className="bg-gray-700 px-1 rounded">
+						<code className="rounded bg-gray-700 px-1">
 							your-vibe-app-url.vibeprojects.com/embedded-view
 						</code>
 						는 예시이며, 실제 VIBE 앱의 임베드 전용 URL 또는 일반 URL을
@@ -116,8 +116,8 @@ const AppEmbedPage = () => {
 					</p>
 				</div>
 
-				<div className="p-6 bg-gray-800 rounded-lg shadow">
-					<h3 className="text-xl font-medium mb-3 text-purple-200">
+				<div className="rounded-lg bg-gray-800 p-6 shadow">
+					<h3 className="mb-3 text-xl font-medium text-purple-200">
 						2. JavaScript SDK 또는 API를 이용한 임베드 (VIBE 지원 시)
 					</h3>
 					<p className="mb-4">
@@ -126,8 +126,8 @@ const AppEmbedPage = () => {
 						가능합니다. SDK는 모(母)사이트와 임베드된 VIBE 앱 간의 원활한 통신,
 						UI 커스터마이징, 이벤트 처리 등을 지원할 수 있습니다.
 					</p>
-					<h4 className="font-semibold text-purple-100 mb-2">장점:</h4>
-					<ul className="list-disc list-inside text-sm mb-3 space-y-1">
+					<h4 className="mb-2 font-semibold text-purple-100">장점:</h4>
+					<ul className="mb-3 list-inside list-disc space-y-1 text-sm">
 						<li>
 							모(母)사이트와 임베드된 앱 간의 긴밀한 통합 및 상호작용이
 							가능합니다.
@@ -138,14 +138,14 @@ const AppEmbedPage = () => {
 						</li>
 						<li>동적인 콘텐츠 로딩 및 업데이트가 수월합니다.</li>
 					</ul>
-					<h4 className="font-semibold text-purple-100 mb-2">단점:</h4>
-					<ul className="list-disc list-inside text-sm mb-3 space-y-1">
+					<h4 className="mb-2 font-semibold text-purple-100">단점:</h4>
+					<ul className="mb-3 list-inside list-disc space-y-1 text-sm">
 						<li>iframe 방식보다 구현 복잡도가 높을 수 있습니다.</li>
 						<li>VIBE 플랫폼에서 SDK 또는 API를 제공해야 합니다.</li>
 						<li>SDK의 학습 곡선이 있을 수 있습니다.</li>
 					</ul>
-					<h4 className="font-semibold text-purple-100 mb-2">예시 (개념적):</h4>
-					<pre className="bg-gray-900 text-white p-3 rounded-md text-sm overflow-x-auto">
+					<h4 className="mb-2 font-semibold text-purple-100">예시 (개념적):</h4>
+					<pre className="overflow-x-auto rounded-md bg-gray-900 p-3 text-sm text-white">
 						<code>
 							{`
               <div id="vibe-app-container"></div>
@@ -167,7 +167,7 @@ const AppEmbedPage = () => {
               `}
 						</code>
 					</pre>
-					<p className="text-xs mt-2 text-gray-400">
+					<p className="mt-2 text-xs text-gray-400">
 						* 위 코드는 VIBE SDK가 있다고 가정했을 때의 개념적인 예시입니다.
 						실제 사용법은 VIBE 공식 문서를 참조해야 합니다.
 					</p>
@@ -175,21 +175,21 @@ const AppEmbedPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					보안 고려 사항
 				</h2>
 				<p className="mb-4">
 					앱을 임베드할 때는 보안을 신중하게 고려해야 합니다. 다음은 주요 보안
 					고려 사항입니다.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>X-Frame-Options 헤더:</strong> VIBE 앱 서버에서{" "}
-						<code className="bg-gray-700 px-1 rounded">X-Frame-Options</code>{" "}
+						<code className="rounded bg-gray-700 px-1">X-Frame-Options</code>{" "}
 						HTTP 응답 헤더를 적절히 설정하여 클릭재킹(Clickjacking) 공격을
 						방지해야 합니다. 특정 도메인에서의 임베드만 허용하도록 설정할 수
 						있습니다. (예:{" "}
-						<code className="bg-gray-700 px-1 rounded">
+						<code className="rounded bg-gray-700 px-1">
 							ALLOW-FROM https://your-parent-site.com
 						</code>
 						)
@@ -198,12 +198,12 @@ const AppEmbedPage = () => {
 						<strong>Content Security Policy (CSP):</strong> 모(母)사이트와 VIBE
 						앱 모두 CSP를 사용하여 스크립트, 스타일, 프레임 등의 리소스 로드를
 						제어하여 XSS(Cross-Site Scripting) 공격 위험을 줄일 수 있습니다.{" "}
-						<code className="bg-gray-700 px-1 rounded">frame-ancestors</code>{" "}
+						<code className="rounded bg-gray-700 px-1">frame-ancestors</code>{" "}
 						지시어를 사용하여 임베드를 허용할 출처를 명시할 수 있습니다.
 					</li>
 					<li>
 						<strong>데이터 통신 보안:</strong> iframe을 사용할 경우{" "}
-						<code className="bg-gray-700 px-1 rounded">
+						<code className="rounded bg-gray-700 px-1">
 							window.postMessage()
 						</code>{" "}
 						API를 사용하여 모(母)사이트와 통신할 때, 메시지 출처(origin)를 항상
@@ -224,14 +224,14 @@ const AppEmbedPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					반응형 디자인 및 사용자 경험
 				</h2>
 				<p className="mb-4">
 					임베드된 VIBE 앱은 다양한 화면 크기에서 올바르게 표시되고 사용하기
 					편해야 합니다.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>반응형 레이아웃:</strong> VIBE 앱 자체가 반응형으로
 						디자인되어야 하며, 임베드될 때 컨테이너의 크기에 맞게 레이아웃이
@@ -239,8 +239,8 @@ const AppEmbedPage = () => {
 					</li>
 					<li>
 						<strong>iframe 크기 조절:</strong> iframe의{" "}
-						<code className="bg-gray-700 px-1 rounded">width</code>와{" "}
-						<code className="bg-gray-700 px-1 rounded">height</code>를 퍼센트(%)
+						<code className="rounded bg-gray-700 px-1">width</code>와{" "}
+						<code className="rounded bg-gray-700 px-1">height</code>를 퍼센트(%)
 						값으로 설정하거나, JavaScript를 사용하여 동적으로 조절할 수
 						있습니다.
 					</li>
@@ -261,14 +261,14 @@ const AppEmbedPage = () => {
 			</section>
 
 			<section>
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					다음 단계
 				</h2>
 				<p className="mb-4">
 					VIBE 앱 임베드 기능에 대해 더 궁금한 점이 있거나 특정 사용 사례에 대한
 					도움이 필요하시면 다음 자료를 참고하시거나 지원팀에 문의해주세요.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<Link
 							href="/docs/vibe-apps/overview"

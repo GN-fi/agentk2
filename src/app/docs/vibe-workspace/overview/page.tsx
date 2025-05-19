@@ -5,10 +5,10 @@ export const dynamic = "force-static";
 const OverviewPage = () => {
 	return (
 		<div className="prose prose-invert max-w-none">
-			<h1 className="text-3xl font-bold mb-6 text-purple-400">
+			<h1 className="mb-6 text-3xl font-bold text-purple-400">
 				VIBE 작업 공간: 모든 개발 여정의 중심
 			</h1>
-			<p className="text-lg mb-8">
+			<p className="mb-8 text-lg">
 				VIBE 작업 공간(Workspace)은 여러분의 모든 개발 프로젝트와 VIBE 앱, AI
 				기능을 한 곳에서 통합적으로 관리하고 접근할 수 있는 중앙 허브입니다.
 				단순한 파일 저장소를 넘어, 아이디어 구상부터 코드 작성, 테스트, 배포,
@@ -16,7 +16,7 @@ const OverviewPage = () => {
 			</p>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					VIBE 작업 공간이란?
 				</h2>
 				<p className="mb-4">
@@ -25,7 +25,7 @@ const OverviewPage = () => {
 					연결합니다. 각 작업 공간은 독립적인 컨테이너 환경으로 분리되어
 					프로젝트 간의 충돌을 방지하고, 안정적인 개발 환경을 제공합니다.
 				</p>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>프로젝트 중심 구조:</strong> 모든 작업은 프로젝트 단위로
 						구성되며, 각 프로젝트는 자체적인 파일 시스템, 터미널, 버전 관리,
@@ -63,12 +63,12 @@ const OverviewPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					주요 기능 및 이점
 				</h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+				<div className="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							1. 통합 프로젝트 관리
 						</h4>
 						<p className="text-sm">
@@ -76,8 +76,8 @@ const OverviewPage = () => {
 							있습니다. 각 프로젝트는 독립적인 환경을 유지합니다.
 						</p>
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							2. 강력한 웹 IDE
 						</h4>
 						<p className="text-sm">
@@ -85,8 +85,8 @@ const OverviewPage = () => {
 							수준의 기능을 웹 브라우저에서 제공합니다.
 						</p>
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							3. AI 기반 개발 지원
 						</h4>
 						<p className="text-sm">
@@ -94,8 +94,8 @@ const OverviewPage = () => {
 							리팩토링 제안 등 개발 생산성을 극대화합니다.
 						</p>
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							4. 간편한 협업
 						</h4>
 						<p className="text-sm">
@@ -110,8 +110,8 @@ const OverviewPage = () => {
 							참조)
 						</p>
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							5. 버전 관리 통합
 						</h4>
 						<p className="text-sm">
@@ -126,8 +126,8 @@ const OverviewPage = () => {
 							참조)
 						</p>
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							6. 원클릭 배포
 						</h4>
 						<p className="text-sm">
@@ -142,8 +142,8 @@ const OverviewPage = () => {
 							참조)
 						</p>
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							7. 사용자 정의 테마
 						</h4>
 						<p className="text-sm">
@@ -158,8 +158,8 @@ const OverviewPage = () => {
 							참조)
 						</p>
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							8. 다양한 기능 접근
 						</h4>
 						<p className="text-sm">
@@ -178,7 +178,7 @@ const OverviewPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					VIBE 작업 공간 시작하기
 				</h2>
 				<p className="mb-4">
@@ -186,7 +186,7 @@ const OverviewPage = () => {
 					작업 공간이 제공되며, 필요에 따라 새로운 작업 공간을 생성하거나 기존
 					작업 공간에 참여할 수 있습니다.
 				</p>
-				<ol className="list-decimal pl-6 mb-6 space-y-3">
+				<ol className="mb-6 list-decimal space-y-3 pl-6">
 					<li>
 						<strong>로그인 및 대시보드 접근:</strong> VIBE 계정으로 로그인하여
 						대시보드에 접속합니다.
@@ -213,14 +213,14 @@ const OverviewPage = () => {
 			</section>
 
 			<section>
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					다음 단계
 				</h2>
 				<p className="mb-4">
 					VIBE 작업 공간은 VIBE 생태계의 핵심입니다. 다음 문서들을 통해 작업
 					공간의 다양한 기능과 활용법을 더 자세히 알아보세요.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<Link
 							href="/docs/getting-started/quickstarts"

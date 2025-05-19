@@ -13,7 +13,7 @@ export const dynamic = "force-static";
 
 const VisibilityPage = () => {
 	return (
-		<article className="prose prose-invert max-w-none prose-headings:text-purple-400 prose-a:text-purple-300 hover:prose-a:text-purple-200 prose-strong:text-purple-300">
+		<article className="prose prose-invert prose-headings:text-purple-400 prose-a:text-purple-300 hover:prose-a:text-purple-200 prose-strong:text-purple-300 max-w-none">
 			<h1 id="visibility-title">VIBE 앱 공개 범위 설정: 누구와 공유할까요?</h1>
 			<p className="lead">
 				VIBE 앱의 공개 범위 설정을 통해 여러분의 프로젝트를 누가 보고, 사용하고,
@@ -31,47 +31,47 @@ const VisibilityPage = () => {
 
 			<h2 id="visibility-options">공개 범위 옵션</h2>
 			<div className="not-prose my-6 space-y-6">
-				<div className="p-6 bg-gray-800 rounded-lg shadow-lg">
-					<div className="flex items-center mb-3">
-						<FiEyeOff className="w-8 h-8 text-red-400 mr-3 flex-shrink-0" />
+				<div className="rounded-lg bg-gray-800 p-6 shadow-lg">
+					<div className="mb-3 flex items-center">
+						<FiEyeOff className="mr-3 h-8 w-8 flex-shrink-0 text-red-400" />
 						<h3 className="text-2xl font-semibold text-red-300">
 							비공개 (Private)
 						</h3>
 					</div>
-					<p className="text-gray-300 mb-2">
+					<p className="mb-2 text-gray-300">
 						비공개로 설정된 VIBE 앱은 앱 소유자와 명시적으로{" "}
 						<Link href="/docs/vibe-apps/collaboration">초대받은 협업자</Link>
 						만이 접근할 수 있습니다. 앱의 코드, 실행 모습, 관련 정보 모두
 						외부에는 노출되지 않습니다.
 					</p>
 					<strong className="text-purple-300">적합한 경우:</strong>
-					<ul className="list-disc list-inside mt-2 ml-4 text-gray-400 text-sm space-y-1">
+					<ul className="mt-2 ml-4 list-inside list-disc space-y-1 text-sm text-gray-400">
 						<li>개인적인 학습 및 실험 프로젝트</li>
 						<li>아직 개발 초기 단계로 외부에 공개하고 싶지 않은 앱</li>
 						<li>회사 내부용 도구나 프로토타입</li>
 						<li>민감한 정보를 다루는 애플리케이션</li>
 					</ul>
-					<p className="text-xs text-gray-500 mt-3">
+					<p className="mt-3 text-xs text-gray-500">
 						* VIBE의 특정 플랜에 따라 비공개 앱 생성 개수에 제한이 있을 수
 						있습니다. (가격 정책 확인 필요)
 					</p>
 				</div>
 
-				<div className="p-6 bg-gray-800 rounded-lg shadow-lg">
-					<div className="flex items-center mb-3">
-						<FiEye className="w-8 h-8 text-green-400 mr-3 flex-shrink-0" />
+				<div className="rounded-lg bg-gray-800 p-6 shadow-lg">
+					<div className="mb-3 flex items-center">
+						<FiEye className="mr-3 h-8 w-8 flex-shrink-0 text-green-400" />
 						<h3 className="text-2xl font-semibold text-green-300">
 							공개 (Public)
 						</h3>
 					</div>
-					<p className="text-gray-300 mb-2">
+					<p className="mb-2 text-gray-300">
 						공개로 설정된 VIBE 앱은 VIBE 플랫폼 사용자뿐만 아니라 인터넷을
 						사용하는 모든 사람이 앱의 코드, 실행 결과(만약 웹 앱이라면),
 						프로젝트 설명 등을 볼 수 있습니다. 일반적으로 다른 사용자가 앱을
 						자신의 계정으로 복제(fork)하여 수정하거나 확장하는 것도 허용됩니다.
 					</p>
 					<strong className="text-purple-300">적합한 경우:</strong>
-					<ul className="list-disc list-inside mt-2 ml-4 text-gray-400 text-sm space-y-1">
+					<ul className="mt-2 ml-4 list-inside list-disc space-y-1 text-sm text-gray-400">
 						<li>오픈소스 프로젝트</li>
 						<li>자신의 작업물을 공유하고 싶은 개발자 포트폴리오</li>
 						<li>커뮤니티와 지식을 공유하고 기여를 받고 싶은 프로젝트</li>
@@ -100,11 +100,11 @@ const VisibilityPage = () => {
 				VIBE 앱의 공개 범위는 앱 작업 공간 내의 설정 메뉴 또는 VIBE 대시보드에서
 				프로젝트별로 쉽게 변경할 수 있습니다.
 			</p>
-			<ol className="list-decimal list-inside my-4 space-y-2 pl-4 marker:text-purple-400 marker:font-semibold">
+			<ol className="my-4 list-inside list-decimal space-y-2 pl-4 marker:font-semibold marker:text-purple-400">
 				<li>VIBE 앱 작업 공간으로 이동합니다.</li>
 				<li>
 					상단 바 또는 사이드바 메뉴에서{" "}
-					<FiSettings className="inline w-5 h-5 mr-1" />
+					<FiSettings className="mr-1 inline h-5 w-5" />
 					"설정" 또는 "프로젝트 설정"을 찾습니다.
 				</li>
 				<li>
@@ -118,7 +118,7 @@ const VisibilityPage = () => {
 			<h2 id="considerations-when-changing-visibility">
 				공개 범위 변경 시 고려사항
 			</h2>
-			<ul className="list-disc list-inside my-4 space-y-2 pl-4 text-gray-300">
+			<ul className="my-4 list-inside list-disc space-y-2 pl-4 text-gray-300">
 				<li>
 					<strong>비공개에서 공개로 변경 시:</strong>
 					앱을 공개하기 전에 코드 내에 API 키, 비밀번호, 개인 식별 정보 등
@@ -133,7 +133,7 @@ const VisibilityPage = () => {
 				</li>
 				<li>
 					<strong className="flex items-center">
-						<FiBookOpen className="inline w-5 h-5 mr-2 text-purple-300" />
+						<FiBookOpen className="mr-2 inline h-5 w-5 text-purple-300" />
 						라이선스 (공개 앱의 경우):
 					</strong>
 					앱을 공개할 경우, 다른 사람들이 여러분의 코드를 어떻게 사용, 수정,
@@ -143,28 +143,28 @@ const VisibilityPage = () => {
 				</li>
 			</ul>
 
-			<div className="mt-10 p-6 bg-gray-800 rounded-lg shadow-md">
-				<h3 className="text-xl font-semibold text-purple-300 mb-3">
+			<div className="mt-10 rounded-lg bg-gray-800 p-6 shadow-md">
+				<h3 className="mb-3 text-xl font-semibold text-purple-300">
 					다음으로 알아볼 내용
 				</h3>
-				<p className="text-gray-300 mb-4">
+				<p className="mb-4 text-gray-300">
 					앱의 공개 범위를 설정했다면, 이제 더 고급 설정이나 앱을 외부로
 					공유하는 방법을 살펴보세요.
 				</p>
 				<div className="flex flex-wrap gap-4">
 					<Link
 						href="/docs/vibe-apps/advanced-configuration" // 고급 설정 페이지 경로 (추후 생성)
-						className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md shadow-md transition-colors group"
+						className="group inline-flex items-center rounded-md bg-purple-600 px-6 py-3 font-semibold text-white shadow-md transition-colors hover:bg-purple-700"
 					>
 						고급 설정 살펴보기
-						<FiArrowRight className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
+						<FiArrowRight className="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-1" />
 					</Link>
 					<Link
 						href="/docs/vibe-apps/app-embed" // 앱 임베드 페이지 경로 (추후 생성)
-						className="inline-flex items-center px-6 py-3 border border-purple-500 hover:bg-purple-500/20 text-purple-300 font-semibold rounded-md shadow-md transition-colors group"
+						className="group inline-flex items-center rounded-md border border-purple-500 px-6 py-3 font-semibold text-purple-300 shadow-md transition-colors hover:bg-purple-500/20"
 					>
 						웹사이트에 앱 임베드하기
-						<FiArrowRight className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
+						<FiArrowRight className="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-1" />
 					</Link>
 				</div>
 			</div>

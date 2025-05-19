@@ -10,7 +10,7 @@ import {
 
 const IntroductionPage = () => {
 	return (
-		<article className="prose prose-invert max-w-none prose-headings:text-purple-400 prose-a:text-purple-300 hover:prose-a:text-purple-200 prose-strong:text-purple-300">
+		<article className="prose prose-invert prose-headings:text-purple-400 prose-a:text-purple-300 hover:prose-a:text-purple-200 prose-strong:text-purple-300 max-w-none">
 			<h1 id="vibe-소개">VIBE에 오신 것을 환영합니다!</h1>
 			<p className="lead">
 				VIBE는 여러분의 아이디어를 현실로 가장 빠르게 옮길 수 있도록 설계된
@@ -32,7 +32,7 @@ const IntroductionPage = () => {
 			<h2 id="vibe의-주요-특징">VIBE의 주요 특징</h2>
 			<ul className="space-y-4">
 				<li className="flex items-start">
-					<FiCpu className="w-6 h-6 text-purple-400 mr-3 mt-1 flex-shrink-0" />
+					<FiCpu className="mt-1 mr-3 h-6 w-6 flex-shrink-0 text-purple-400" />
 					<div>
 						<strong>AI 기반 코딩 지원:</strong> 코드 자동 완성, 실시간 코드
 						생성, 스마트 디버깅, AI 채팅 도우미 등 VIBE의 지능형 AI가 코딩
@@ -40,7 +40,7 @@ const IntroductionPage = () => {
 					</div>
 				</li>
 				<li className="flex items-start">
-					<FiUsers className="w-6 h-6 text-purple-400 mr-3 mt-1 flex-shrink-0" />
+					<FiUsers className="mt-1 mr-3 h-6 w-6 flex-shrink-0 text-purple-400" />
 					<div>
 						<strong>실시간 협업:</strong> 동료들과 함께 실시간으로 코드를
 						편집하고, 아이디어를 공유하며 프로젝트를 진행할 수 있습니다. 마치 한
@@ -48,7 +48,7 @@ const IntroductionPage = () => {
 					</div>
 				</li>
 				<li className="flex items-start">
-					<FiUploadCloud className="w-6 h-6 text-purple-400 mr-3 mt-1 flex-shrink-0" />
+					<FiUploadCloud className="mt-1 mr-3 h-6 w-6 flex-shrink-0 text-purple-400" />
 					<div>
 						<strong>원클릭 배포:</strong> 복잡한 배포 과정은 이제 그만!
 						VIBE에서는 단 몇 번의 클릭만으로 여러분의 웹 앱, API, 봇 등을 전
@@ -56,7 +56,7 @@ const IntroductionPage = () => {
 					</div>
 				</li>
 				<li className="flex items-start">
-					<FiZap className="w-6 h-6 text-purple-400 mr-3 mt-1 flex-shrink-0" />
+					<FiZap className="mt-1 mr-3 h-6 w-6 flex-shrink-0 text-purple-400" />
 					<div>
 						<strong>다양한 템플릿:</strong> 웹사이트, 챗봇, 게임 등 다양한
 						종류의 프로젝트 템플릿을 활용하여 개발을 빠르게 시작하고 시간을
@@ -64,7 +64,7 @@ const IntroductionPage = () => {
 					</div>
 				</li>
 				<li className="flex items-start">
-					<FiBook className="w-6 h-6 text-purple-400 mr-3 mt-1 flex-shrink-0" />
+					<FiBook className="mt-1 mr-3 h-6 w-6 flex-shrink-0 text-purple-400" />
 					<div>
 						<strong>학습 및 커뮤니티 (출시 예정):</strong> VIBE는 단순한 개발
 						도구를 넘어, 함께 배우고 성장하는 개발자 커뮤니티를 지향합니다.
@@ -81,20 +81,20 @@ const IntroductionPage = () => {
 				사용 예시를 통해 이해를 돕고자 합니다.
 			</p>
 
-			<div className="mt-10 p-6 bg-gray-800 rounded-lg shadow-md">
-				<h3 className="text-xl font-semibold text-purple-300 mb-3">
+			<div className="mt-10 rounded-lg bg-gray-800 p-6 shadow-md">
+				<h3 className="mb-3 text-xl font-semibold text-purple-300">
 					다음 단계
 				</h3>
-				<p className="text-gray-300 mb-4">
+				<p className="mb-4 text-gray-300">
 					VIBE의 세계에 첫발을 내디딘 것을 환영합니다! 이제 다음 가이드를 통해
 					VIBE를 직접 경험해보세요.
 				</p>
 				<Link
 					href="/docs/getting-started/quickstarts"
-					className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md shadow-md transition-colors group"
+					className="group inline-flex items-center rounded-md bg-purple-600 px-6 py-3 font-semibold text-white shadow-md transition-colors hover:bg-purple-700"
 				>
 					빠른 시작 가이드로 이동
-					<FiArrowRight className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
+					<FiArrowRight className="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-1" />
 				</Link>
 			</div>
 		</article>

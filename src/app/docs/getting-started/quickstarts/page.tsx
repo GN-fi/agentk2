@@ -15,7 +15,7 @@ export const dynamic = "force-static";
 
 const QuickstartsPage = () => {
 	return (
-		<article className="prose prose-invert max-w-none prose-headings:text-purple-400 prose-a:text-purple-300 hover:prose-a:text-purple-200 prose-strong:text-purple-300">
+		<article className="prose prose-invert prose-headings:text-purple-400 prose-a:text-purple-300 hover:prose-a:text-purple-200 prose-strong:text-purple-300 max-w-none">
 			<h1 id="빠른-시작-가이드">빠른 시작: 첫 VIBE 앱 만들기</h1>
 			<p className="lead">
 				이 가이드를 따라 몇 분 안에 VIBE를 사용하여 첫 번째 웹 애플리케이션을
@@ -24,9 +24,9 @@ const QuickstartsPage = () => {
 			</p>
 
 			<h2 id="1단계-새-프로젝트-시작하기">1단계: 새 프로젝트 시작하기</h2>
-			<div className="my-6 p-4 border border-gray-700 rounded-lg bg-gray-800/50">
+			<div className="my-6 rounded-lg border border-gray-700 bg-gray-800/50 p-4">
 				<p className="flex items-center">
-					<FiMousePointer className="w-5 h-5 mr-2 text-purple-400" />
+					<FiMousePointer className="mr-2 h-5 w-5 text-purple-400" />
 					VIBE에 로그인한 후, <Link href="/editor/~">대시보드</Link>로
 					이동합니다.
 				</p>
@@ -49,7 +49,7 @@ const QuickstartsPage = () => {
 				프로젝트가 생성되면 VIBE 작업 공간으로 이동합니다. 익숙해져야 할 몇 가지
 				주요 영역이 있습니다:
 			</p>
-			<ul className="list-disc list-inside my-4 space-y-2 pl-4">
+			<ul className="my-4 list-inside list-disc space-y-2 pl-4">
 				<li>
 					<strong>파일 탐색기 (왼쪽):</strong> 프로젝트의 모든 파일과 폴더를
 					보여줍니다. 새 파일을 만들거나 기존 파일을 열 수 있습니다.
@@ -72,14 +72,14 @@ const QuickstartsPage = () => {
 
 			<h2 id="3단계-간단한-코드-작성하기">3단계: 간단한 코드 작성하기</h2>
 			<p className="flex items-center">
-				<FiCode className="w-5 h-5 mr-2 text-purple-400" />
+				<FiCode className="mr-2 h-5 w-5 text-purple-400" />
 				파일 탐색기에서 <code>index.html</code> 파일을 클릭하여 엽니다. (없다면
 				새로 만듭니다.)
 			</p>
 			<p className="mt-2">
 				다음과 같이 간단한 HTML 코드를 입력하거나 수정해보세요:
 			</p>
-			<pre className="bg-gray-800 p-4 rounded-md text-sm overflow-x-auto my-4">
+			<pre className="my-4 overflow-x-auto rounded-md bg-gray-800 p-4 text-sm">
 				<code className="language-html">
 					{`<!DOCTYPE html>
 <html>
@@ -102,11 +102,11 @@ const QuickstartsPage = () => {
 
 			<h2 id="4단계-앱-실행-및-확인하기">4단계: 앱 실행 및 확인하기</h2>
 			<p className="flex items-center">
-				<FiPlay className="w-5 h-5 mr-2 text-purple-400" />
+				<FiPlay className="mr-2 h-5 w-5 text-purple-400" />
 				상단 바에 있는 초록색 "실행" 버튼을 클릭하세요.
 			</p>
 			<p className="mt-2 flex items-center">
-				<FiEye className="w-5 h-5 mr-2 text-purple-400" />
+				<FiEye className="mr-2 h-5 w-5 text-purple-400" />
 				작업 공간의 미리보기 창(웹뷰)에 "안녕하세요, VIBE!" 메시지가 나타나는
 				것을 확인할 수 있습니다. 만약 Node.js 프로젝트라면 콘솔에 로그가 출력될
 				것입니다.
@@ -116,11 +116,11 @@ const QuickstartsPage = () => {
 				5단계 (선택): AI 도우미 사용해보기
 			</h2>
 			<p className="flex items-center">
-				<FiCpu className="w-5 h-5 mr-2 text-purple-400" />
+				<FiCpu className="mr-2 h-5 w-5 text-purple-400" />
 				VIBE의 강력한 AI 기능을 살짝 경험해보세요! 코드 에디터에서 특정 코드
 				라인을 선택하거나, AI 채팅 패널을 열어 다음과 같이 요청해보세요:
 			</p>
-			<blockquote className="border-l-4 border-purple-500 pl-4 italic my-4 text-gray-300">
+			<blockquote className="my-4 border-l-4 border-purple-500 pl-4 text-gray-300 italic">
 				<p>
 					"현재 날짜와 시간을 페이지에 표시하는 JavaScript 함수를 만들어줘."
 				</p>
@@ -137,11 +137,11 @@ const QuickstartsPage = () => {
 				현실로 만들어보세요.
 			</p>
 
-			<div className="mt-10 p-6 bg-gray-800 rounded-lg shadow-md">
-				<h3 className="text-xl font-semibold text-purple-300 mb-3">
+			<div className="mt-10 rounded-lg bg-gray-800 p-6 shadow-md">
+				<h3 className="mb-3 text-xl font-semibold text-purple-300">
 					다음으로 무엇을 배울까요?
 				</h3>
-				<ul className="list-disc list-inside space-y-2 mb-4 text-gray-300">
+				<ul className="mb-4 list-inside list-disc space-y-2 text-gray-300">
 					<li>
 						<Link href="/docs/vibe-workspace/overview">
 							VIBE 작업 공간 더 자세히 알아보기
@@ -160,10 +160,10 @@ const QuickstartsPage = () => {
 				</ul>
 				<Link
 					href="/docs"
-					className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md shadow-md transition-colors group"
+					className="group inline-flex items-center rounded-md bg-purple-600 px-6 py-3 font-semibold text-white shadow-md transition-colors hover:bg-purple-700"
 				>
 					모든 문서 보기
-					<FiArrowRight className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
+					<FiArrowRight className="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-1" />
 				</Link>
 			</div>
 		</article>

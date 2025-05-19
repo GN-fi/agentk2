@@ -30,19 +30,19 @@ const recentAppsData = [
 const RecentAppsSection = () => {
 	return (
 		<div className="mb-8">
-			<div className="flex items-center justify-between mb-4">
+			<div className="mb-4 flex items-center justify-between">
 				<h2 className="text-2xl font-semibold text-white">최근 작업한 앱</h2>
 				<button
 					type="button"
 					// TODO: 추후 실제 '모든 앱 보기' 페이지 이동 로직 구현
-					className="flex items-center text-sm text-purple-400 hover:text-purple-300 transition-colors"
+					className="flex items-center text-sm text-purple-400 transition-colors hover:text-purple-300"
 				>
 					모두 보기
-					<FiArrowRight className="w-4 h-4 ml-1" />
+					<FiArrowRight className="ml-1 h-4 w-4" />
 				</button>
 			</div>
 			{recentAppsData.length > 0 ? (
-				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 					{recentAppsData.map((app) => (
 						<AppCard
 							key={app.appName}
@@ -53,9 +53,9 @@ const RecentAppsSection = () => {
 					))}
 				</div>
 			) : (
-				<div className="text-center py-8 bg-gray-800 rounded-lg">
+				<div className="rounded-lg bg-gray-800 py-8 text-center">
 					<p className="text-gray-400">최근 작업한 앱이 없습니다.</p>
-					<p className="text-gray-500 text-sm mt-1">
+					<p className="mt-1 text-sm text-gray-500">
 						새로운 프로젝트를 시작해보세요!
 					</p>
 				</div>

@@ -3,10 +3,10 @@ import Link from "next/link";
 const DeploymentsAdvancedConfigPage = () => {
 	return (
 		<div className="prose prose-invert max-w-none">
-			<h1 className="text-3xl font-bold mb-6 text-purple-400">
+			<h1 className="mb-6 text-3xl font-bold text-purple-400">
 				VIBE 배포 고급 설정: 전문가처럼 배포 환경 제어하기
 			</h1>
-			<p className="text-lg mb-8">
+			<p className="mb-8 text-lg">
 				VIBE는 기본적인 배포 기능을 넘어, 사용자가 자신의 애플리케이션
 				요구사항에 맞게 배포 환경을 세밀하게 제어할 수 있도록 다양한 고급 설정
 				옵션을 제공합니다. 환경 변수 관리부터 사용자 정의 도메인 연결, 빌드
@@ -16,8 +16,8 @@ const DeploymentsAdvancedConfigPage = () => {
 			</p>
 
 			{/* 1. 환경 변수 관리 */}
-			<section className="mb-12 p-6 bg-gray-800 rounded-lg shadow-lg">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+			<section className="mb-12 rounded-lg bg-gray-800 p-6 shadow-lg">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					1. 환경 변수 (Environment Variables)
 				</h2>
 				<p className="mb-4">
@@ -28,10 +28,10 @@ const DeploymentsAdvancedConfigPage = () => {
 					다른 환경 변수 값을 설정하고 관리할 수 있는 직관적인 인터페이스를
 					제공합니다.
 				</p>
-				<h4 className="font-semibold text-lg text-purple-200 mb-2">
+				<h4 className="mb-2 text-lg font-semibold text-purple-200">
 					주요 기능 및 설정 방법:
 				</h4>
-				<ul className="list-disc pl-5 space-y-2 text-sm mb-4">
+				<ul className="mb-4 list-disc space-y-2 pl-5 text-sm">
 					<li>
 						<strong>환경별 변수 설정:</strong> VIBE 대시보드 또는 설정
 						파일(`vibe.config.js` 또는 유사 파일)을 통해 각 배포 환경(예:
@@ -59,8 +59,8 @@ const DeploymentsAdvancedConfigPage = () => {
 						사용되는 변수를 구분하여 관리할 수 있습니다.
 					</li>
 				</ul>
-				<h4 className="font-semibold text-lg text-purple-200 mb-2">팁:</h4>
-				<ul className="list-disc pl-5 space-y-1 text-sm">
+				<h4 className="mb-2 text-lg font-semibold text-purple-200">팁:</h4>
+				<ul className="list-disc space-y-1 pl-5 text-sm">
 					<li>
 						민감한 정보는 절대 코드에 직접 작성하지 말고 환경 변수(특히 보안
 						변수)를 사용하세요.
@@ -73,8 +73,8 @@ const DeploymentsAdvancedConfigPage = () => {
 			</section>
 
 			{/* 2. 사용자 정의 도메인 (Custom Domains) */}
-			<section className="mb-12 p-6 bg-gray-800 rounded-lg shadow-lg">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+			<section className="mb-12 rounded-lg bg-gray-800 p-6 shadow-lg">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					2. 사용자 정의 도메인 (Custom Domains)
 				</h2>
 				<p className="mb-4">
@@ -84,10 +84,10 @@ const DeploymentsAdvancedConfigPage = () => {
 					수 있습니다. VIBE는 사용자 정의 도메인 설정 및 SSL/TLS 인증서 자동
 					발급/갱신 기능을 간편하게 제공합니다.
 				</p>
-				<h4 className="font-semibold text-lg text-purple-200 mb-2">
+				<h4 className="mb-2 text-lg font-semibold text-purple-200">
 					설정 절차:
 				</h4>
-				<ol className="list-decimal pl-5 space-y-2 text-sm mb-4">
+				<ol className="mb-4 list-decimal space-y-2 pl-5 text-sm">
 					<li>
 						<strong>VIBE에 도메인 추가:</strong> VIBE 배포 설정에서 사용하고자
 						하는 사용자 정의 도메인을 입력합니다.
@@ -115,10 +115,10 @@ const DeploymentsAdvancedConfigPage = () => {
 						서브도메인 관리가 가능해질 수 있습니다.
 					</li>
 				</ol>
-				<h4 className="font-semibold text-lg text-purple-200 mb-2">
+				<h4 className="mb-2 text-lg font-semibold text-purple-200">
 					SSL/TLS 인증서:
 				</h4>
-				<p className="text-sm mb-2">
+				<p className="mb-2 text-sm">
 					VIBE는 Let's Encrypt와 같은 인증 기관을 통해 사용자 정의 도메인에 대한
 					SSL/TLS 인증서를 <strong>무료로 자동 발급하고 주기적으로 갱신</strong>
 					해줍니다. 이를 통해 모든 트래픽이 HTTPS로 암호화되어 보안이 강화되며,
@@ -127,8 +127,8 @@ const DeploymentsAdvancedConfigPage = () => {
 			</section>
 
 			{/* 3. 빌드 설정 커스터마이징 */}
-			<section className="mb-12 p-6 bg-gray-800 rounded-lg shadow-lg">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+			<section className="mb-12 rounded-lg bg-gray-800 p-6 shadow-lg">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					3. 빌드 설정 커스터마이징
 				</h2>
 				<p className="mb-4">
@@ -136,10 +136,10 @@ const DeploymentsAdvancedConfigPage = () => {
 					설정을 감지하지만, 때로는 프로젝트의 특정 요구에 맞춰 빌드 명령어나
 					환경을 직접 지정해야 할 필요가 있습니다.
 				</p>
-				<h4 className="font-semibold text-lg text-purple-200 mb-2">
+				<h4 className="mb-2 text-lg font-semibold text-purple-200">
 					주요 설정 항목:
 				</h4>
-				<ul className="list-disc pl-5 space-y-2 text-sm mb-4">
+				<ul className="mb-4 list-disc space-y-2 pl-5 text-sm">
 					<li>
 						<strong>프레임워크 프리셋:</strong> Next.js, React (Create React
 						App), Vue, Angular, Svelte, Gatsby, Hugo 등 다양한 프레임워크에 대한
@@ -176,8 +176,8 @@ const DeploymentsAdvancedConfigPage = () => {
 			</section>
 
 			{/* 4. 리소스 할당 및 확장 설정 (Scaling) */}
-			<section className="mb-12 p-6 bg-gray-800 rounded-lg shadow-lg">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+			<section className="mb-12 rounded-lg bg-gray-800 p-6 shadow-lg">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					4. 리소스 할당 및 확장 설정 (Scaling)
 				</h2>
 				<p className="mb-4">
@@ -187,10 +187,10 @@ const DeploymentsAdvancedConfigPage = () => {
 					기반 또는 설정 기반의 리소스 할당 및 오토 스케일링 옵션을 제공할 수
 					있습니다 (플랜 또는 배포 대상에 따라 다름).
 				</p>
-				<h4 className="font-semibold text-lg text-purple-200 mb-2">
+				<h4 className="mb-2 text-lg font-semibold text-purple-200">
 					주요 고려사항:
 				</h4>
-				<ul className="list-disc pl-5 space-y-2 text-sm mb-4">
+				<ul className="mb-4 list-disc space-y-2 pl-5 text-sm">
 					<li>
 						<strong>리소스 플랜 선택:</strong> 애플리케이션의 예상 트래픽과
 						리소스 요구량에 맞는 적절한 컴퓨팅 인스턴스 유형 또는 리소스 플랜을
@@ -220,8 +220,8 @@ const DeploymentsAdvancedConfigPage = () => {
 			</section>
 
 			{/* 5. 보안 설정 */}
-			<section className="mb-12 p-6 bg-gray-800 rounded-lg shadow-lg">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+			<section className="mb-12 rounded-lg bg-gray-800 p-6 shadow-lg">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					5. 보안 설정
 				</h2>
 				<p className="mb-4">
@@ -229,7 +229,7 @@ const DeploymentsAdvancedConfigPage = () => {
 					필수적입니다. VIBE는 다양한 보안 기능을 통해 안전한 배포 환경을
 					구축하도록 돕습니다.
 				</p>
-				<ul className="list-disc pl-5 space-y-2 text-sm mb-4">
+				<ul className="mb-4 list-disc space-y-2 pl-5 text-sm">
 					<li>
 						<strong>자동 HTTPS (SSL/TLS):</strong> 앞서 언급된 바와 같이, 사용자
 						정의 도메인에 대해 무료 SSL/TLS 인증서를 자동으로 발급하고 관리하여
@@ -263,15 +263,15 @@ const DeploymentsAdvancedConfigPage = () => {
 			</section>
 
 			{/* 6. 모니터링 및 로깅 */}
-			<section className="mb-12 p-6 bg-gray-800 rounded-lg shadow-lg">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+			<section className="mb-12 rounded-lg bg-gray-800 p-6 shadow-lg">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					6. 모니터링 및 로깅
 				</h2>
 				<p className="mb-4">
 					배포된 애플리케이션의 상태를 지속적으로 모니터링하고 발생하는 로그를
 					효과적으로 관리하는 것은 문제 해결과 성능 최적화에 매우 중요합니다.
 				</p>
-				<ul className="list-disc pl-5 space-y-2 text-sm mb-4">
+				<ul className="mb-4 list-disc space-y-2 pl-5 text-sm">
 					<li>
 						<strong>실시간 배포 로그:</strong> VIBE 대시보드에서 빌드 및 배포
 						과정의 실시간 로그를 확인할 수 있어 문제 발생 시 원인을 빠르게
@@ -299,8 +299,8 @@ const DeploymentsAdvancedConfigPage = () => {
 			</section>
 
 			{/* 7. 백업 및 롤백 전략 */}
-			<section className="mb-12 p-6 bg-gray-800 rounded-lg shadow-lg">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+			<section className="mb-12 rounded-lg bg-gray-800 p-6 shadow-lg">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					7. 백업 및 롤백 전략
 				</h2>
 				<p className="mb-4">
@@ -308,7 +308,7 @@ const DeploymentsAdvancedConfigPage = () => {
 					백업하고, 문제 발생 시 이전의 안정적인 상태로 빠르게 복구(롤백)할 수
 					있는 전략이 필요합니다.
 				</p>
-				<ul className="list-disc pl-5 space-y-2 text-sm mb-4">
+				<ul className="mb-4 list-disc space-y-2 pl-5 text-sm">
 					<li>
 						<strong>자동 배포 이력 관리:</strong> VIBE는 이전 배포 버전들을
 						자동으로 기록하고 관리하여, 클릭 한 번으로 특정 이전 버전으로 쉽게
@@ -334,7 +334,7 @@ const DeploymentsAdvancedConfigPage = () => {
 			</section>
 
 			<section>
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					결론: VIBE로 배포 전문가 되기
 				</h2>
 				<p className="mb-4">

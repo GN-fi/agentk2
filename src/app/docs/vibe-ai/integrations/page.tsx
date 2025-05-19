@@ -6,10 +6,10 @@ export const dynamic = "force-static";
 const IntegrationsPage = () => {
 	return (
 		<div className="prose prose-invert max-w-none">
-			<h1 className="text-3xl font-bold mb-6 text-purple-400">
+			<h1 className="mb-6 text-3xl font-bold text-purple-400">
 				VIBE AI 통합: 워크플로우 확장 및 자동화
 			</h1>
-			<p className="text-lg mb-8">
+			<p className="mb-8 text-lg">
 				VIBE AI는 독립적인 기능으로도 강력하지만, 다양한 외부 개발 도구 및
 				서비스와 통합될 때 그 잠재력이 더욱 확장됩니다. 이를 통해 기존에
 				사용하던 도구들과 VIBE AI 기능을 매끄럽게 연동하여 개발 워크플로우를
@@ -17,10 +17,10 @@ const IntegrationsPage = () => {
 			</p>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					VIBE AI 통합의 이점
 				</h2>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>개발 생산성 극대화:</strong> 자주 사용하는 도구(예: GitHub,
 						Jira, Slack) 내에서 VIBE AI의 코드 생성, 분석, 자동화 기능을 직접
@@ -52,15 +52,15 @@ const IntegrationsPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					주요 통합 시나리오 (예시)
 				</h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+				<div className="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							1. GitHub / GitLab / Bitbucket
 						</h4>
-						<p className="text-sm mb-2">
+						<p className="mb-2 text-sm">
 							<strong>기능:</strong> 코드 푸시 시 자동 코드 리뷰 및 개선 사항
 							제안, PR 생성 시 관련 이슈 자동 연결 및 요약, 테스트 결과 코멘트,
 							VIBE 에이전트를 통한 CI 실행 등.
@@ -69,11 +69,11 @@ const IntegrationsPage = () => {
 							<strong>통합 방식:</strong> 웹훅(Webhook), API, VIBE 에이전트 액션
 						</p>
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							2. Jira / Asana / Trello
 						</h4>
-						<p className="text-sm mb-2">
+						<p className="mb-2 text-sm">
 							<strong>기능:</strong> 새로운 이슈 생성 시 관련 코드 스켈레톤 자동
 							생성 제안, 코드 변경 사항에 따른 이슈 상태 자동 업데이트, VIBE
 							어시스턴트/에이전트 작업 결과 이슈 코멘트로 기록 등.
@@ -83,11 +83,11 @@ const IntegrationsPage = () => {
 							제공)
 						</p>
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							3. Slack / Microsoft Teams
 						</h4>
-						<p className="text-sm mb-2">
+						<p className="mb-2 text-sm">
 							<strong>기능:</strong> 중요한 빌드 실패 알림, 코드 리뷰 요청 알림,
 							VIBE AI 분석 리포트 요약 공유, 특정 명령어 기반 VIBE 에이전트 작업
 							실행 (예: /vibe-agent deploy staging).
@@ -96,11 +96,11 @@ const IntegrationsPage = () => {
 							<strong>통합 방식:</strong> 봇(Bot) 연동, API, 웹훅
 						</p>
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							4. CI/CD (Jenkins, GitHub Actions 등)
 						</h4>
-						<p className="text-sm mb-2">
+						<p className="mb-2 text-sm">
 							<strong>기능:</strong> VIBE 에이전트를 CI/CD 파이프라인의 한
 							단계로 포함하여 코드 분석, 테스트 자동화, 보안 취약점 점검 등을
 							수행하고 결과를 리포팅.
@@ -109,11 +109,11 @@ const IntegrationsPage = () => {
 							<strong>통합 방식:</strong> VIBE 에이전트 CLI, API
 						</p>
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							5. 코드 품질 및 보안 분석 도구
 						</h4>
-						<p className="text-sm mb-2">
+						<p className="mb-2 text-sm">
 							<strong>기능:</strong> SonarQube, Snyk 등 외부 분석 도구의 결과를
 							VIBE AI가 종합하여 사용자에게 더 실행 가능한 형태로 요약 및 개선
 							방안 제시.
@@ -122,11 +122,11 @@ const IntegrationsPage = () => {
 							<strong>통합 방식:</strong> API (각 도구에서 제공)
 						</p>
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							6. 자체 개발 도구 및 시스템 (API 활용)
 						</h4>
-						<p className="text-sm mb-2">
+						<p className="mb-2 text-sm">
 							<strong>기능:</strong> VIBE AI API (향후 제공 예정)를 통해 기업
 							내부 시스템이나 자체 개발한 도구에 VIBE 어시스턴트, 코드 생성,
 							분석 기능 등을 직접 통합.
@@ -139,7 +139,7 @@ const IntegrationsPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					통합 설정 방법 (일반적인 절차)
 				</h2>
 				<p className="mb-4">
@@ -147,7 +147,7 @@ const IntegrationsPage = () => {
 					일반적인 절차는 다음과 같습니다. VIBE는 다양한 주요 서비스와의 간편한
 					통합을 위한 사전 빌드된 커넥터 또는 가이드를 제공할 예정입니다.
 				</p>
-				<ol className="list-decimal pl-6 mb-6 space-y-3">
+				<ol className="mb-6 list-decimal space-y-3 pl-6">
 					<li>
 						<strong>VIBE 설정 메뉴 접근:</strong> VIBE IDE 또는 웹 대시보드의
 						'설정' &gt; '통합' (또는 'Integrations') 메뉴로 이동합니다.
@@ -179,7 +179,7 @@ const IntegrationsPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					VIBE AI API (향후 계획)
 				</h2>
 				<p className="mb-4">
@@ -188,7 +188,7 @@ const IntegrationsPage = () => {
 					코드 생성, 분석, 번역, 요약 등 다양한 AI 기능을 프로그래밍 방식으로
 					호출하여 활용 범위를 무한히 확장할 수 있습니다.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>제공 형태:</strong> RESTful API, gRPC 등 표준적인 인터페이스
 						제공
@@ -208,14 +208,14 @@ const IntegrationsPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					보안 및 데이터 관리
 				</h2>
 				<p className="mb-4">
 					외부 서비스와의 통합 시 데이터 보안 및 개인 정보 보호는 매우
 					중요합니다. VIBE는 다음 원칙을 준수합니다.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<strong>최소 권한 원칙:</strong> 통합 시 필요한 최소한의 권한만을
 						요청하고 사용합니다.
@@ -246,7 +246,7 @@ const IntegrationsPage = () => {
 			</section>
 
 			<section>
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					다음 단계
 				</h2>
 				<p className="mb-4">
@@ -254,7 +254,7 @@ const IntegrationsPage = () => {
 					만들어보세요. VIBE의 다른 기능들도 함께 살펴보시면 시너지를 경험할 수
 					있습니다.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<Link
 							href="/docs/vibe-ai/overview"

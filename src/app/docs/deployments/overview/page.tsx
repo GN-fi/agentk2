@@ -6,10 +6,10 @@ export const dynamic = "force-static";
 const DeploymentsOverviewPage = () => {
 	return (
 		<div className="prose prose-invert max-w-none">
-			<h1 className="text-3xl font-bold mb-6 text-purple-400">
+			<h1 className="mb-6 text-3xl font-bold text-purple-400">
 				VIBE 배포: 아이디어를 세상에 선보이는 가장 빠른 길
 			</h1>
-			<p className="text-lg mb-8">
+			<p className="mb-8 text-lg">
 				훌륭한 애플리케이션을 개발하는 것만큼 중요한 것은 사용자들이 실제로
 				경험할 수 있도록 안정적이고 효율적으로 배포하는 것입니다. VIBE는 복잡한
 				배포 과정을 단순화하고 자동화하여, 개발자 여러분이 코드 작성에 더욱
@@ -18,7 +18,7 @@ const DeploymentsOverviewPage = () => {
 			</p>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					배포란 무엇이며 왜 중요한가요?
 				</h2>
 				<p className="mb-4">
@@ -27,7 +27,7 @@ const DeploymentsOverviewPage = () => {
 					옮기고 실행시키는 과정을 의미합니다. 효과적인 배포 전략은 다음과 같은
 					이점을 제공합니다:
 				</p>
-				<ul className="list-disc pl-6 mb-6 space-y-3">
+				<ul className="mb-6 list-disc space-y-3 pl-6">
 					<li>
 						<strong>빠른 시장 출시:</strong> 자동화되고 간소화된 배포 프로세스는
 						새로운 기능이나 업데이트를 사용자에게 신속하게 전달할 수 있게
@@ -52,16 +52,16 @@ const DeploymentsOverviewPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					VIBE를 통한 배포의 이점
 				</h2>
 				<p className="mb-4">
 					VIBE 작업 공간과 통합된 배포 기능은 개발부터 배포까지의 과정을
 					매끄럽게 연결하여 사용자에게 다음과 같은 특별한 이점을 제공합니다:
 				</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+				<div className="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							1. 원클릭 배포
 						</h4>
 						<p className="text-sm">
@@ -71,8 +71,8 @@ const DeploymentsOverviewPage = () => {
 						</p>
 						{/* TODO: VIBE 원클릭 배포 UI 스크린샷 */}
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							2. 다양한 배포 대상 지원 (예정 포함)
 						</h4>
 						<p className="text-sm">
@@ -81,8 +81,8 @@ const DeploymentsOverviewPage = () => {
 							지원할 예정입니다.
 						</p>
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							3. 자동화된 CI/CD 파이프라인
 						</h4>
 						<p className="text-sm">
@@ -91,8 +91,8 @@ const DeploymentsOverviewPage = () => {
 							파이프라인 구축을 지원합니다.
 						</p>
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							4. 환경 구성 및 관리 용이성
 						</h4>
 						<p className="text-sm">
@@ -100,8 +100,8 @@ const DeploymentsOverviewPage = () => {
 							도메인 설정 등을 VIBE 내에서 통합적으로 관리할 수 있습니다.
 						</p>
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							5. 배포 모니터링 및 로그 확인
 						</h4>
 						<p className="text-sm">
@@ -110,8 +110,8 @@ const DeploymentsOverviewPage = () => {
 						</p>
 						{/* TODO: VIBE 배포 대시보드 및 로그 확인 화면 스크린샷 */}
 					</div>
-					<div className="bg-gray-800 p-6 rounded-lg shadow">
-						<h4 className="font-semibold text-lg text-purple-300 mb-2">
+					<div className="rounded-lg bg-gray-800 p-6 shadow">
+						<h4 className="mb-2 text-lg font-semibold text-purple-300">
 							6. 간편한 롤백 기능
 						</h4>
 						<p className="text-sm">
@@ -123,14 +123,14 @@ const DeploymentsOverviewPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					일반적인 배포 프로세스 in VIBE
 				</h2>
 				<p className="mb-4">
 					VIBE에서 애플리케이션을 배포하는 일반적인 과정은 다음과 같습니다
 					(선택한 배포 대상 및 설정에 따라 일부 차이가 있을 수 있습니다):
 				</p>
-				<ol className="list-decimal pl-6 mb-6 space-y-3">
+				<ol className="mb-6 list-decimal space-y-3 pl-6">
 					<li>
 						<strong>개발 완료 및 테스트:</strong> VIBE 작업 공간에서
 						애플리케이션 개발을 완료하고, 로컬 환경 또는 VIBE 앱 미리보기를 통해
@@ -138,7 +138,7 @@ const DeploymentsOverviewPage = () => {
 					</li>
 					<li>
 						<strong>배포 설정 구성:</strong>
-						<ul className="list-disc pl-6 mt-2 space-y-1">
+						<ul className="mt-2 list-disc space-y-1 pl-6">
 							<li>배포 대상 선택 (예: VIBE 호스팅, AWS S3, Docker Hub 등)</li>
 							<li>빌드 명령어 및 환경 변수 설정</li>
 							<li>도메인 및 SSL 인증서 설정 (필요시)</li>
@@ -175,7 +175,7 @@ const DeploymentsOverviewPage = () => {
 			</section>
 
 			<section className="mb-12">
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					다양한 배포 유형 지원
 				</h2>
 				<p className="mb-4">
@@ -189,7 +189,7 @@ const DeploymentsOverviewPage = () => {
 					</Link>
 					에서 확인할 수 있습니다.
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>정적 웹사이트 배포 (Static Site Deployment)</li>
 					<li>서버 사이드 렌더링(SSR) 애플리케이션 배포</li>
 					<li>컨테이너 기반 애플리케이션 배포 (Docker)</li>
@@ -199,14 +199,14 @@ const DeploymentsOverviewPage = () => {
 			</section>
 
 			<section>
-				<h2 className="text-2xl font-semibold mb-4 text-purple-300">
+				<h2 className="mb-4 text-2xl font-semibold text-purple-300">
 					다음 단계: 배포 시작하기
 				</h2>
 				<p className="mb-4">
 					VIBE와 함께라면 복잡했던 배포 과정이 한결 쉬워집니다. 지금 바로
 					여러분의 프로젝트를 세상에 선보이세요!
 				</p>
-				<ul className="list-disc pl-6 mb-4 space-y-2">
+				<ul className="mb-4 list-disc space-y-2 pl-6">
 					<li>
 						<Link
 							href="/docs/getting-started/quickstarts"
