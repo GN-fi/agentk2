@@ -41,11 +41,17 @@ jobs:
         working-directory: .
 
       - name: Fetch and Build Golden Layout Docs
-        run: npm run docs:fetch:gl --prefix ..
-
+        run: |
+          cd ..
+          npm install devdocs
+          npm run docs:fetch:gl
+          
       - name: Build Internal API Docs
-        run: npm run docs:build:api --prefix ..
-
+        run: |
+          cd ..
+          npm install typedoc typedoc-plugin-markdown
+          npm run docs:build:api
+          
       - name: Version Docusaurus Docs
         if: steps.glver.outputs.GL_VERSION != ''
         run: npm run docusaurus docs:version ${{ steps.glver.outputs.GL_VERSION }}
