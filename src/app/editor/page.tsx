@@ -3,8 +3,8 @@
 import { useEffect } from "react";
 // import { initLayout } from '@/components/GoldenLayout'; // 경로 수정 가능성 있음
 
-// 이 페이지를 정적으로 렌더링하도록 설정
-export const dynamic = "force-static";
+// 이 페이지를 동적으로 렌더링하도록 설정
+export const dynamic = "force-dynamic";
 
 export default function EditorPage() {
 	useEffect(() => {
