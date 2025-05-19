@@ -6,6 +6,8 @@ import TrustedBySection from "@/components/landing/TrustedBySection";
 import VibeCodingSection from "@/components/landing/VibeCodingSection";
 import Footer from "@/components/layout/Footer";
 
+export const dynamic = "force-static";
+
 export default function LandingPage() {
 	return (
 		<div className="flex flex-col min-h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 text-white">
