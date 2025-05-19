@@ -31,6 +31,10 @@ const nextConfig = {
 	trailingSlash: true,
 	// 모든 페이지를 서버 사이드 렌더링으로 처리
 	generateEtags: false,
+	// 빌드 중 특정 페이지 제외
+	excludeDefaultMomentLocales: true,
+	// 빌드 중 특정 경로 무시
+	pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
 };
 
 module.exports = nextConfig;
