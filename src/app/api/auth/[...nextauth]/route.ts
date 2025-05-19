@@ -9,13 +9,14 @@ import type { JWT } from "next-auth/jwt";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider, { type GoogleProfile } from "next-auth/providers/google";
 
-if (!process.env.GOOGLE_CLIENT_ID) {
-	throw new Error("Missing GOOGLE_CLIENT_ID in .env.local");
-}
+// CI 환경에서는 환경 변수가 없어도 빌드가 가능하도록 체크를 주석 처리합니다.
+// if (!process.env.GOOGLE_CLIENT_ID) {
+// 	throw new Error("Missing GOOGLE_CLIENT_ID in .env.local");
+// }
 
-if (!process.env.GOOGLE_CLIENT_SECRET) {
-	throw new Error("Missing GOOGLE_CLIENT_SECRET in .env.local");
-}
+// if (!process.env.GOOGLE_CLIENT_SECRET) {
+// 	throw new Error("Missing GOOGLE_CLIENT_SECRET in .env.local");
+// }
 
 const authOptions: AuthOptions = {
 	// 어댑터를 사용하지 않으면 JWT 세션이 기본값입니다.
