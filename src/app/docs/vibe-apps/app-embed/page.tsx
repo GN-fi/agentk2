@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+// 이 페이지를 정적으로 렌더링하도록 설정
+export const dynamic = "force-static";
+
 const AppEmbedPage = () => {
 	return (
 		<div className="prose prose-invert max-w-none">
@@ -92,11 +95,11 @@ const AppEmbedPage = () => {
 					<pre className="bg-gray-900 text-white p-3 rounded-md text-sm overflow-x-auto">
 						<code>
 							{`
-              <iframe 
-                src="https://your-vibe-app-url.vibeprojects.com/embedded-view" 
-                width="100%" 
-                height="600px" 
-                frameBorder="0" 
+              <iframe
+                src="https://your-vibe-app-url.vibeprojects.com/embedded-view"
+                width="100%"
+                height="600px"
+                frameBorder="0"
                 allowFullScreen
                 title="My VIBE App Embed"
               ></iframe>
@@ -146,7 +149,7 @@ const AppEmbedPage = () => {
 						<code>
 							{`
               <div id="vibe-app-container"></div>
-              
+
               <script src="https://api.vibeprojects.com/v1/sdk.js"></script>
               <script>
                 Vibe.init({ apiKey: 'YOUR_API_KEY' });
