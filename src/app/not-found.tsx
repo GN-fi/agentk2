@@ -2,6 +2,9 @@ import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import Link from "next/link";
 
+// 이 페이지를 정적으로 렌더링하도록 설정
+export const dynamic = "force-static";
+
 export default function NotFound() {
 	return (
 		<div className="flex flex-col min-h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 text-white">
