@@ -15,9 +15,7 @@ datasource db {
   url = env("DATABASE_URL")
 
   // 마이그레이션(DDL)에는 postgresql:// URL을 사용합니다.
-  // Prisma 4.10.0부터 directUrl 속성을 사용하여 마이그레이션과 런타임에서 다른 URL을 사용할 수 있습니다.
-  // https://www.prisma.io/docs/orm/prisma-schema/overview/data-sources#using-direct-connections
-  // directUrl = env("DIRECT_URL") // 필요한 경우 주석 해제하여 사용
+  directUrl = env("DIRECT_URL")
 }
 
 model Post {
