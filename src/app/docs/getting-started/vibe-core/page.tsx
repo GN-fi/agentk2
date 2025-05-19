@@ -93,11 +93,13 @@ const VibeCorePage = () => {
 			<h2 id="vibe-core-시작하기">VIBE Core 시작하기</h2>
 			<p>
 				VIBE Core를 경험하는 가장 좋은 방법은 직접 사용해보는 것입니다.
-				<Link href="/docs/getting-started/quickstarts">빠른 시작 가이드</Link>를
-				따라 첫 번째 VIBE 앱을 만들어보세요. VIBE Core의 강력함과 편리함을 즉시
-				느낄 수 있을 것입니다. 새 프로젝트를 생성하고, 몇 줄의 코드를 작성한 후
-				'실행' 버튼을 누르기만 하면 아이디어가 현실이 되는 마법을 경험할 수
-				있습니다.
+				<Link href="/docs/getting-started/quickstarts" prefetch={false}>
+					빠른 시작 가이드
+				</Link>
+				를 따라 첫 번째 VIBE 앱을 만들어보세요. VIBE Core의 강력함과 편리함을
+				즉시 느낄 수 있을 것입니다. 새 프로젝트를 생성하고, 몇 줄의 코드를
+				작성한 후 '실행' 버튼을 누르기만 하면 아이디어가 현실이 되는 마법을
+				경험할 수 있습니다.
 			</p>
 			<div className="my-6 rounded-lg border border-gray-700 bg-gray-800/50 p-4 text-center">
 				<Link

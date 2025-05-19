@@ -204,6 +204,7 @@ const TemplatesPage = () => {
 				<div className="flex flex-wrap gap-4">
 					<Link
 						href="/docs/getting-started/quickstarts"
+						prefetch={false}
 						className="group inline-flex items-center rounded-md bg-purple-600 px-4 py-2 text-sm font-semibold text-white shadow-md transition-colors hover:bg-purple-700"
 					>
 						빠른 시작 가이드로 앱 만들기

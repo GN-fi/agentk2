@@ -63,6 +63,7 @@ const DocsPage = () => {
 					<Link
 						key={section.title}
 						href={section.href}
+						prefetch={false}
 						className="block transform rounded-xl bg-gray-800 p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-gray-700 hover:shadow-purple-500/30"
 					>
 						<div className="flex flex-col items-center text-center sm:items-start sm:text-left">

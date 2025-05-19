@@ -91,6 +91,7 @@ const IntroductionPage = () => {
 				</p>
 				<Link
 					href="/docs/getting-started/quickstarts"
+					prefetch={false}
 					className="group inline-flex items-center rounded-md bg-purple-600 px-6 py-3 font-semibold text-white shadow-md transition-colors hover:bg-purple-700"
 				>
 					빠른 시작 가이드로 이동

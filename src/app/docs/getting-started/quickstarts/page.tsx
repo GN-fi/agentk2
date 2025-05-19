@@ -146,23 +146,24 @@ const QuickstartsPage = () => {
 				</h3>
 				<ul className="mb-4 list-inside list-disc space-y-2 text-gray-300">
 					<li>
-						<Link href="/docs/vibe-workspace/overview">
+						<Link href="/docs/vibe-workspace/overview" prefetch={false}>
 							VIBE 작업 공간 더 자세히 알아보기
 						</Link>
 					</li>
 					<li>
-						<Link href="/docs/vibe-ai/overview">
+						<Link href="/docs/vibe-ai/overview" prefetch={false}>
 							VIBE AI의 모든 기능 살펴보기
 						</Link>
 					</li>
 					<li>
-						<Link href="/docs/deployments/overview">
+						<Link href="/docs/deployments/overview" prefetch={false}>
 							만든 앱을 세상에 배포하기
 						</Link>
 					</li>
 				</ul>
 				<Link
 					href="/docs"
+					prefetch={false}
 					className="group inline-flex items-center rounded-md bg-purple-600 px-6 py-3 font-semibold text-white shadow-md transition-colors hover:bg-purple-700"
 				>
 					모든 문서 보기
