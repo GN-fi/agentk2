@@ -4,9 +4,11 @@ on:
   push:
     paths:
       - 'package.json' # 루트 package.json 변경 감지
-      - 'docs-site/package.json' # docs-site 내부의 변경도 감지 (선택 사항)
+      - 'docs-site/**' # docs-site 내부의 모든 변경 감지
     branches:
       - main # 또는 주 브랜치 이름
+  # 수동으로 워크플로우 실행 가능
+  workflow_dispatch:
 
 jobs:
   build-docs:
@@ -51,7 +53,7 @@ jobs:
           # 실제로는 docs-site 내부에서 상대 경로로 접근해야 할 수 있습니다.
           # 또는, devdocs 명령을 docs-site/package.json 스크립트로 옮기고 npm run을 사용하는 것이 더 깔끔할 수 있습니다.
           # 우선은 루트의 스크립트를 호출하는 방식으로 시도합니다.
-          npm run docs:fetch:gl --prefix .. 
+          npm run docs:fetch:gl --prefix ..
           # docs-site/static/docs/golden-layout/${{ steps.glver.outputs.GL_VERSION }} 경로에 저장됨
 
       - name: Build Internal API Docs
@@ -67,13 +69,15 @@ jobs:
       - name: Build Docusaurus Site
         run: npm run build # npm run docs:build 와 동일 (docs-site 내부에서 실행)
 
-      - name: Deploy to GitHub Pages (예시)
-        # 실제 배포 환경에 맞게 수정 필요 (Vercel, Netlify 등)
+      - name: Deploy to GN-fi.github.io
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main' # main 브랜치에 푸시될 때만 배포
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.DOCS_DEPLOY_KEY }}
+          external_repository: GN-fi/GN-fi.github.io
+          publish_branch: main
           publish_dir: ./docs-site/build # Docusaurus 빌드 결과
-          # user_name: 'github-actions[bot]' # 선택 사항
-          # user_email: 'github-actions[bot]@users.noreply.github.com' # 선택 사항
-          # commit_message: 'Deploy Docusaurus site from commit ${{ github.sha }}' # 선택 사항
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'Deploy documentation from ${{ github.repository }}@${{ github.sha }}'
+          full_commit_message: 'Deploy documentation from ${{ github.repository }}@${{ github.sha }}'
