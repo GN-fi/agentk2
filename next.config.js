@@ -17,7 +17,7 @@ const nextConfig = {
 	},
 	// CI 환경에서 빌드 오류를 방지하기 위한 설정
 	// API 라우트와의 호환성 문제로 정적 내보내기 비활성화
-	// output: process.env.CI ? "export" : undefined,
+	output: "standalone", // 정적 내보내기 대신 standalone 모드 사용
 	// 이미지 최적화 설정
 	images: { domains: ["lh3.googleusercontent.com"] },
 	// 빌드 중 URL 오류 해결을 위한 설정
