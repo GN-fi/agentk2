@@ -35,3 +35,12 @@ jobs:
         run: |
           pnpm lint
           pnpm type-check # tsc --noEmit 
+
+      - name: Build project
+        env:
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
+          NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
+          # DATABASE_URL: ${{ secrets.DATABASE_URL }} # 빌드 시 데이터베이스 연결이 필요하다면 추가
+        run: pnpm turbo run build --cache-dir=.turbo 
