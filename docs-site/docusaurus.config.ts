@@ -5,8 +5,8 @@ import { themes as prismThemes } from "prism-react-renderer";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-	title: "My Site",
-	tagline: "Dinosaurs are cool",
+	title: "AgentK2 Documentation",
+	tagline: "강력한 AI 에이전트 프레임워크",
 	favicon: "img/favicon.ico",
 
 	// Set the production url of your site here
@@ -68,9 +68,9 @@ const config: Config = {
 		// Replace with your project's social card
 		image: "img/docusaurus-social-card.jpg",
 		navbar: {
-			title: "My Site",
+			title: "AgentK2 Docs",
 			logo: {
-				alt: "My Site Logo",
+				alt: "AgentK2 Logo",
 				src: "img/logo.svg",
 			},
 			items: [
@@ -131,7 +131,7 @@ const config: Config = {
 					],
 				},
 			],
-			copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+			copyright: `Copyright © ${new Date().getFullYear()} AgentK2 Project. Built with Docusaurus.`,
 		},
 		prism: {
 			theme: prismThemes.github,
