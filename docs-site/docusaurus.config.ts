@@ -55,20 +55,6 @@ const config: Config = {
 				],
 			},
 		],
-		// 콘텐츠 블로그 플러그인
-		[
-			'@docusaurus/plugin-content-blog',
-			{
-				path: 'blog',
-				routeBasePath: 'blog',
-				blogTitle: 'AgentK2 Blog',
-				blogDescription: 'AgentK2 개발 소식 및 업데이트',
-				blogSidebarTitle: '최근 게시물',
-				blogSidebarCount: 5,
-				postsPerPage: 10,
-				showReadingTime: true,
-			},
-		],
 	],
 
 	presets: [
@@ -93,15 +79,19 @@ const config: Config = {
 				},
 				blog: {
 					showReadingTime: true,
+					blogTitle: 'AgentK2 Blog',
+					blogDescription: 'AgentK2 개발 소식 및 업데이트',
+					blogSidebarTitle: '최근 게시물',
+					blogSidebarCount: 5,
+					postsPerPage: 10,
 					feedOptions: {
 						type: ["rss", "atom"],
 						xslt: true,
+						copyright: `Copyright © ${new Date().getFullYear()} AgentK2 Project`,
 					},
-					// Please change this to your repo.
-					// Remove this to remove the "edit this page" links.
-					editUrl:
-						"https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-					// Useful options to enforce blogging best practices
+					// 편집 링크 설정
+					editUrl: "https://github.com/GN-fi/agentk2/tree/main/docs-site/",
+					// 블로그 모범 사례 설정
 					onInlineTags: "warn",
 					onInlineAuthors: "warn",
 					onUntruncatedBlogPosts: "warn",
