@@ -2,46 +2,29 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# AgentK2 소개
 
-Let's discover **Docusaurus in less than 5 minutes**.
+**AgentK2**는 강력한 AI 에이전트 프레임워크로, 복잡한 작업을 자동화하고 지능적인 의사 결정을 수행할 수 있습니다.
 
-## Getting Started
+## AgentK2란?
 
-Get started by **creating a new site**.
+AgentK2는 다음과 같은 특징을 가진 AI 에이전트 프레임워크입니다:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+- **강력한 추론 능력**: 복잡한 문제를 해결하기 위한 고급 추론 기능
+- **유연한 통합**: 다양한 도구 및 API와 쉽게 통합
+- **확장 가능한 아키텍처**: 다양한 사용 사례에 맞게 확장 가능
+- **사용자 친화적 인터페이스**: 직관적인 사용자 경험 제공
 
-### What you'll need
+## 주요 사용 사례
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+AgentK2는 다음과 같은 다양한 사용 사례에 적합합니다:
 
-## Generate a new site
+1. **자동화된 코드 생성 및 리팩토링**
+2. **지능형 데이터 분석 및 시각화**
+3. **복잡한 워크플로우 자동화**
+4. **대화형 문제 해결 및 의사 결정 지원**
 
-Generate a new Docusaurus site using the **classic template**.
+## 시작하기
 
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+AgentK2를 시작하려면 [설치 가이드](getting-started/installation)를 참조하세요.
+빠르게 시작하려면 [빠른 시작 가이드](getting-started/quick-start)를 확인하세요.
