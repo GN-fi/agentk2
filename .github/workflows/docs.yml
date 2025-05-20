@@ -11,13 +11,21 @@ on:
 
 # GitHub Pages에 배포하기 위한 권한 설정
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
+
+# GitHub Pages 환경 설정
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build-docs:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     defaults:
       run:
         working-directory: ./docs-site
@@ -60,14 +68,15 @@ jobs:
       - name: Build Docusaurus Site
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs-site/build
-          destination_dir: docs  # 문서를 /docs 경로에 배포
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_message: 'Deploy documentation from ${{ github.repository }}@${{ github.sha }}'
-          full_commit_message: 'Deploy documentation from ${{ github.repository }}@${{ github.sha }}'
+          # 업로드할 빌드 결과물 경로
+          path: './docs-site/build'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
