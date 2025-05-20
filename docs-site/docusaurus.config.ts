@@ -31,6 +31,21 @@ const config: Config = {
 		locales: ["en"],
 	},
 
+	// 루트 경로에서 문서 페이지로 리디렉션
+	plugins: [
+		[
+			'@docusaurus/plugin-client-redirects',
+			{
+				redirects: [
+					{
+						from: '/',
+						to: '/docs/intro',
+					},
+				],
+			},
+		],
+	],
+
 	presets: [
 		[
 			"classic",
