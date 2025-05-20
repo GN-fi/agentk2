@@ -1,11 +1,11 @@
 /**
  * API 문서 자동 생성 스크립트
- * 
+ *
  * 이 스크립트는 소스 코드에서 JSDoc 주석을 추출하여 Markdown 문서를 생성합니다.
  */
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 const jsdoc2md = require('jsdoc-to-markdown');
 const glob = require('glob');
 
@@ -44,16 +44,16 @@ function ensureDirectoryExists(dirPath) {
  */
 function getSourceFiles() {
   const files = [];
-  
+
   for (const pattern of CONFIG.patterns) {
-    const matches = glob.sync(pattern, { 
+    const matches = glob.sync(pattern, {
       cwd: CONFIG.sourcePath,
       ignore: CONFIG.exclude,
       absolute: true
     });
     files.push(...matches);
   }
-  
+
   return files;
 }
 
@@ -66,23 +66,24 @@ function groupFilesByCategory(files) {
   const groups = {
     'other': [] // 기본 그룹
   };
-  
+
   // 카테고리 초기화
-  Object.keys(CONFIG.categories).forEach(category => {
+  for (const category of Object.keys(CONFIG.categories)) {
     groups[category] = [];
-  });
-  
+  }
+
   // 파일 분류
-  files.forEach(file => {
+  for (const file of files) {
     const fileName = path.basename(file, path.extname(file));
     let assigned = false;
-    
+
     // 카테고리에 할당
     for (const [category, patterns] of Object.entries(CONFIG.categories)) {
       if (patterns.some(pattern => {
         if (typeof pattern === 'string') {
           return fileName === pattern;
-        } else if (pattern instanceof RegExp) {
+        }
+        if (pattern instanceof RegExp) {
           return pattern.test(fileName);
         }
         return false;
@@ -92,13 +93,13 @@ function groupFilesByCategory(files) {
         break;
       }
     }
-    
+
     // 할당되지 않은 파일은 기타 그룹에 추가
     if (!assigned) {
       groups.other.push(file);
     }
-  });
-  
+  }
+
   return groups;
 }
 
@@ -110,7 +111,7 @@ function groupFilesByCategory(files) {
 async function generateMarkdown(files, outputFile) {
   try {
     const output = await jsdoc2md.render({ files });
-    
+
     if (output.trim()) {
       fs.writeFileSync(outputFile, output);
       console.log(`Generated: ${outputFile}`);
@@ -143,13 +144,13 @@ sidebar_position: 1
     if (groups[category].length > 0) {
       const displayName = category.charAt(0).toUpperCase() + category.slice(1);
       content += `## ${displayName}\n\n`;
-      
+
       const categoryFiles = groups[category];
       for (const file of categoryFiles) {
         const fileName = path.basename(file, path.extname(file));
         content += `- [${fileName}](./${category}/${fileName}.md)\n`;
       }
-      
+
       content += '\n';
     }
   }
@@ -164,20 +165,20 @@ sidebar_position: 1
 async function main() {
   // 출력 디렉토리 생성
   ensureDirectoryExists(CONFIG.outputPath);
-  
+
   // 소스 파일 가져오기
   const files = getSourceFiles();
   console.log(`Found ${files.length} source files`);
-  
+
   // 카테고리별 그룹화
   const groups = groupFilesByCategory(files);
-  
+
   // 카테고리별 문서 생성
   for (const [category, categoryFiles] of Object.entries(groups)) {
     if (categoryFiles.length > 0) {
       const categoryDir = path.join(CONFIG.outputPath, category);
       ensureDirectoryExists(categoryDir);
-      
+
       // 파일별 문서 생성
       for (const file of categoryFiles) {
         const fileName = path.basename(file, path.extname(file));
@@ -186,10 +187,10 @@ async function main() {
       }
     }
   }
-  
+
   // 인덱스 파일 생성
   generateIndex(groups);
-  
+
   console.log('API documentation generation complete!');
 }
 
