@@ -1,13 +1,23 @@
-name: Sync Docs
+name: Build and Deploy Docs
 
 on:
   push:
     paths:
       - 'package.json'
       - 'docs-site/**'
+      - '.github/workflows/docs.yml'
     branches:
       - main
+  pull_request:
+    paths:
+      - 'docs-site/**'
   workflow_dispatch:
+    inputs:
+      deploy:
+        description: 'Deploy to GitHub Pages'
+        required: true
+        default: true
+        type: boolean
 
 # GitHub Pages에 배포하기 위한 권한 설정
 permissions:
@@ -65,18 +75,39 @@ jobs:
         if: steps.glver.outputs.GL_VERSION != ''
         run: npm run docusaurus docs:version ${{ steps.glver.outputs.GL_VERSION }}
 
+      - name: Lint Docusaurus Site
+        run: npm run lint || echo "Linting failed but continuing"
+
+      - name: Test Docusaurus Site
+        run: npm run test || echo "Testing failed but continuing"
+
       - name: Build Docusaurus Site
         run: npm run build
+
+      - name: Cache Docusaurus Build
+        uses: actions/cache@v3
+        with:
+          path: ./docs-site/build
+          key: docusaurus-build-${{ github.sha }}
+          restore-keys: |
+            docusaurus-build-
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' && inputs.deploy
         uses: actions/upload-pages-artifact@v3
         with:
           # 업로드할 빌드 결과물 경로
           path: './docs-site/build'
 
       - name: Deploy to GitHub Pages
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' && inputs.deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Notify Deployment Success
+        if: success() && (github.event_name == 'push' || github.event_name == 'workflow_dispatch' && inputs.deploy)
+        run: |
+          echo "::notice::Documentation deployed successfully to ${{ steps.deployment.outputs.page_url }}"

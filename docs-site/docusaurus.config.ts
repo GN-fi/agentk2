@@ -7,7 +7,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config: Config = {
 	title: "AgentK2 Documentation",
 	tagline: "강력한 AI 에이전트 프레임워크",
-	favicon: "img/favicon.ico",
+	favicon: "img/agentk2-favicon.svg",
 
 	// Set the production url of your site here
 	url: "https://gn-fi.github.io",
@@ -23,16 +23,27 @@ const config: Config = {
 	onBrokenLinks: "throw",
 	onBrokenMarkdownLinks: "warn",
 
-	// Even if you don't use internationalization, you can use this field to set
-	// useful metadata like html lang. For example, if your site is Chinese, you
-	// may want to replace "en" with "zh-Hans".
+	// 다국어 지원 설정
 	i18n: {
-		defaultLocale: "en",
-		locales: ["en"],
+		defaultLocale: "ko",
+		locales: ["ko", "en"],
+		localeConfigs: {
+			ko: {
+				label: '한국어',
+				direction: 'ltr',
+				htmlLang: 'ko-KR',
+			},
+			en: {
+				label: 'English',
+				direction: 'ltr',
+				htmlLang: 'en-US',
+			},
+		},
 	},
 
-	// 루트 경로에서 문서 페이지로 리디렉션
+	// 플러그인 설정
 	plugins: [
+		// 리디렉션 설정
 		[
 			'@docusaurus/plugin-client-redirects',
 			{
@@ -44,6 +55,20 @@ const config: Config = {
 				],
 			},
 		],
+		// 콘텐츠 블로그 플러그인
+		[
+			'@docusaurus/plugin-content-blog',
+			{
+				path: 'blog',
+				routeBasePath: 'blog',
+				blogTitle: 'AgentK2 Blog',
+				blogDescription: 'AgentK2 개발 소식 및 업데이트',
+				blogSidebarTitle: '최근 게시물',
+				blogSidebarCount: 5,
+				postsPerPage: 10,
+				showReadingTime: true,
+			},
+		],
 	],
 
 	presets: [
@@ -52,10 +77,19 @@ const config: Config = {
 			{
 				docs: {
 					sidebarPath: "./sidebars.ts",
-					// Please change this to your repo.
-					// Remove this to remove the "edit this page" links.
-					editUrl:
-						"https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+					// 편집 링크 설정
+					editUrl: "https://github.com/GN-fi/agentk2/tree/main/docs-site/",
+					// 버전 관리 설정
+					lastVersion: 'current',
+					versions: {
+						current: {
+							label: '1.0.0',
+							path: '',
+						},
+					},
+					// 문서 태그 설정
+					showLastUpdateTime: true,
+					showLastUpdateAuthor: true,
 				},
 				blog: {
 					showReadingTime: true,
@@ -82,11 +116,21 @@ const config: Config = {
 	themeConfig: {
 		// Replace with your project's social card
 		image: "img/docusaurus-social-card.jpg",
+
+		// Algolia DocSearch 설정
+		algolia: {
+			// 실제 사용 시 Algolia에서 발급받은 값으로 대체해야 합니다
+			appId: 'YOUR_APP_ID',
+			apiKey: 'YOUR_API_KEY',
+			indexName: 'agentk2',
+			contextualSearch: true,
+			searchParameters: {},
+		},
 		navbar: {
 			title: "AgentK2 Docs",
 			logo: {
 				alt: "AgentK2 Logo",
-				src: "img/logo.svg",
+				src: "img/agentk2-logo.svg",
 			},
 			items: [
 				{

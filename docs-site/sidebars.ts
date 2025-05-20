@@ -26,6 +26,13 @@ const sidebars: SidebarsConfig = {
 		},
 		{
 			type: 'category',
+			label: '아키텍처',
+			items: [
+				'architecture/overview',
+			],
+		},
+		{
+			type: 'category',
 			label: '기능',
 			items: [
 				'features/core-features',
@@ -38,6 +45,7 @@ const sidebars: SidebarsConfig = {
 			items: [
 				'api-reference/core-api',
 				'api-reference/utilities',
+				'api-reference/examples',
 			],
 		},
 		{
