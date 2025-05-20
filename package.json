@@ -16,6 +16,7 @@
 		"type-check": "tsc --noEmit",
 		"lint-staged": "lint-staged",
 		"prepare": "husky && husky install",
+		"test": "echo \"No tests specified yet\" && exit 0",
 		"docs:fetch:gl": "npx devdocs fetch golden-layout@2.6.0 --output docs-site/static/docs/golden-layout/2.6.0",
 		"docs:build:api": "npx typedoc --out docs-site/docs/api src/ --entryPointStrategy expand ./src",
 		"docs:start": "cd docs-site && npm run start",
