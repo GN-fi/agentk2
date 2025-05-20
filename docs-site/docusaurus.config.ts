@@ -9,6 +9,9 @@ const config: Config = {
 	tagline: "강력한 AI 에이전트 프레임워크",
 	favicon: "img/agentk2-favicon.svg",
 
+	// 정적 디렉토리 설정 (라이브러리 문서를 정적 콘텐츠로 포함)
+	staticDirectories: ['static', 'docs/libraries'],
+
 	// Set the production url of your site here
 	url: "https://gn-fi.github.io",
 	// Set the /<baseUrl>/ pathname under which your site is served

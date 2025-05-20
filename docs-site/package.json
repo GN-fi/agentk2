@@ -16,7 +16,10 @@
 		"lint": "eslint . --ext .js,.jsx,.ts,.tsx",
 		"test": "jest",
 		"generate-api-docs": "node scripts/generate-api-docs.js",
-		"build:with-api-docs": "npm run generate-api-docs && npm run build"
+		"fetch-library-docs": "node scripts/fetch-library-docs.js",
+		"update-sidebar": "node scripts/update-sidebar.js",
+		"build:with-api-docs": "npm run generate-api-docs && npm run build",
+		"build:with-library-docs": "npm run fetch-library-docs && npm run update-sidebar && npm run build"
 	},
 	"dependencies": {
 		"@docusaurus/core": "3.7.0",
@@ -34,11 +37,13 @@
 		"@docusaurus/types": "3.7.0",
 		"@typescript-eslint/eslint-plugin": "^6.21.0",
 		"@typescript-eslint/parser": "^6.21.0",
+		"devdocs-cli": "^0.6.0",
 		"eslint": "^8.57.0",
 		"eslint-plugin-react": "^7.34.1",
 		"glob": "^10.3.10",
 		"jest": "^29.7.0",
 		"jsdoc-to-markdown": "^8.0.1",
+		"typedoc": "^0.25.12",
 		"typescript": "~5.6.2"
 	},
 	"browserslist": {

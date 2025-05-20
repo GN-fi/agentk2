@@ -18,6 +18,11 @@ on:
         required: true
         default: true
         type: boolean
+      fetch_library_docs:
+        description: 'Fetch library documentation'
+        required: true
+        default: true
+        type: boolean
 
 # GitHub Pages에 배포하기 위한 권한 설정
 permissions:
@@ -59,21 +64,36 @@ jobs:
       - name: Install Dependencies (docs-site)
         run: pnpm install --no-frozen-lockfile
 
-      - name: Get Golden Layout Version
-        id: glver
-        run: echo "GL_VERSION=$(jq -r '.dependencies["golden-layout"]' ../package.json | tr -d '^~')" >> $GITHUB_OUTPUT
+      # 라이브러리 버전 정보 가져오기
+      - name: Get Library Versions
+        id: libver
+        run: |
+          echo "GL_VERSION=$(jq -r '.dependencies["golden-layout"] | sub("^\\^";"")' ../package.json)" >> $GITHUB_OUTPUT
+          echo "REACT_VERSION=$(jq -r '.dependencies["react"] | sub("^\\^";"")' ../package.json)" >> $GITHUB_OUTPUT
         working-directory: .
 
-      # Skip Golden Layout Docs for now
-      - name: Create Golden Layout Docs Directory
-        run: mkdir -p ../docs-site/static/docs/golden-layout/2.6.0
+      # 라이브러리 문서 디렉토리 생성
+      - name: Create Library Docs Directories
+        run: |
+          mkdir -p ../docs-site/docs/libraries/golden-layout/${{ steps.libver.outputs.GL_VERSION }}
+          mkdir -p ../docs-site/docs/libraries/react/${{ steps.libver.outputs.REACT_VERSION }}
+          mkdir -p ../docs-site/docs/api
 
-      # Skip API Docs for now
-      - name: Create API Docs Directory
-        run: mkdir -p ../docs-site/docs/api
+      # 라이브러리 문서 가져오기 (워크플로우 디스패치에서 활성화된 경우)
+      - name: Fetch Library Documentation
+        if: github.event_name == 'workflow_dispatch' && inputs.fetch_library_docs
+        run: node scripts/fetch-library-docs.js
+        working-directory: docs-site
+
+      # 사이드바 업데이트
+      - name: Update Sidebar
+        run: node scripts/update-sidebar.js
+        working-directory: docs-site
+
+      # Docusaurus 버전 스냅샷 생성
       - name: Version Docusaurus Docs
-        if: steps.glver.outputs.GL_VERSION != ''
-        run: npm run docusaurus docs:version ${{ steps.glver.outputs.GL_VERSION }}
+        if: steps.libver.outputs.GL_VERSION != ''
+        run: npm run docusaurus docs:version ${{ steps.libver.outputs.GL_VERSION }} || echo "Version already exists"
 
       - name: Lint Docusaurus Site
         run: npm run lint || echo "Linting failed but continuing"
