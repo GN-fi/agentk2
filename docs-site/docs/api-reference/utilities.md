@@ -78,8 +78,8 @@ new PromptTemplate(template, options)
 - `template` (string): 템플릿 문자열
 - `options` (Object, 선택 사항): 템플릿 옵션
   - `delimiter` (Object, 선택 사항): 변수 구분자 설정
-    - `start` (string): 시작 구분자 (기본값: '{{')
-    - `end` (string): 종료 구분자 (기본값: '}}')
+    - `start` (string): 시작 구분자 (기본값: '\{\{')
+    - `end` (string): 종료 구분자 (기본값: '\}\}')
   - `defaultValues` (Object, 선택 사항): 기본 변수 값
 
 ##### 반환값
@@ -92,11 +92,11 @@ new PromptTemplate(template, options)
 import { PromptTemplate } from 'agentk2/utils';
 
 const template = new PromptTemplate(`
-당신은 {{name}}이라는 이름의 도우미 에이전트입니다.
-다음 작업을 수행해주세요: {{task}}
-{{#if tools}}
-사용 가능한 도구: {{tools}}
-{{/if}}
+당신은 \{\{name\}\}이라는 이름의 도우미 에이전트입니다.
+다음 작업을 수행해주세요: \{\{task\}\}
+\{\{#if tools\}\}
+사용 가능한 도구: \{\{tools\}\}
+\{\{/if\}\}
 `, {
   defaultValues: {
     name: 'Assistant',
